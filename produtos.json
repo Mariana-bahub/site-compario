@@ -1,0 +1,21 @@
+{
+    "categorias": ["Eletrônicos", "Moda", "Turismo", "Casa & Jardim"],
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Smartphone XYZ",
+            "imagem": "imagens/smartphone.jpg",
+            "categoria": "Eletrônicos",
+            "preco": 2500,
+            "historico": [2700, 2600, 2550]
+        },
+        {
+            "id": 2,
+            "nome": "Notebook ABC",
+            "imagem": "imagens/notebook.jpg",
+            "categoria": "Eletrônicos",
+            "preco": 4500,
+            "historico": [4700, 4600, 4550]
+        }
+    ]
+}
