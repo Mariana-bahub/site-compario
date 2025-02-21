@@ -1,102 +1,171 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melhores Protetores Solares</title>
+    <title>Protetores Solares</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
-        /* Estilos CSS para a página */
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
-
-        .container {
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-
-        .title {
-            font-size: 24px;
+        .produto-card {
+            width: 100%; /* Ajusta para largura total */
+            max-width: 300px; /* Limita a largura do produto */
+            box-sizing: border-box;
+            padding: 10px;
             margin-bottom: 20px;
         }
 
-        .product-list {
-            list-style: none;
-            padding: 0;
+        .produto-card img {
+            max-width: 100%;
+            height: auto;
         }
 
-        .product-item {
+        .produto-card .card-body {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .vitrine-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Estilo do título de cada produto */
+        .produto-titulo {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .produto-descricao {
+            font-size: 1rem;
+            color: #555;
             margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
         }
 
-        .product-title {
-            font-weight: bold;
+        .lista-lojas {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        .product-price {
-            margin-top: 5px;
+        .lista-lojas li {
+            margin-bottom: 5px;
         }
 
-        .product-link {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .produto-card {
+                width: 48%; /* Dois produtos por linha em telas médias */
+            }
         }
 
-        .view-all {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
+        @media (max-width: 480px) {
+            .produto-card {
+                width: 100%; /* Um produto por linha em telas pequenas */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Qual o melhor protetor solar?</h1>
 
-        <ul class="product-list">
-            <li class="product-item">
-                <div class="product-title">#1. Bioré Aqua Rich</div>
-                <div class="product-description">Protetor Solar Bioré - Aqua Rich Watery Essence FPS 50</div>
-                <div class="product-price">R$ 56,37. Via Magazine Luiza</div>
-                <a href="#" class="product-link">Ir à loja</a>
-            </li>
-            <li class="product-item">
-                <div class="product-title">#2. Australian Gold Botanical</div>
-                <div class="product-description">Protetor Solar Australian Gold Botanical</div>
-                <div class="product-price">R$ 206,28. Via Mercado Livre</div>
-                <a href="#" class="product-link">Ir à loja</a>
-            </li>
-            <li class="product-item">
-                <div class="product-title">#3. Episol Color</div>
-                <div class="product-description">Episol Color Pele Clara FPS 30 Protetor Solar 40g</div>
-                <div class="product-price">R$ 89,94 Via Americanas</div>
-                <a href="#" class="product-link">Ir à loja</a>
-            </li>
-            <li class="product-item">
-                <div class="product-title">#4. Isdin Fusion Water</div>
-                <div class="product-description">Protetor Solar Facial Isdin Fusion Water 5 Stars Color FPS 50 Cor Clara 50ml</div>
-                <div class="product-price">R$ 84,91- Via Mercado Livre</div>
-                <a href="#" class="product-link">Ir à loja</a>
-            </li>
-            <li class="product-item">
-                <div class="product-title">#5. Neutrogena Sun Fresh</div>
-                <div class="product-description">Neutrogena Sun Fresh Protetor Solar FPS 70 200ml</div>
-                <div class="product-price">R$ 74,95 Via Magazine Luiza</div>
-                <a href="#" class="product-link">Ir à loja</a>
-            </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+                Comparador de Preços
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da página Protetores Solares -->
+    <div class="container mt-4">
+        <h1>Protetores Solares</h1>
+        <p>Confira os melhores protetores solares disponíveis e compare os preços em diversas lojas.</p>
+        
+        <!-- Descrição do produto Nívea -->
+        <div class="produto-titulo">Protetor Solar Nívea</div>
+        <p class="produto-descricao">Ideal para peles sensíveis, oferece alta proteção contra os raios solares, garantindo uma proteção duradoura e suave.</p>
+        
+        <!-- Lista de lojas para o produto Nívea -->
+        <ul class="lista-lojas">
+            <li><a href="https://link-de-afiliado.com" class="btn btn-link">Loja 1 - R$ 49,90</a></li>
+            <li><a href="https://link-de-afiliado.com" class="btn btn-link">Loja 2 - R$ 52,90</a></li>
+            <li><a href="https://link-de-afiliado.com" class="btn btn-link">Loja 3 - R$ 47,90</a></li>
         </ul>
 
-        <a href="#" class="view-all">Ver todos</a>
+        <!-- Vitrine de produtos -->
+        <div class="vitrine-container">
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Nívea</h5>
+                    <p class="card-text">R$ 49,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar La Roche</h5>
+                    <p class="card-text">R$ 89,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
+
+        <!-- Título e descrição do próximo produto -->
+        <div class="produto-titulo">Protetor Solar La Roche</div>
+        <p class="produto-descricao">Ideal para peles oleosas, com alta resistência à água, proporcionando um efeito matte duradouro.</p>
+        
+        <!-- Lista de lojas para o produto La Roche -->
+        <ul class="lista-lojas">
+            <li><a href="https://link-de-afiliado.com" class="btn btn-link">Loja 1 - R$ 89,90</a></li>
+            <li><a href="https://link-de-afiliado.com" class="btn btn-link">Loja 2 - R$ 95,00</a></li>
+            <li><a href="https://link-de-afiliado.com" class="btn btn-link">Loja 3 - R$ 85,00</a></li>
+        </ul>
+
+        <!-- Vitrine de produtos -->
+        <div class="vitrine-container">
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Avène</h5>
+                    <p class="card-text">R$ 99,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Banana Boat</h5>
+                    <p class="card-text">R$ 79,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
     </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        &copy; 2025 Comparador de Preços - Todos os direitos reservados
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
