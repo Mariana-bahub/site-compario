@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         .produto-card {
-            width: 100%; /* Ajusta para largura total */
-            max-width: 300px; /* Limita a largura do produto */
+            width: 100%;
+            max-width: 300px;
             box-sizing: border-box;
             padding: 10px;
             margin-bottom: 20px;
@@ -28,12 +28,11 @@
         .vitrine-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: flex-start; /* Alinha os cards à esquerda */
             gap: 10px;
             margin-top: 20px;
         }
 
-        /* Estilo do título de cada produto */
         .produto-titulo {
             font-size: 1.5rem;
             margin-top: 20px;
@@ -43,6 +42,15 @@
             font-size: 1rem;
             color: #555;
             margin-bottom: 20px;
+        }
+
+        .lista-lojas {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .lista-lojas li {
+            margin-bottom: 5px;
         }
 
         /* Responsividade */
@@ -61,7 +69,6 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -82,59 +89,85 @@
         </div>
     </nav>
 
-    <!-- Conteúdo da página Protetores Solares -->
     <div class="container mt-4">
         <h1>Protetores Solares</h1>
         <p>Confira os melhores protetores solares disponíveis e compare os preços em diversas lojas.</p>
 
-        <!-- Vitrine de produtos -->
-        <div class="vitrine-container">
-            <div class="produto-card card">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 1">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Nívea</h5>
-                    <p class="card-text">R$ 49,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-            <div class="produto-card card">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 2">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar La Roche</h5>
-                    <p class="card-text">R$ 89,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-            <!-- Adicione mais produtos aqui -->
-        </div>
+        <div id="produtos-container"> </div>  </div>
 
-        <!-- Vitrine de produtos -->
-        <div class="vitrine-container">
-            <div class="produto-card card">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 3">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Avène</h5>
-                    <p class="card-text">R$ 99,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-            <div class="produto-card card">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 4">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Banana Boat</h5>
-                    <p class="card-text">R$ 79,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-            <!-- Adicione mais produtos aqui -->
-        </div>
-    </div>
-
-    <!-- Rodapé -->
     <footer class="bg-dark text-white text-center p-3 mt-4">
         &copy; 2025 Comparador de Preços - Todos os direitos reservados
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const produtos = [
+            {
+                nome: "Protetor Solar Nívea",
+                descricao: "Ideal para peles sensíveis, oferece alta proteção contra os raios solares, garantindo uma proteção duradoura e suave.",
+                lojas: [
+                    { nome: "Loja 1", preco: "R$ 49,90", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja 2", preco: "R$ 52,90", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja 3", preco: "R$ 47,90", link: "https://link-de-afiliado.com" }
+                ],
+                imagem: "https://via.placeholder.com/150"
+            },
+            {
+                nome: "Protetor Solar La Roche",
+                descricao: "Ideal para peles oleosas, com alta resistência à água, proporcionando um efeito matte duradouro.",
+                lojas: [
+                    { nome: "Loja 1", preco: "R$ 89,90", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja 2", preco: "R$ 95,00", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja 3", preco: "R$ 85,00", link: "https://link-de-afiliado.com" }
+                ],
+                imagem: "https://via.placeholder.com/150"
+            },
+            // Adicione mais produtos aqui
+            {
+                nome: "Protetor Solar Avène",
+                descricao: "Proteção muito alta para peles sensíveis e hipersensíveis.",
+                lojas: [
+                    { nome: "Loja A", preco: "R$ 99,90", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja B", preco: "R$ 105,00", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja C", preco: "R$ 95,00", link: "https://link-de-afiliado.com" }
+                ],
+                imagem: "https://via.placeholder.com/150"
+            },
+            {
+                nome: "Protetor Solar Banana Boat",
+                descricao: "Resistente à água, ideal para atividades ao ar livre.",
+                lojas: [
+                    { nome: "Loja X", preco: "R$ 79,90", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja Y", preco: "R$ 85,00", link: "https://link-de-afiliado.com" },
+                    { nome: "Loja Z", preco: "R$ 75,00", link: "https://link-de-afiliado.com" }
+                ],
+                imagem: "https://via.placeholder.com/150"
+            }
+        ];
+
+        const produtosContainer = document.getElementById('produtos-container');
+
+        produtos.forEach(produto => {
+            const produtoDiv = document.createElement('div');
+
+            produtoDiv.innerHTML = `
+                <div class="produto-titulo">${produto.nome}</div>
+                <p class="produto-descricao">${produto.descricao}</p>
+                <ul class="lista-lojas">
+                    ${produto.lojas.map(loja => `<li><a href="${loja.link}" class="btn btn-link">${loja.nome} - ${loja.preco}</a></li>`).join('')}
+                </ul>
+                <div class="vitrine-container">
+                    <div class="produto-card card">
+                        <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
+                        <div class="card-body">
+                            <h5 class="card-title">${produto.nome}</h5>
+                            <p class="card-text">${produto.lojas[0].preco}</p> <a href="${produto.lojas[0].link}" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            produtosContainer.appendChild(produtoDiv);
+        });
+    </script>
 </body>
 </html>
