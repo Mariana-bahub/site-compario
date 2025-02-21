@@ -1,173 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protetores Solares</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Melhores Protetores Solares</title>
     <style>
-        .produto-card {
-            width: 100%;
-            max-width: 300px;
-            box-sizing: border-box;
-            padding: 10px;
+        /* Estilos CSS para a página */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 24px;
             margin-bottom: 20px;
         }
 
-        .produto-card img {
-            max-width: 100%;
-            height: auto;
+        .product-list {
+            list-style: none;
+            padding: 0;
         }
 
-        .produto-card .card-body {
-            padding: 10px;
-            text-align: center;
-        }
-
-        .vitrine-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start; /* Alinha os cards à esquerda */
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .produto-titulo {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-
-        .produto-descricao {
-            font-size: 1rem;
-            color: #555;
+        .product-item {
             margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
         }
 
-        .lista-lojas {
-            list-style-type: none;
-            padding-left: 0;
+        .product-title {
+            font-weight: bold;
         }
 
-        .lista-lojas li {
-            margin-bottom: 5px;
+        .product-price {
+            margin-top: 5px;
         }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .produto-card {
-                width: 48%; /* Dois produtos por linha em telas médias */
-            }
+        .product-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
         }
 
-        @media (max-width: 480px) {
-            .produto-card {
-                width: 100%; /* Um produto por linha em telas pequenas */
-            }
+        .view-all {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1 class="title">Qual o melhor protetor solar?</h1>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
-                Comparador de Preços
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <ul class="product-list">
+            <li class="product-item">
+                <div class="product-title">#1. Bioré Aqua Rich</div>
+                <div class="product-description">Protetor Solar Bioré - Aqua Rich Watery Essence FPS 50</div>
+                <div class="product-price">R$ 56,37. Via Magazine Luiza</div>
+                <a href="#" class="product-link">Ir à loja</a>
+            </li>
+            <li class="product-item">
+                <div class="product-title">#2. Australian Gold Botanical</div>
+                <div class="product-description">Protetor Solar Australian Gold Botanical</div>
+                <div class="product-price">R$ 206,28. Via Mercado Livre</div>
+                <a href="#" class="product-link">Ir à loja</a>
+            </li>
+            <li class="product-item">
+                <div class="product-title">#3. Episol Color</div>
+                <div class="product-description">Episol Color Pele Clara FPS 30 Protetor Solar 40g</div>
+                <div class="product-price">R$ 89,94 Via Americanas</div>
+                <a href="#" class="product-link">Ir à loja</a>
+            </li>
+            <li class="product-item">
+                <div class="product-title">#4. Isdin Fusion Water</div>
+                <div class="product-description">Protetor Solar Facial Isdin Fusion Water 5 Stars Color FPS 50 Cor Clara 50ml</div>
+                <div class="product-price">R$ 84,91- Via Mercado Livre</div>
+                <a href="#" class="product-link">Ir à loja</a>
+            </li>
+            <li class="product-item">
+                <div class="product-title">#5. Neutrogena Sun Fresh</div>
+                <div class="product-description">Neutrogena Sun Fresh Protetor Solar FPS 70 200ml</div>
+                <div class="product-price">R$ 74,95 Via Magazine Luiza</div>
+                <a href="#" class="product-link">Ir à loja</a>
+            </li>
+        </ul>
 
-    <div class="container mt-4">
-        <h1>Protetores Solares</h1>
-        <p>Confira os melhores protetores solares disponíveis e compare os preços em diversas lojas.</p>
-
-        <div id="produtos-container"> </div>  </div>
-
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        &copy; 2025 Comparador de Preços - Todos os direitos reservados
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const produtos = [
-            {
-                nome: "Protetor Solar Nívea",
-                descricao: "Ideal para peles sensíveis, oferece alta proteção contra os raios solares, garantindo uma proteção duradoura e suave.",
-                lojas: [
-                    { nome: "Loja 1", preco: "R$ 49,90", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja 2", preco: "R$ 52,90", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja 3", preco: "R$ 47,90", link: "https://link-de-afiliado.com" }
-                ],
-                imagem: "https://via.placeholder.com/150"
-            },
-            {
-                nome: "Protetor Solar La Roche",
-                descricao: "Ideal para peles oleosas, com alta resistência à água, proporcionando um efeito matte duradouro.",
-                lojas: [
-                    { nome: "Loja 1", preco: "R$ 89,90", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja 2", preco: "R$ 95,00", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja 3", preco: "R$ 85,00", link: "https://link-de-afiliado.com" }
-                ],
-                imagem: "https://via.placeholder.com/150"
-            },
-            // Adicione mais produtos aqui
-            {
-                nome: "Protetor Solar Avène",
-                descricao: "Proteção muito alta para peles sensíveis e hipersensíveis.",
-                lojas: [
-                    { nome: "Loja A", preco: "R$ 99,90", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja B", preco: "R$ 105,00", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja C", preco: "R$ 95,00", link: "https://link-de-afiliado.com" }
-                ],
-                imagem: "https://via.placeholder.com/150"
-            },
-            {
-                nome: "Protetor Solar Banana Boat",
-                descricao: "Resistente à água, ideal para atividades ao ar livre.",
-                lojas: [
-                    { nome: "Loja X", preco: "R$ 79,90", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja Y", preco: "R$ 85,00", link: "https://link-de-afiliado.com" },
-                    { nome: "Loja Z", preco: "R$ 75,00", link: "https://link-de-afiliado.com" }
-                ],
-                imagem: "https://via.placeholder.com/150"
-            }
-        ];
-
-        const produtosContainer = document.getElementById('produtos-container');
-
-        produtos.forEach(produto => {
-            const produtoDiv = document.createElement('div');
-
-            produtoDiv.innerHTML = `
-                <div class="produto-titulo">${produto.nome}</div>
-                <p class="produto-descricao">${produto.descricao}</p>
-                <ul class="lista-lojas">
-                    ${produto.lojas.map(loja => `<li><a href="${loja.link}" class="btn btn-link">${loja.nome} - ${loja.preco}</a></li>`).join('')}
-                </ul>
-                <div class="vitrine-container">
-                    <div class="produto-card card">
-                        <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
-                        <div class="card-body">
-                            <h5 class="card-title">${produto.nome}</h5>
-                            <p class="card-text">${produto.lojas[0].preco}</p> <a href="${produto.lojas[0].link}" class="btn btn-primary">Comprar</a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            produtosContainer.appendChild(produtoDiv);
-        });
-    </script>
+        <a href="#" class="view-all">Ver todos</a>
+    </div>
 </body>
 </html>
