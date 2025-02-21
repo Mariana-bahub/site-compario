@@ -1,103 +1,113 @@
-<!DOCTYPE html><html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine de Protetores Solares</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .navbar {
-            background-color: #6a0dad;
-            padding: 15px;
-            text-align: center;
-            color: white;
-            font-size: 18px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .produto {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .produto img {
-            width: 40px;
-            height: auto;
-            margin-right: 10px;
-        }
-        .info {
-            flex-grow: 1;
-        }
-        .preco {
-            font-weight: bold;
-            color: #333;
-        }
-        .botao {
-            background-color: #6a0dad;
-            color: white;
-            text-decoration: none;
-            padding: 6px 10px;
-            border-radius: 5px;
-            display: inline-block;
-            font-size: 14px;
-        }
-        .ver-todos {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            background-color: #6a0dad;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+<!DOCTYPE html>  <html lang="pt">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Protetores Solares</title>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">  
+    <style>  
+        .produto-card {  
+            width: 100%;  
+            max-width: 250px;  
+            box-sizing: border-box;  
+            padding: 10px;  
+            margin-bottom: 20px;  
+        }  
+        .produto-card img {  
+            max-width: 100%;  
+            height: auto;  
+        }  
+        .produto-card .card-body {  
+            padding: 10px;  
+            text-align: center;  
+        }  
+        .vitrine-container {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: flex-start;  
+            gap: 10px;  
+            margin-top: 20px;  
+        }  
+        .produto-titulo {  
+            font-size: 1.5rem;  
+            margin-top: 20px;  
+        }  
+        .produto-descricao {  
+            font-size: 1rem;  
+            color: #555;  
+            margin-bottom: 20px;  
+        }  
+        .lista-lojas {  
+            list-style-type: none;  
+            padding-left: 0;  
+        }  
+        .lista-lojas li {  
+            margin-bottom: 5px;  
+        }  
+        @media (max-width: 768px) {  
+            .produto-card {  
+                width: 48%;  
+            }  
+        }  
+        @media (max-width: 480px) {  
+            .produto-card {  
+                width: 100%;  
+            }  
+        }  
     </style>
-</head>
-<body>
-    <div class="navbar">Vitrine de Protetores Solares</div>
-    <div class="container">
-        <h2>Qual o melhor protetor solar?</h2>
-        <div class="produto">
-            <img src="https://via.placeholder.com/40" alt="Bioré Aqua Rich">
-            <div class="info">
-                <strong>#1 - Bioré Aqua Rich</strong>
-                <p>FPS 50 - 50ml</p>
-                <p class="preco">R$ 56,37</p>
-                <a href="#" class="botao">Ir à loja</a>
-            </div>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/40" alt="Australian Gold">
-            <div class="info">
-                <strong>#2 - Australian Gold</strong>
-                <p>FPS 30 - 120ml</p>
-                <p class="preco">R$ 206,28</p>
-                <a href="#" class="botao">Ir à loja</a>
-            </div>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/40" alt="Episol Color">
-            <div class="info">
-                <strong>#3 - Episol Color</strong>
-                <p>FPS 30 - 40g</p>
-                <p class="preco">R$ 89,94</p>
-                <a href="#" class="botao">Ir à loja</a>
-            </div>
-        </div>
-        <a href="#" class="ver-todos">Ver todos os produtos</a>
-    </div>
-</body>
+</head>  
+<body>  
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
+    <div class="container">  
+        <a class="navbar-brand" href="#">  
+            <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">  
+            Comparador de Preços  
+        </a>  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"  
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
+            <span class="navbar-toggler-icon"></span>  
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNav">  
+            <ul class="navbar-nav ms-auto">  
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>  
+                <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>  
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>  
+            </ul>  
+        </div>  
+    </div>  
+</nav>  
+<div class="container mt-4">  
+    <h1>Protetores Solares</h1>  
+    <p>Confira os melhores protetores solares disponíveis e compare os preços em diversas lojas.</p>  
+    <div class="produto-titulo">Protetor Solar Nívea</div>  
+    <p class="produto-descricao">Ideal para peles sensíveis, oferece alta proteção contra os raios solares, garantindo uma proteção duradoura e suave.</p>  
+    <ul class="lista-lojas">  
+        <li><a href="#" class="btn btn-link">Loja 1 - R$ 49,90</a></li>  
+        <li><a href="#" class="btn btn-link">Loja 2 - R$ 52,90</a></li>  
+        <li><a href="#" class="btn btn-link">Loja 3 - R$ 47,90</a></li>  
+    </ul>  
+    <div class="vitrine-container">  
+        <div class="produto-card card">  
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 1">  
+            <div class="card-body">  
+                <h5 class="card-title">Protetor Solar Nívea</h5>  
+                <p class="card-text">R$ 49,90</p>  
+                <a href="#" class="btn btn-primary">Comprar</a>  
+            </div>  
+        </div>  
+        <div class="produto-card card">  
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 2">  
+            <div class="card-body">  
+                <h5 class="card-title">Protetor Solar La Roche</h5>  
+                <p class="card-text">R$ 89,90</p>  
+                <a href="#" class="btn btn-primary">Comprar</a>  
+            </div>  
+        </div>  
+    </div>  
+</div>  
+<footer class="bg-dark text-white text-center p-3 mt-4">  
+    &copy; 2025 Comparador de Preços - Todos os direitos reservados  
+</footer>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>  
 </html>
