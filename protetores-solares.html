@@ -9,37 +9,38 @@
     <style>
         .produto-card {
             display: flex;
-            flex-direction: row; /* Alinha os itens horizontalmente */
-            align-items: center; /* Alinha verticalmente */
-            padding: 10px; /* Espaçamento interno */
-            margin-bottom: 10px; /* Espaçamento entre os cards */
-            border: 1px solid #ccc; /* Adiciona borda */
-            border-radius: 8px; /* Arredonda os cantos */
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
         }
 
         .produto-card img {
-            max-width: 100px; /* Largura máxima da imagem */
-            height: auto; /* Altura automática para manter a proporção */
-            margin-right: 10px; /* Espaçamento à direita da imagem */
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
         }
 
         .produto-card .card-body {
-            flex-grow: 1; /* O corpo do card ocupa o espaço restante */
+            flex-grow: 1;
         }
 
         .produto-card .card-title {
-            font-size: 1.2rem; /* Tamanho da fonte do título */
-            margin-bottom: 5px; /* Espaçamento abaixo do título */
+            font-size: 1.2rem;
+            margin-bottom: 5px;
         }
 
         .produto-card .card-text {
-            font-size: 1rem; /* Tamanho da fonte do preço */
-            color: #555; /* Cor do preço */
+            font-size: 1rem;
+            color: #555;
         }
+
         .vitrine-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta o número de colunas automaticamente */
-            gap: 20px; /* Espaçamento entre os cards */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
     </style>
 </head>
@@ -86,7 +87,39 @@
                     <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
                 </div>
             </div>
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/150" alt="Produto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Sundown</h5>
+                    <p class="card-text">R$ 69,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
             </div>
+            <div class="produto-card">
+                <img src="https://via.placeholder.com/150" alt="Produto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Anasol</h5>
+                    <p class="card-text">R$ 59,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+             <div class="produto-card">
+                <img src="https://via.placeholder.com/150" alt="Produto 5">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Isdin</h5>
+                    <p class="card-text">R$ 99,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+             <div class="produto-card">
+                <img src="https://via.placeholder.com/150" alt="Produto 6">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Vichy</h5>
+                    <p class="card-text">R$ 79,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="bg-dark text-white text-center p-3 mt-4">
