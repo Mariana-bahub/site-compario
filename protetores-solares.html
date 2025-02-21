@@ -8,50 +8,60 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         .produto-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%; /* Ajusta para largura total */
+            max-width: 300px; /* Limita a largura do produto */
+            box-sizing: border-box;
             padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         .produto-card img {
-            max-width: 100px;
+            max-width: 100%;
             height: auto;
-            margin-bottom: 10px;
         }
 
         .produto-card .card-body {
+            padding: 10px;
             text-align: center;
         }
 
-        .produto-card .card-title {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
+        .vitrine-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-top: 20px;
         }
 
-        .produto-card .card-text {
+        /* Estilo do título de cada produto */
+        .produto-titulo {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .produto-descricao {
             font-size: 1rem;
             color: #555;
+            margin-bottom: 20px;
         }
 
-        .vitrine-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .produto-card {
+                width: 48%; /* Dois produtos por linha em telas médias */
+            }
         }
 
-        .descricao-produto {
-            font-size: 0.9rem;
-            color: #333;
-            margin-top: 10px;
+        @media (max-width: 480px) {
+            .produto-card {
+                width: 100%; /* Um produto por linha em telas pequenas */
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -72,80 +82,55 @@
         </div>
     </nav>
 
+    <!-- Conteúdo da página Protetores Solares -->
     <div class="container mt-4">
         <h1>Protetores Solares</h1>
         <p>Confira os melhores protetores solares disponíveis e compare os preços em diversas lojas.</p>
-        
+
+        <!-- Vitrine de produtos -->
         <div class="vitrine-container">
-            <!-- Produto Nívea -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 1">
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 1">
                 <div class="card-body">
                     <h5 class="card-title">Protetor Solar Nívea</h5>
                     <p class="card-text">R$ 49,90</p>
-                    <p class="descricao-produto">O Protetor Solar Nívea é ideal para peles sensíveis, oferecendo alta proteção contra os raios solares e deixando a pele suave e hidratada.</p>
                     <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
                 </div>
             </div>
-
-            <!-- Produto Príncipia -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 2">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Príncipia</h5>
-                    <p class="card-text">R$ 79,90</p>
-                    <p class="descricao-produto">O Protetor Solar Príncipia é livre de fragrâncias e parabenos, ideal para peles sensíveis. Ele oferece proteção intensa contra os danos solares.</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-
-            <!-- Produto La Roche -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 3">
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 2">
                 <div class="card-body">
                     <h5 class="card-title">Protetor Solar La Roche</h5>
                     <p class="card-text">R$ 89,90</p>
-                    <p class="descricao-produto">O Protetor Solar La Roche possui uma fórmula que controla a oleosidade da pele e oferece proteção UVA e UVB, sendo ideal para peles oleosas.</p>
                     <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
                 </div>
             </div>
-
-            <!-- Produto Sundown -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 4">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Sundown</h5>
-                    <p class="card-text">R$ 69,90</p>
-                    <p class="descricao-produto">O Protetor Solar Sundown oferece alta proteção solar e hidratação para todos os tipos de pele, inclusive para peles mais sensíveis.</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-
-            <!-- Produto Anasol -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 5">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Anasol</h5>
-                    <p class="card-text">R$ 59,90</p>
-                    <p class="descricao-produto">O Protetor Solar Anasol é recomendado para peles com tendência a manchas, oferecendo proteção contra os danos solares enquanto cuida da pele.</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-
-            <!-- Produto Isdin -->
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 6">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Isdin</h5>
-                    <p class="card-text">R$ 99,90</p>
-                    <p class="descricao-produto">O Protetor Solar Isdin é ideal para quem busca proteção eficaz com textura leve. Ele é resistente à água e tem um efeito matificante durante todo o dia.</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
+            <!-- Adicione mais produtos aqui -->
         </div>
 
+        <!-- Vitrine de produtos -->
+        <div class="vitrine-container">
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Avène</h5>
+                    <p class="card-text">R$ 99,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+            <div class="produto-card card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Protetor Solar Banana Boat</h5>
+                    <p class="card-text">R$ 79,90</p>
+                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
     </div>
 
+    <!-- Rodapé -->
     <footer class="bg-dark text-white text-center p-3 mt-4">
         &copy; 2025 Comparador de Preços - Todos os direitos reservados
     </footer>
