@@ -42,6 +42,39 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+        .produto-container {
+            display: flex;
+            align-items: center; /* Alinha verticalmente */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: fit-content; /* Largura ajustada ao conteúdo */
+        }
+        .produto-container img {
+            max-width: 80px; /* Largura máxima da imagem */
+            height: auto;
+            margin-right: 10px;
+        }
+        .produto-info {
+            flex-grow: 1; /* Ocupa o espaço restante */
+        }
+        .produto-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .produto-info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px; /* Espaçamento abaixo do preço */
+        }
+        .produto-container a {
+            background-color: #007bff; /* Cor de fundo do botão */
+            color: #fff; /* Cor do texto do botão */
+            padding: 8px 16px; /* Espaçamento interno do botão */
+            border-radius: 5px; /* Arredondamento dos cantos do botão */
+            text-decoration: none; /* Remove sublinhado do link */
+        }
     </style>
 </head>
 <body>
@@ -71,61 +104,38 @@
         <p>Confira os melhores protetores solares disponíveis e compare os preços em diversas lojas.</p>
         
         <div class="vitrine-container">
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 1">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Nívea</h5>
-                    <p class="card-text">R$ 49,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+            <div class="produto-container">
+                <img src="https://m.media-amazon.com/images/I/519pPFJMDlL._AC_SR160_160_.jpg" alt="Produto 1">
+                <div class="produto-info">
+                    <h3>Protetor Solar Bioré - Aqua Rich Watery Essence FPS 50</h3>
+                    <p>R$ 56,37</p>
+                    <p>Via Magazine Luiza</p>
                 </div>
+                <a href="https://www.magazinevoce.com.br/magazineelainemodas/protetor-solar-bior-aqua-rich-watery-essence-fps-50-50g-1544485300">Ir à loja</a>
             </div>
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 2">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar La Roche</h5>
-                    <p class="card-text">R$ 89,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+            <div class="produto-container">
+                <img src="https://m.media-amazon.com/images/I/71Y12E11ELL._AC_SR160_160_.jpg" alt="Produto 2">
+                <div class="produto-info">
+                    <h3>Protetor Solar Australian Gold Botanical</h3>
+                    <p>R$ 206,28</p>
+                    <p>Via Mercado Livre</p>
                 </div>
+                <a href="https://produto.mercadolivre.com.br/MLB-2713142224-protetor-solar-australian-gold-botanical-spf-50-fps-50-_JM#position=1&search_layout=stack&type=item&tracking_id=599e0754-e04f-4229-8732-c9062b5c56dd">Ir à loja</a>
             </div>
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 3">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Sundown</h5>
-                    <p class="card-text">R$ 69,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+            <div class="produto-container">
+                <img src="https://m.media-amazon.com/images/I/61E5c5x78eL._AC_SR160_160_.jpg" alt="Produto 3">
+                <div class="produto-info">
+                    <h3>Episol Color Pele Clara FPS 30 Protetor Solar 40g</h3>
+                    <p>R$ 89,94</p>
+                    <p>Via Americanas</p>
                 </div>
+                <a href="https://www.americanas.com.br/produto/5385759715?epar=bpab2&opn=YPADNG&af=YPADNG&utm_source=Google&utm_medium=cpc&utm_campaign=Shopping&utm_term=5385759715&utm_content=automotive&gclid=Cj0KCQjwx4iQBhC-ARIsAABWGVpXl2Nn6n9p0-l9c7q9v9_9o56m9p2L1w7j3t3w9c7_4a0o89982421&gclsrc=aw.ds">Ir à loja</a>
             </div>
-            <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 4">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Anasol</h5>
-                    <p class="card-text">R$ 59,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
+            <div class="produto-container">
+                <img src="https://m.media-amazon.com/images/I/71j0kPUjbdL._AC_SR160_160_.jpg" alt="Produto 4">
+                <div class="produto-info">
+                    <h3>Protetor Solar Facial Isdin Fusion Water 5 Stars Color FPS 50 Cor Clara 50ml</h3>
+                    <p>R$ 84,91</p>
+                    <p>Via Mercado Livre</p>
                 </div>
-            </div>
-             <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 5">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Isdin</h5>
-                    <p class="card-text">R$ 99,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-             <div class="produto-card">
-                <img src="https://via.placeholder.com/150" alt="Produto 6">
-                <div class="card-body">
-                    <h5 class="card-title">Protetor Solar Vichy</h5>
-                    <p class="card-text">R$ 79,90</p>
-                    <a href="https://link-de-afiliado.com" class="btn btn-primary">Comprar</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        &copy; 2025 Comparador de Preços - Todos os direitos reservados
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                <a href="https://www.mercadolivre.com.br/protetor-solar-facial-isdin-fusion-water-5-stars-color-fps-50-cor-clara-50ml/p/MLB17282283?matt_tool=24622952&matt_type=pla&utm_id=5200174071&utm_medium=cpc&utm_source=google&utm_campaign=MLB_DSA_ALL_CATEGORIES&
