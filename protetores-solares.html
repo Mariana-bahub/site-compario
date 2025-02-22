@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,22 @@
             font-size: 24px;
             font-weight: bold;
         }
+        .post-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #e9ecef;
+        }
+        .post-header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .post-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .post-header p {
+            margin-bottom: 5px;
+        }
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -29,9 +46,15 @@
         .produto {
             border-bottom: 1px solid #ddd;
             padding: 15px 0;
+            display: flex;
+            align-items: center;
         }
         .produto:last-child {
             border-bottom: none;
+        }
+        .produto img {
+            max-width: 100px;
+            margin-right: 20px;
         }
         .produto h2 {
             font-size: 20px;
@@ -39,19 +62,50 @@
         }
         .produto p {
             color: #666;
+            margin-bottom: 10px;
+        }
+        .produto a {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="header">Protetores Solares - Comparação de Preços</div>
+    <div class="post-header">
+        <img src="protetor_solar.jpg" alt="Imagem de destaque">
+        <h1>Comparativo de Protetores Solares: Guia Completo</h1>
+        <p>Data de publicação: 10 de Outubro de 2023</p>
+        <p>Autor: Seu Nome</p>
+        <p>Categoria: Cuidados com a Pele</p>
+    </div>
     <div class="container">
         <div class="produto">
-            <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
-            <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+            <img src="nivea.jpg" alt="Nívea Sun Protect & Hidrata FPS 50">
+            <div>
+                <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
+                <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+                <p>Preço: R$ 39,90</p>
+                <p>Tipo de pele: Todos os tipos</p>
+                <p>Resistência à água: Sim</p>
+                <p>Tamanho: 200ml</p>
+                <a href="#">Comprar</a>
+            </div>
         </div>
         <div class="produto">
-            <h2>La Roche-Posay Anthelios XL FPS 60</h2>
-            <p>Proteção avançada contra raios solares, indicado para peles sensíveis.</p>
+            <img src="laroche.jpg" alt="La Roche-Posay Anthelios XL FPS 60">
+            <div>
+                <h2>La Roche-Posay Anthelios XL FPS 60</h2>
+                <p>Proteção avançada contra raios solares, indicado para peles sensíveis.</p>
+                <p>Preço: R$ 89,90</p>
+                <p>Tipo de pele: Sensível</p>
+                <p>Resistência à água: Sim</p>
+                <p>Tamanho: 50ml</p>
+                <a href="#">Comprar</a>
+            </div>
         </div>
     </div>
 </body>
