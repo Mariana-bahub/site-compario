@@ -1,105 +1,58 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html><html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melhores Protetores Solares para o Verão</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Protetores Solares</title>
     <style>
-        .container-comparacao {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        .container-comparacao h3 {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .produto-comparado {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-        .produto-comparado img {
-            max-width: 80px;
-            height: auto;
-        }
-        .descricao {
-            flex: 1;
-        }
-        .botao {
-            display: inline-block;
-            background-color: purple;
+        .header {
+            background-color: #007bff;
             color: white;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
             text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .produto {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .produto:last-child {
+            border-bottom: none;
+        }
+        .produto h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        .produto p {
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
-                Comparador de Preços
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                </ul>
-            </div>
+    <div class="header">Protetores Solares - Comparação de Preços</div>
+    <div class="container">
+        <div class="produto">
+            <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
+            <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
         </div>
-    </nav><div class="container mt-4">
-    <h1>Melhores Protetores Solares para o Verão</h1>
-    
-    <div class="produto">
-        <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
-        <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
-    </div>
-    
-    <div class="container-comparacao">
-        <h3>Quais são os melhores protetores solares?</h3>
-        <div class="produto-comparado">
-            <img src="link-imagem-nivea" alt="Nivea Sun FPS 50">
-            <div class="descricao">
-                <p>Nívea Sun FPS 50 - Hidratação intensa e alta proteção.</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-        </div>
-        <div class="produto-comparado">
-            <img src="link-imagem-la-roche" alt="La Roche-Posay">
-            <div class="descricao">
-                <p>La Roche-Posay Anthelios - Textura leve e proteção duradoura.</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-        </div>
-        <div class="produto-comparado">
-            <img src="link-imagem-biore" alt="Bioré UV Aqua Rich">
-            <div class="descricao">
-                <p>Bioré UV Aqua Rich - Fórmula japonesa com acabamento seco.</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
+        <div class="produto">
+            <h2>La Roche-Posay Anthelios XL FPS 60</h2>
+            <p>Proteção avançada contra raios solares, indicado para peles sensíveis.</p>
         </div>
     </div>
-</div>
-
-<!-- Rodapé -->
-<footer class="bg-dark text-white text-center p-3 mt-4">
-    &copy; 2025 Comparador de Preços - Todos os direitos reservados
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
