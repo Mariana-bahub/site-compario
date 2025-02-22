@@ -12,26 +12,28 @@
         .produto {
             margin-bottom: 40px;
         }
-        .container {
+        .container-comparacao {
             border: 1px solid #ddd;
             padding: 15px;
             border-radius: 8px;
+            margin-top: 20px;
+        }
+        .container-comparacao h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .produto-comparado {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             gap: 15px;
+            margin-bottom: 10px;
         }
-        .container img {
+        .produto-comparado img {
             max-width: 80px;
             height: auto;
         }
-        .detalhes {
+        .descricao {
             flex: 1;
-        }
-        .precos {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
         }
         .botao {
             display: inline-block;
@@ -40,6 +42,7 @@
             padding: 10px;
             text-decoration: none;
             border-radius: 5px;
+            text-align: center;
         }
     </style>
 </head>
@@ -47,23 +50,62 @@
     <h1>Melhores Protetores Solares para o Verão</h1><div class="produto">
     <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
     <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
-    <div class="container">
-        <img src="link-da-imagem" alt="Nivea Sun FPS 50">
-        <div class="detalhes">
-            <h3>Nívea Sun Protect & Hidrata FPS 50</h3>
-            <p>200ml - Alta proteção e hidratação.</p>
-        </div>
-        <div class="precos">
-            <a href="#" class="botao">R$ 56,37 - Loja 1</a>
-            <a href="#" class="botao">R$ 59,90 - Loja 2</a>
-            <a href="#" class="botao">R$ 54,99 - Loja 3</a>
-            <a href="#" class="botao">R$ 57,00 - Loja 4</a>
-        </div>
-    </div>
-    <a href="#" class="botao">Ver todos os produtos</a>
 </div>
 
-<!-- Adicione novos produtos aqui -->
+<div class="container-comparacao">
+    <h3>Quais são os melhores protetores solares?</h3>
+    <div class="produto-comparado">
+        <img src="link-imagem-nivea" alt="Nivea Sun FPS 50">
+        <div class="descricao">
+            <p>Nívea Sun FPS 50 - Hidratação intensa e alta proteção.</p>
+            <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+    <div class="produto-comparado">
+        <img src="link-imagem-la-roche" alt="La Roche-Posay">
+        <div class="descricao">
+            <p>La Roche-Posay Anthelios - Textura leve e proteção duradoura.</p>
+            <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+    <div class="produto-comparado">
+        <img src="link-imagem-biore" alt="Bioré UV Aqua Rich">
+        <div class="descricao">
+            <p>Bioré UV Aqua Rich - Fórmula japonesa com acabamento seco.</p>
+            <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+</div>
+
+<div class="produto">
+    <h2>Bioré UV Aqua Rich</h2>
+    <p>O protetor solar Bioré UV Aqua Rich possui textura leve, rápida absorção e alta resistência à água.</p>
+</div>
+
+<div class="container-comparacao">
+    <h3>Quais são os melhores protetores solares?</h3>
+    <div class="produto-comparado">
+        <img src="link-imagem-biore" alt="Bioré UV Aqua Rich">
+        <div class="descricao">
+            <p>Bioré UV Aqua Rich - Toque seco e resistente à água.</p>
+            <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+    <div class="produto-comparado">
+        <img src="link-imagem-la-roche" alt="La Roche-Posay">
+        <div class="descricao">
+            <p>La Roche-Posay Anthelios - Proteção duradoura e sem oleosidade.</p>
+            <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+    <div class="produto-comparado">
+        <img src="link-imagem-nivea" alt="Nivea Sun FPS 50">
+        <div class="descricao">
+            <p>Nívea Sun FPS 50 - Hidratação profunda com proteção UV.</p>
+            <a href="#" class="botao">Comprar</a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
