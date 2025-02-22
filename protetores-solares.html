@@ -1,96 +1,76 @@
-import Link from "next/link";
-
-export default function Navbar() {
-  return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/">
-          <span className="text-white text-lg font-bold">Meu Site</span>
-        </Link>
-        <div className="space-x-4">
-          <Link href="/sobre" className="text-white hover:underline">Sobre</Link>
-          <Link href="/produtos" className="text-white hover:underline">Produtos</Link>
-          <Link href="/contato" className="text-white hover:underline">Contato</Link>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
-export function Footer() {
-  return (
-    <footer className="bg-gray-800 text-white text-center p-4 mt-8">
-      <p>&copy; {new Date().getFullYear()} Meu Site. Todos os direitos reservados.</p>
-    </footer>
-  );
-}
-
-export default function ComparacaoProtetores() {
-  return (
-    <div>
-      <Navbar />
-      <main className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Quais são os melhores protetores solares?</h1>
-        
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold">Nívea</h2>
-          <p>Descrição sobre o protetor solar Nívea...</p>
-        </section>
-
-        <div className="border p-4 rounded-md shadow-md">
-          <h3 className="text-lg font-semibold mb-2">Comparação de preços</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="border p-2 text-center">
-              <img src="/nivea.jpg" alt="Nívea" className="mx-auto mb-2" />
-              <p className="font-semibold">Nívea</p>
-              <p>Descrição curta...</p>
-              <Link href="#" className="bg-blue-500 text-white p-2 rounded block mt-2">Comprar</Link>
-            </div>
-            <div className="border p-2 text-center">
-              <img src="/la-roche.jpg" alt="La Roche" className="mx-auto mb-2" />
-              <p className="font-semibold">La Roche-Posay</p>
-              <p>Descrição curta...</p>
-              <Link href="#" className="bg-blue-500 text-white p-2 rounded block mt-2">Comprar</Link>
-            </div>
-            <div className="border p-2 text-center">
-              <img src="/biore.jpg" alt="Bioré" className="mx-auto mb-2" />
-              <p className="font-semibold">Bioré</p>
-              <p>Descrição curta...</p>
-              <Link href="#" className="bg-blue-500 text-white p-2 rounded block mt-2">Comprar</Link>
-            </div>
-          </div>
-        </div>
-        
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold">Bioré</h2>
-          <p>Descrição sobre o protetor solar Bioré...</p>
-        </section>
-
-        <div className="border p-4 rounded-md shadow-md mt-4">
-          <h3 className="text-lg font-semibold mb-2">Comparação de preços</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="border p-2 text-center">
-              <img src="/biore.jpg" alt="Bioré" className="mx-auto mb-2" />
-              <p className="font-semibold">Bioré</p>
-              <p>Descrição curta...</p>
-              <Link href="#" className="bg-blue-500 text-white p-2 rounded block mt-2">Comprar</Link>
-            </div>
-            <div className="border p-2 text-center">
-              <img src="/isdin.jpg" alt="Isdin" className="mx-auto mb-2" />
-              <p className="font-semibold">Isdin</p>
-              <p>Descrição curta...</p>
-              <Link href="#" className="bg-blue-500 text-white p-2 rounded block mt-2">Comprar</Link>
-            </div>
-            <div className="border p-2 text-center">
-              <img src="/episol.jpg" alt="Episol" className="mx-auto mb-2" />
-              <p className="font-semibold">Episol</p>
-              <p>Descrição curta...</p>
-              <Link href="#" className="bg-blue-500 text-white p-2 rounded block mt-2">Comprar</Link>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Protetores Solares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .produto {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .produto img {
+            max-width: 100px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Início</a>
+        <a href="#">Comparações</a>
+        <a href="#">Contato</a>
     </div>
-  );
-}
+    
+    <div class="container">
+        <div class="produto">
+            <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
+            <img src="nivea-sun.jpg" alt="Nívea Sun Protect & Hidrata FPS 50">
+            <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Comparação de Produtos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
