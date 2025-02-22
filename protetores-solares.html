@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="pt-BR">
+
+<!DOCTYPE html>
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Protetores Solares</title>
+    <title>Protetores Solares</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -10,65 +12,49 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            padding: 15px;
-            text-align: center;
-        }
-        .navbar a {
+        .header {
+            background-color: #007bff;
             color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
             background: white;
+            padding: 20px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .produto {
             border-bottom: 1px solid #ddd;
             padding: 15px 0;
         }
-        .produto img {
-            max-width: 100px;
-            display: block;
-            margin-bottom: 10px;
+        .produto:last-child {
+            border-bottom: none;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+        .produto h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        .produto p {
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Início</a>
-        <a href="#">Comparações</a>
-        <a href="#">Contato</a>
-    </div><div class="container">
-    <div class="produto">
-        <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
-        <img src="nivea-sun.jpg" alt="Nívea Sun Protect & Hidrata FPS 50">
-        <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+    <div class="header">Protetores Solares - Comparação de Preços</div>
+    <div class="container">
+        <div class="produto">
+            <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
+            <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+        </div>
+        <div class="produto">
+            <h2>La Roche-Posay Anthelios XL FPS 60</h2>
+            <p>Proteção avançada contra raios solares, indicado para peles sensíveis.</p>
+        </div>
     </div>
-</div>
-
-<footer>
-    <p>&copy; 2025 Comparação de Produtos. Todos os direitos reservados.</p>
-</footer>
-
 </body>
 </html>
