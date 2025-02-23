@@ -86,3 +86,68 @@ h1 {
 .ver-todos-container a:hover {
     text-decoration: underline;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove margens padrão do body */
+    padding: 0; /* Remove paddings padrão do body */
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px; /* Adiciona padding ao container para melhor visualização */
+}
+
+.logos-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0; /* Adiciona padding vertical para melhor espaçamento */
+}
+
+.logo, .ver-todos-btn {
+    margin: 10px; /* Reduz a margem para melhor espaçamento em telas menores */
+    text-align: center;
+    display: inline-block;
+    flex-shrink: 0; /* Impede que os itens encolham */
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.ver-todos-btn button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ver-todos-btn button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .logo, .ver-todos-btn {
+        margin: 5px; /* Reduz ainda mais a margem em telas muito pequenas */
+    }
+
+    .logo img, .ver-todos-btn button {
+        width: 60px; /* Reduz o tamanho dos logos e do botão */
+        height: 60px;
+    }
+}
+
