@@ -34,7 +34,7 @@ body {
   justify-content: center;
   width: 80px; /* Ajuste o tamanho do círculo conforme necessário */
   height: 80px; /* Ajuste o tamanho do círculo conforme necessário */
-  border-radius: 50%; /* Cria o círculo */
+  border-radius: 80%; /* Cria o círculo */
   overflow: hidden; /* Garante que a imagem não saia do círculo */
 }
 
