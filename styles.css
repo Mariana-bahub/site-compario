@@ -43,3 +43,20 @@ body {
   height: auto;
   object-fit: contain; /* Ajusta a imagem para caber dentro do círculo */
 }
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
