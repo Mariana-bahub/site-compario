@@ -63,3 +63,26 @@ body {
 .logos-container {
   margin-top: 20px; /* Ajuste o valor da margem conforme necessário */
 }
+.container {
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 20px; /* Adiciona margem abaixo da seção */
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
