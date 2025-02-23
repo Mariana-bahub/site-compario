@@ -158,16 +158,16 @@
             font-family: sans-serif;
         }
 
-        .logos {
+        .logos-container { /* Adiciona um container para os logos e o botão */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            overflow-x: auto; /* Adiciona barra de rolagem horizontal */
+            white-space: nowrap; /* Impede que os itens quebrem para a próxima linha */
         }
 
-        .logo, .ver-todos-btn { /* Adiciona .ver-todos-btn aqui */
+        .logo, .ver-todos-btn {
             margin: 20px;
             text-align: center;
+            display: inline-block; /* Permite que os itens sejam dispostos horizontalmente */
         }
 
         .logo img {
@@ -177,59 +177,51 @@
             object-fit: contain;
         }
 
-        .ver-todos-btn button { /* Estilos para o botão */
+        .ver-todos-btn button {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             border: none;
-            background-color: #007bff; /* Cor de fundo do botão */
-            color: white; /* Cor do texto do botão */
+            background-color: #007bff;
+            color: white;
             font-size: 14px;
             cursor: pointer;
         }
 
         .ver-todos-btn button:hover {
-            background-color: #0056b3; /* Cor de fundo do botão no hover */
-        }
-
-        @media (max-width: 768px) {
-            .logos {
-                flex-direction: column;
-            }
-
-            .logo, .ver-todos-btn { /* Adiciona .ver-todos-btn aqui */
-                margin: 10px;
-            }
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Comparação de preços e cashback é no Zoom!</h1>
-        <div class="logos">
-            <div class="logo">
-                <img src="images/logos/casasbahia.png" alt="Casas Bahia">
-                <p>Até 17%</p>
+        <div class="logos-container">
+            <div class="logos">
+                <div class="logo">
+                    <img src="images/logos/casasbahia.png" alt="Casas Bahia">
+                    <p>Até 17%</p>
+                </div>
+                <div class="logo">
+                    <img src="images/logos/ponto.png" alt="Ponto">
+                    <p>Até 20%</p>
+                </div>
+                <div class="logo">
+                    <img src="images/logos/extra.png" alt="Extra">
+                    <p>Até 5%</p>
+                </div>
+                <div class="logo">
+                    <img src="images/logos/amazon.png" alt="Amazon">
+                    <p>Até 3%</p>
+                </div>
+                <div class="logo">
+                    <img src="images/logos/candide.png" alt="Candide">
+                    <p>10%</p>
+                </div>
             </div>
-            <div class="logo">
-                <img src="images/logos/ponto.png" alt="Ponto">
-                <p>Até 20%</p>
+            <div class="ver-todos-btn">
+                <button>Ver Todos</button>
             </div>
-            <div class="logo">
-                <img src="images/logos/extra.png" alt="Extra">
-                <p>Até 5%</p>
-            </div>
-            <div class="logo">
-                <img src="images/logos/amazon.png" alt="Amazon">
-                <p>Até 3%</p>
-            </div>
-            <div class="logo">
-                <img src="images/logos/candide.png" alt="Candide">
-                <p>10%</p>
-            </div>
-        </div>
-        <div class="ver-todos-btn">
-            <button>Ver Todos</button>
         </div>
     </div>
 </body>
