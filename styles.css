@@ -43,9 +43,11 @@ body {
   height: auto;
   object-fit: contain; /* Ajusta a imagem para caber dentro do círculo */
 }
-h1 {
+H1 {
   margin-top: 20px; /* Adiciona margem acima do título */
   margin-bottom: 20px; /* Mantém a margem abaixo do título */
+  /* Outras regras... */
+  text-align: center;
 }
 
 .container {
