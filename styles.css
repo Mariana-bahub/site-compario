@@ -60,3 +60,6 @@ body {
   border-radius: 50%;
   object-fit: contain;
 }
+.logos-container {
+  margin-top: 20px; /* Ajuste o valor da margem conforme necessário */
+}
