@@ -32,8 +32,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 150px; /* Ajuste o tamanho do círculo conforme necessário */
-  height: 90px; /* Ajuste o tamanho do círculo conforme necessário */
+  width: 100px; /* Ajuste o tamanho do círculo conforme necessário */
+  height: 120px; /* Ajuste o tamanho do círculo conforme necessário */
   border-radius: 80%; /* Cria o círculo */
   overflow: hidden; /* Garante que a imagem não saia do círculo */
 }
