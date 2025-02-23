@@ -28,3 +28,18 @@ body {
 .produto-card a:hover {
     background: #0056b3;
 }
+.logo-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Ajuste o tamanho do círculo conforme necessário */
+  height: 80px; /* Ajuste o tamanho do círculo conforme necessário */
+  border-radius: 50%; /* Cria o círculo */
+  overflow: hidden; /* Garante que a imagem não saia do círculo */
+}
+
+.logo-circle img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ajusta a imagem para caber dentro do círculo */
+}
