@@ -43,6 +43,16 @@ body {
   height: auto;
   object-fit: contain; /* Ajusta a imagem para caber dentro do círculo */
 }
+h1 {
+  margin-top: 20px; /* Adiciona margem acima do título */
+  margin-bottom: 20px; /* Mantém a margem abaixo do título */
+}
+
+.container {
+  text-align: center;
+  font-family: sans-serif;
+}
+
 .logos {
   display: flex;
   justify-content: center;
