@@ -121,3 +121,11 @@ footer {
     text-align: center; /* Centralizar conteúdo */
     margin-top: 1.5rem; /* Espaço acima do footer */
 }
+footer a {
+    color: white; /* Define a cor padrão como branca */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+footer a:hover {
+    color: #ffcc00; /* Altera a cor ao passar o mouse (amarelo) */
+}
