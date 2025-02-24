@@ -114,3 +114,42 @@ body {
     font-size: 12px;
   }
 }
+.rodape {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu-rodape ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-rodape li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.menu-rodape a {
+  text-decoration: none;
+  color: #333;
+}
+
+.informacoes-contato,
+.redes-sociais,
+.newsletter,
+.links-uteis,
+.copyright {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Estilos para ícones de redes sociais */
+.icone-facebook::before { content: "f"; /* Ícone do Facebook */ }
+.icone-twitter::before { content: "t"; /* Ícone do Twitter */ }
+.icone-instagram::before { content: "i"; /* Ícone do Instagram */ }
+
+/* ... Outros estilos ... */
