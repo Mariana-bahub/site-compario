@@ -1,75 +1,102 @@
-// Fun��o para buscar pre�os da Amazon
+// Função para buscar preços da Amazon
 async function buscarPrecoAmazon(asin) {
-    let accessKey = "SUA_ACCESS_KEY"; // Substitua pela sua chave
-    let afiliadoId = "SEU_ID_AFILIADO";
+    const accessKey = process.env.AMAZON_ACCESS_KEY; // Acessa a variável de ambiente
+    const afiliadoId = process.env.AMAZON_AFILIADO_ID; // Acessa a variável de ambiente
+
+    if (!accessKey || !afiliadoId) {
+        console.error("Chaves de API da Amazon não configuradas.");
+        return null;
+    }
     
-    let url = `https://api.amazon.com/produtos?asin=${asin}&access_key=${accessKey}`;
+    const url = https://api.amazon.com/produtos?asin=${asin}&access_key=${accessKey};
 
     try {
-        let resposta = await fetch(url);
-        let dados = await resposta.json();
+        const resposta = await fetch(url);
+        if (!resposta.ok) {
+            throw new Error(Erro na API da Amazon: ${resposta.status});
+        }
+        const dados = await resposta.json();
         return {
             preco: dados.preco,
-            linkAfiliado: `https://www.amazon.com/dp/${asin}?tag=${afiliadoId}`
+            linkAfiliado: https://www.amazon.com/dp/${asin}?tag=${afiliadoId}
         };
     } catch (erro) {
-        console.error("Erro ao buscar pre�o da Amazon", erro);
+        console.error("Erro ao buscar preço da Amazon", erro);
         return null;
     }
 }
 
-// Fun��o para buscar pre�os do AliExpress via Admitad
+// Função para buscar preços do AliExpress via Admitad
 async function buscarPrecoAliExpress(produtoId) {
-    let admitadToken = "SEU_ACCESS_TOKEN"; // Gere no Admitad API
-    let afiliadoId = "SEU_ID_AFILIADO";
+    const admitadToken = process.env.ADMITAD_TOKEN; // Acessa a variável de ambiente
+    const afiliadoId = process.env.ALIEXPRESS_AFILIADO_ID; // Acessa a variável de ambiente
+
+    if (!admitadToken || !afiliadoId) {
+        console.error("Tokens da Admitad/AliExpress não configurados.");
+        return null;
+    }
     
-    let url = `https://api.admitad.com/aliexpress/products/${produtoId}?token=${admitadToken}`;
+    const url = https://api.admitad.com/aliexpress/products/${produtoId}?token=${admitadToken};
 
     try {
-        let resposta = await fetch(url);
-        let dados = await resposta.json();
+        const resposta = await fetch(url);
+        if (!resposta.ok) {
+            throw new Error(Erro na API da Admitad/AliExpress: ${resposta.status});
+        }
+        const dados = await resposta.json();
         return {
             preco: dados.preco,
-            linkAfiliado: `https://aliexpress.com/item/${produtoId}?aff=${afiliadoId}`
+            linkAfiliado: https://aliexpress.com/item/${produtoId}?aff=${afiliadoId}
         };
     } catch (erro) {
-        console.error("Erro ao buscar pre�o do AliExpress", erro);
+        console.error("Erro ao buscar preço do AliExpress", erro);
         return null;
     }
 }
 
-// Fun��o para buscar pre�os na Shopee
+// Função para buscar preços na Shopee
 async function buscarPrecoShopee(itemId) {
-    let shopeeToken = "SEU_ACCESS_TOKEN"; // Token gerado no Shopee Partners
+    const shopeeToken = process.env.SHOPEE_TOKEN; // Acessa a variável de ambiente
+
+    if (!shopeeToken) {
+        console.error("Token da Shopee não configurado.");
+        return null;
+    }
     
-    let url = `https://partner.shopeemobile.com/api/v2/product/get?item_id=${itemId}&access_token=${shopeeToken}`;
+    const url = https://partner.shopeemobile.com/api/v2/product/get?item_id=${itemId}&access_token=${shopeeToken};
 
     try {
-        let resposta = await fetch(url);
-        let dados = await resposta.json();
+        const resposta = await fetch(url);
+        if (!resposta.ok) {
+            throw new Error(Erro na API da Shopee: ${resposta.status});
+        }
+        const dados = await resposta.json();
         return {
             preco: dados.preco,
-            linkAfiliado: `https://shopee.com.br/product/${itemId}`
+            linkAfiliado: https://shopee.com.br/product/${itemId}
         };
     } catch (erro) {
-        console.error("Erro ao buscar pre�o na Shopee", erro);
+        console.error("Erro ao buscar preço na Shopee", erro);
         return null;
     }
 }
 
-// Fun��o para buscar pre�os no Mercado Livre
+// Função para buscar preços no Mercado Livre
 async function buscarPrecoMercadoLivre(produtoId) {
-    let url = `https://api.mercadolibre.com/items/${produtoId}`;
+    const url = https://api.mercadolibre.com/items/${produtoId};
 
     try {
-        let resposta = await fetch(url);
-        let dados = await resposta.json();
+        const resposta = await fetch(url);
+        if (!resposta.ok) {
+            throw new Error(Erro na API do Mercado Livre: ${resposta.status});
+        }
+        const dados = await resposta.json();
         return {
             preco: dados.price,
-            linkAfiliado: `https://produto.mercadolivre.com.br/${produtoId}`
+            linkAfiliado: https://produto.mercadolivre.com.br/${produtoId}
         };
     } catch (erro) {
-        console.error("Erro ao buscar pre�o no Mercado Livre", erro);
+        console.error("Erro ao buscar preço no Mercado Livre", erro);
         return null;
     }
 }
