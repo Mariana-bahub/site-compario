@@ -81,9 +81,16 @@ body {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 50%;
+  border-radius: 50%; /* Garante o formato circular */
   cursor: pointer;
   font-size: 14px;
   min-width: 80px;
   flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .empresas-lista {
+    overflow-x: auto; /* Permite rolagem em telas menores */
+  }
 }
