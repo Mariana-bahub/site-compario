@@ -121,11 +121,25 @@ footer {
     text-align: center; /* Centralizar conteúdo */
     margin-top: 1.5rem; /* Espaço acima do footer */
 }
+/* Cor dos ícones de redes sociais */
 footer a {
-    color: white; /* Define a cor padrão como branca */
+    color: white; /* Cor dos ícones */
     text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 footer a:hover {
     color: #ffcc00; /* Altera a cor ao passar o mouse (amarelo) */
+}
+
+/* Cor do menu (Navbar) */
+.navbar {
+    background-color: #ff6600; /* Cor de fundo do menu */
+}
+
+.navbar a {
+    color: white; /* Cor do texto do menu */
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse sobre o texto do menu */
 }
