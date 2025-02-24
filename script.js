@@ -100,43 +100,69 @@ async function buscarPrecoMercadoLivre(produtoId) {
         return null;
     }
 }
-const listaContainer = document.querySelector('.empresas-lista-container');
-const lista = document.querySelector('.empresas-lista');
-const larguraItem = document.querySelector('.empresa').offsetWidth + 20;
-let indiceAtual = 0;
-const totalItens = document.querySelectorAll('.empresa').length + 1; // Inclui o botão
-const itensPorPagina = 3;
-
-function atualizarIndicadores() {
-  indicadores.forEach((indicador, indice) => {
-    indicador.classList.remove('ativo');
-    if (indice === indiceAtual) {
-      indicador.classList.add('ativo');
-    }
-  });
+.ofertas-empresas {
+  text-align: center;
+  margin: 20px 0;
 }
 
-// Cria os indicadores dinamicamente
-for (let i = 0; i < Math.ceil(totalItens / itensPorPagina); i++) {
-  const indicador = document.createElement('span');
-  indicador.classList.add('indicador');
-  document.querySelector('.indicadores').appendChild(indicador);
+.empresas-lista-container {
+  overflow-x: hidden;
+  position: relative;
 }
 
-const indicadores = document.querySelectorAll('.indicador');
+.empresas-lista {
+  display: flex;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
 
-indicadores.forEach((indicador, indice) => {
-  indicador.addEventListener('click', () => {
-    indiceAtual = indice;
-    lista.style.transform = translateX(-${indiceAtual * larguraItem * itensPorPagina}px);
-    atualizarIndicadores();
-  });
-});
+.empresa {
+  margin: 0 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
 
-atualizarIndicadores();
+.empresa img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
 
-const verTodosBtn = document.querySelector('.ver-todos');
+.indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
-verTodosBtn.addEventListener('click', () => {
-  window.location.href = '/todas-ofertas';
-});
+.indicador {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.indicador.ativo {
+  background-color: #007bff;
+}
+
+.ver-todos {
+  margin: 0 10px;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Garante o formato circular */
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .empresas-lista {
+    overflow-x: auto; /* Permite rolagem em telas menores */
+  }
+}
