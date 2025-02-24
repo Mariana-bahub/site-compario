@@ -28,3 +28,41 @@ body {
 .produto-card a:hover {
     background: #0056b3;
 }
+.ofertas-empresas {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.empresas-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.empresa {
+  margin: 10px;
+  text-align: center;
+}
+
+.empresa img {
+  width: 80px; /* Ajuste o tamanho das logos */
+  height: 80px;
+  object-fit: contain;
+}
+
+.ver-todos {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .empresas-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+}
