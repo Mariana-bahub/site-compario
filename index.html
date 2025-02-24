@@ -127,6 +127,86 @@
                 </a>
             </div>
         </div>
+          <div style="margin-top: 20px;">
+          </div>
+        <!DOCTYPE html><html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas Afiliadas</title>
+    <style>
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            padding: 10px;
+            white-space: nowrap;
+        }
+        .logo-item {
+            flex: 0 0 auto;
+            width: 80px;
+            text-align: center;
+            scroll-snap-align: start;
+        }
+        .logo-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .hidden-logos {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .logo-item p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .show-all-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="logo-item"><img src="logo1.jpg" alt="Empresa 1"><p>10% de desconto</p></div>
+        <div class="logo-item"><img src="logo2.jpg" alt="Empresa 2"><p>20% de desconto</p></div>
+        <div class="logo-item"><img src="logo3.jpg" alt="Empresa 3"><p>15% de desconto</p></div>
+        <div class="logo-item"><img src="logo4.jpg" alt="Empresa 4"><p>25% de desconto</p></div>
+    </div><button class="show-all-btn" onclick="toggleLogos()">Ver Todos</button>
+
+<div class="hidden-logos">
+    <div class="logo-item"><img src="logo5.jpg" alt="Empresa 5"><p>30% de desconto</p></div>
+    <div class="logo-item"><img src="logo6.jpg" alt="Empresa 6"><p>5% de desconto</p></div>
+    <div class="logo-item"><img src="logo7.jpg" alt="Empresa 7"><p>12% de desconto</p></div>
+    <div class="logo-item"><img src="logo8.jpg" alt="Empresa 8"><p>18% de desconto</p></div>
+</div>
+
+<script>
+    function toggleLogos() {
+        const hiddenLogos = document.querySelector('.hidden-logos');
+        if (hiddenLogos.style.display === 'none' || hiddenLogos.style.display === '') {
+            hiddenLogos.style.display = 'flex';
+        } else {
+            hiddenLogos.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+        </html>
+        <div style="margin-top: 20px;">
+     </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselOfertas" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
