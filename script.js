@@ -100,3 +100,43 @@ async function buscarPrecoMercadoLivre(produtoId) {
         return null;
     }
 }
+const listaContainer = document.querySelector('.empresas-lista-container');
+const lista = document.querySelector('.empresas-lista');
+const larguraItem = document.querySelector('.empresa').offsetWidth + 20;
+let indiceAtual = 0;
+const totalItens = document.querySelectorAll('.empresa').length + 1; // Inclui o botão
+const itensPorPagina = 3;
+
+function atualizarIndicadores() {
+  indicadores.forEach((indicador, indice) => {
+    indicador.classList.remove('ativo');
+    if (indice === indiceAtual) {
+      indicador.classList.add('ativo');
+    }
+  });
+}
+
+// Cria os indicadores dinamicamente
+for (let i = 0; i < Math.ceil(totalItens / itensPorPagina); i++) {
+  const indicador = document.createElement('span');
+  indicador.classList.add('indicador');
+  document.querySelector('.indicadores').appendChild(indicador);
+}
+
+const indicadores = document.querySelectorAll('.indicador');
+
+indicadores.forEach((indicador, indice) => {
+  indicador.addEventListener('click', () => {
+    indiceAtual = indice;
+    lista.style.transform = translateX(-${indiceAtual * larguraItem * itensPorPagina}px);
+    atualizarIndicadores();
+  });
+});
+
+atualizarIndicadores();
+
+const verTodosBtn = document.querySelector('.ver-todos');
+
+verTodosBtn.addEventListener('click', () => {
+  window.location.href = '/todas-ofertas';
+});
