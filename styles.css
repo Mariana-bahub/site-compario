@@ -33,32 +33,57 @@ body {
   margin: 20px 0;
 }
 
+.empresas-lista-container {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .empresas-lista {
   display: flex;
-  overflow-x: auto; /* Adiciona rolagem horizontal */
-  white-space: nowrap; /* Impede que as logos quebrem para a próxima linha */
-  padding: 10px;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
 }
 
 .empresa {
-  margin: 0 10px; /* Ajuste o espaçamento entre as logos */
+  margin: 0 10px;
   text-align: center;
-  flex-shrink: 0; /* Impede que as logos encolham */
+  flex-shrink: 0;
 }
 
 .empresa img {
-  width: 80px; /* Ajuste o tamanho das logos */
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
-.ver-todos {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+.indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicador {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 4px;
   cursor: pointer;
 }
 
-/* Remova a responsividade anterior */
+.indicador.ativo {
+  background-color: #007bff;
+}
+
+.ver-todos {
+  margin: 0 10px;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 80px;
+  flex-shrink: 0;
+}
