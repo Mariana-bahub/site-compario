@@ -143,22 +143,17 @@ footer a:hover {
 .navbar a:hover {
     color: #ffcc00; /* Cor ao passar o mouse sobre o texto do menu */
 }
-/* Tamanho da logo na navbar */
 .navbar-logo {
-  max-width: 1500%;  /* Para que a logo se ajuste bem */
-  height: auto;     /* Mantém a proporção da logo */
+  width: 40vw; /* Define a largura como 40% da tela */
+  max-width: 350px; /* Evita que fique grande demais */
+  min-width: 120px; /* Evita que fique muito pequena */
+  height: auto; /* Mantém a proporção correta */
+  display: block; /* Evita espaços extras ao redor da imagem */
 }
 
-/* Ajuste da logo para telas pequenas */
-@media (max-width: 1500px) {
+/* Ajuste para telas menores */
+@media (max-width: 500px) {
   .navbar-logo {
-    width: 2000px; /* Tamanho reduzido da logo em telas menores */
-  }
-}
-
-/* Ajuste para telas ainda menores, como celulares */
-@media (max-width: 1550px) {
-  .navbar-logo {
-    width: 2500px; /* Tamanho ainda menor para telas muito pequenas */
+    width: 45vw; /* Aumenta um pouco em telas pequenas */
   }
 }
