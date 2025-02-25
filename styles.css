@@ -143,20 +143,3 @@ footer a:hover {
 .navbar a:hover {
     color: #ffcc00; /* Cor ao passar o mouse sobre o texto do menu */
 }
-.navbar-logo {
-  width: 15vw; /* A largura será 20% da largura da tela */
-  max-width: 60px; /* Define um tamanho máximo para evitar que fique grande demais */
-  min-width: 50px; /* Define um tamanho mínimo para que não fique muito pequena */
-  height: auto; /* Mantém a proporção correta da imagem */
-}
-
-/* Ajustes para telas muito pequenas (celulares) */
-@media (max-width: 40px) {
-  .navbar-logo {
-    width: 10vw; /* Aumenta um pouco a proporção para melhor visualização */
-  }
-}
-.navbar-logo {
-  max-width: 15px !important;
-  height: auto !important;
-}
