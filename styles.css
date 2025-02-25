@@ -145,15 +145,15 @@ footer a:hover {
 }
 .navbar-logo {
   width: 400vw; /* Define a largura como 400% da tela */
-  max-width: 800px; /* Evita que fique grande demais */
-  min-width: 490px; /* Evita que fique muito pequena */
+  max-width: 100px; /* Evita que fique grande demais */
+  min-width: 125px; /* Evita que fique muito pequena */
   height: auto; /* Mantém a proporção correta */
   display: block; /* Evita espaços extras ao redor da imagem */
 }
 
 /* Ajuste para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 250px) {
   .navbar-logo {
-    width: 550vw; /* Aumenta um pouco em telas pequenas */
+    width: 150vw; /* Aumenta um pouco em telas pequenas */
   }
 }
