@@ -150,14 +150,14 @@ footer a:hover {
 }
 
 /* Ajuste da logo para telas pequenas */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .navbar-logo {
-    width: 120px; /* Tamanho reduzido da logo em telas menores */
+    width: 500px; /* Tamanho reduzido da logo em telas menores */
   }
 }
 
 /* Ajuste para telas ainda menores, como celulares */
-@media (max-width: 480px) {
+@media (max-width: 950px) {
   .navbar-logo {
     width: 800px; /* Tamanho ainda menor para telas muito pequenas */
   }
