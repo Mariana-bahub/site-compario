@@ -143,3 +143,22 @@ footer a:hover {
 .navbar a:hover {
     color: #ffcc00; /* Cor ao passar o mouse sobre o texto do menu */
 }
+/* Tamanho da logo na navbar */
+.navbar-logo {
+  max-width: 100%;  /* Para que a logo se ajuste bem */
+  height: auto;     /* Mantém a proporção da logo */
+}
+
+/* Ajuste da logo para telas pequenas */
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 120px; /* Tamanho reduzido da logo em telas menores */
+  }
+}
+
+/* Ajuste para telas ainda menores, como celulares */
+@media (max-width: 480px) {
+  .navbar-logo {
+    width: 100px; /* Tamanho ainda menor para telas muito pequenas */
+  }
+}
