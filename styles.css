@@ -145,7 +145,7 @@ footer a:hover {
 }
 /* Tamanho da logo na navbar */
 .navbar-logo {
-  max-width: 200%;  /* Para que a logo se ajuste bem */
+  max-width: 400%;  /* Para que a logo se ajuste bem */
   height: auto;     /* Mantém a proporção da logo */
 }
 
