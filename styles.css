@@ -188,6 +188,11 @@ footer a:hover {
     .search-bar {
         width: 100%;
     }
+
+    .navbar-toggler {
+        margin-bottom: 10px;
+        order: -1;
+    }
 }
 
 .navbar-brand img {
