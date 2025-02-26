@@ -143,3 +143,58 @@ footer a:hover {
 .navbar a:hover {
     color: #ffcc00; /* Cor ao passar o mouse sobre o texto do menu */
 }
+/* Estilos para a barra de pesquisa */
+.navbar form.d-flex {
+    width: 100%; /* Largura total no celular */
+    margin-top: 10px; /* Espaço extra no topo no celular */
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Cor de fundo similar à imagem */
+    border-radius: 25px; /* Deixa as bordas arredondadas */
+    padding: 8px 15px; /* Espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.navbar form.d-flex input[type="search"] {
+    flex-grow: 1; /* Faz o input ocupar o máximo de espaço possível */
+    border: none;
+    background-color: transparent; /* Fundo transparente */
+    padding: 5px;
+    font-size: 16px;
+    outline: none; /* Remove a borda ao focar */
+}
+
+.navbar form.d-flex button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar form.d-flex button i {
+    font-size: 20px; /* Ajuste o tamanho da lupa */
+}
+
+/* Media query para dispositivos móveis */
+@media (min-width: 992px) { /* Ajuste para telas maiores */
+    .navbar form.d-flex {
+        width: auto; /* Largura padrão em telas maiores */
+        margin-top: 0; /* Remove o espaço extra no topo */
+    }
+}
+
+/* Logo responsiva */
+.navbar-brand img {
+    max-width: 100px; /* Ajuste o tamanho máximo conforme necessário */
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Cor da navbar personalizável */
+:root {
+    --navbar-color: #800080; /* Cor roxa similar à imagem */
+}
+
+.navbar {
+    background-color: var(--navbar-color) !important; /* !important para garantir a prioridade */
+}
