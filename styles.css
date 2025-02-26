@@ -232,3 +232,6 @@ footer a:hover {
 .navbar-brand {
     overflow: hidden;
 }
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
