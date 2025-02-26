@@ -143,58 +143,64 @@ footer a:hover {
 .navbar a:hover {
     color: #ffcc00; /* Cor ao passar o mouse sobre o texto do menu */
 }
-/* Estilos para a barra de pesquisa */
-.navbar form.d-flex {
-    width: 100%; /* Largura total no celular */
-    margin-top: 10px; /* Espaço extra no topo no celular */
+.search-bar-container {
     display: flex;
     align-items: center;
-    background-color: #f0f0f0; /* Cor de fundo similar à imagem */
-    border-radius: 25px; /* Deixa as bordas arredondadas */
-    padding: 8px 15px; /* Espaçamento interno */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    margin-left: 20px;
 }
 
-.navbar form.d-flex input[type="search"] {
-    flex-grow: 1; /* Faz o input ocupar o máximo de espaço possível */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 8px 15px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
     border: none;
-    background-color: transparent; /* Fundo transparente */
+    background-color: transparent;
     padding: 5px;
     font-size: 16px;
-    outline: none; /* Remove a borda ao focar */
+    outline: none;
 }
 
-.navbar form.d-flex button {
+.search-bar button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.navbar form.d-flex button i {
-    font-size: 20px; /* Ajuste o tamanho da lupa */
+.search-bar button i {
+    font-size: 20px;
 }
 
-/* Media query para dispositivos móveis */
-@media (min-width: 992px) { /* Ajuste para telas maiores */
-    .navbar form.d-flex {
-        width: auto; /* Largura padrão em telas maiores */
-        margin-top: 0; /* Remove o espaço extra no topo */
+@media (max-width: 991px) {
+    .search-bar-container {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
     }
 }
 
-/* Logo responsiva */
 .navbar-brand img {
-    max-width: 100px; /* Ajuste o tamanho máximo conforme necessário */
+    max-width: 100px;
     height: auto;
     display: block;
     object-fit: contain;
 }
 
-/* Cor da navbar personalizável */
 :root {
-    --navbar-color: #800080; /* Cor roxa similar à imagem */
+    --navbar-color: #800080;
 }
 
 .navbar {
-    background-color: var(--navbar-color) !important; /* !important para garantir a prioridade */
+    background-color: var(--navbar-color) !important;
 }
