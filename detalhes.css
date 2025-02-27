@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.buy-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Garante que o botão ocupe toda a largura */
+}
+
+/* Estilos para informações adicionais (cashback, frete, etc.) */
+.cashback, .shipping, .final-price {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.cashback-details, .shipping-details, .final-price-details {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Estrutura para exibir os produtos lado a lado em telas maiores */
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        width: 48%; /* Ajuste a largura conforme necessário */
+        margin-right: 1%;
+    }
+}
