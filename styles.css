@@ -235,3 +235,64 @@ footer a:hover {
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
 }
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+#produto-info {
+    padding: 20px;
+    text-align: center;
+}
+
+#precos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.preco-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+}
+
+.preco-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.preco-item h3 {
+    margin-top: 0;
+}
+
+.preco-item a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    #precos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preco-item {
+        width: 80%;
+    }
+}
