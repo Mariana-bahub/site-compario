@@ -1,11 +1,11 @@
 {
-    "categorias": ["EletrÙnicos", "Moda", "Turismo", "Casa & Jardim"],
+    "categorias": ["Eletr√¥nicos", "Moda", "Turismo", "Casa & Jardim"],
     "produtos": [
         {
             "id": 1,
             "nome": "Smartphone XYZ",
             "imagem": "imagens/smartphone.jpg",
-            "categoria": "EletrÙnicos",
+            "categoria": "Eletr√¥nicos",
             "preco": 2500,
             "historico": [2700, 2600, 2550]
         },
@@ -13,9 +13,33 @@
             "id": 2,
             "nome": "Notebook ABC",
             "imagem": "imagens/notebook.jpg",
-            "categoria": "EletrÙnicos",
+            "categoria": "Eletr√¥nicos",
             "preco": 4500,
             "historico": [4700, 4600, 4550]
         }
     ]
 }
+[
+  {
+    "nome": "Samsung Galaxy A14",
+    "descricao": "Celular com 128GB e c√¢mera tripla.",
+    "imagem": "img/samsung-a14.jpg",
+    "lojas": [
+      {
+        "nome": "Amazon",
+        "preco": "R$ 1.199,00",
+        "link": "https://amazon.com/samsung"
+      },
+      {
+        "nome": "Mercado Livre",
+        "preco": "R$ 1.179,99",
+        "link": "https://mercadolivre.com/samsung"
+      },
+      {
+        "nome": "Shopee",
+        "preco": "R$ 1.150,00",
+        "link": "https://shopee.com/samsung"
+      }
+    ]
+  }
+]
