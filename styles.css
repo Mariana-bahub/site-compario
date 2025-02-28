@@ -235,125 +235,146 @@ footer a:hover {
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
 }
-/* Reset CSS e Estilos Gerais */
-.comparacao-page * {
+body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.comparacao-page {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-/* Cabeçalho */
-.comparacao-page .top-header-comparacao {
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.product-info {
+    text-align: center;
 }
 
-.comparacao-page .top-header-comparacao .time-comparacao {
+.product-info img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.highlighted-price, .price-history, .lower-price-alert, .price-list {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.price {
+    font-size: 1.5em;
     font-weight: bold;
 }
 
-.comparacao-page .top-header-comparacao .actions-comparacao button {
-    margin-left: 10px;
-    padding: 8px 15px;
-    border: none;
+.installments {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.compare-button, .history-button, .alert-button, .go-to-store, .buy-button {
     background-color: #007bff;
     color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.favorite-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
-/* Conteúdo Principal */
-.comparacao-page .main-content-comparacao {
-    flex: 1;
-    padding: 20px;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
-.comparacao-page .product-details-comparacao {
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
     background-color: white;
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 20px;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
-.comparacao-page .product-image-comparacao {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+input:checked + .slider {
+    background-color: #2196F3;
 }
 
-.comparacao-page .price-comparison-comparacao {
-    background-color: white;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 8px;
-    padding: 20px;
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
 }
 
-.comparacao-page .price-list-comparacao {
-    display: flex;
-    flex-direction: column;
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
-.comparacao-page .price-item-comparacao {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    padding: 10px;
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.store-price {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.comparacao-page .store-logo-comparacao img {
-    max-width: 80px;
-    margin-right: 20px;
+.store-price:last-child {
+    border-bottom: none;
 }
 
-.comparacao-page .price-details-comparacao {
-    flex: 1;
+.cashback, .final-price {
+    font-size: 0.9em;
+    color: #444;
 }
 
-.comparacao-page .price-item-comparacao button {
-    margin-left: auto;
+.cashback-details, .final-price-details {
+    font-size: 0.8em;
+    color: #666;
 }
 
-/* Rodapé */
-.comparacao-page footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .comparacao-page .top-header-comparacao {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .comparacao-page .top-header-comparacao .actions-comparacao {
-        margin-top: 10px;
-    }
-
-    .comparacao-page .product-details-comparacao,
-    .comparacao-page .price-comparison-comparacao {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    .comparacao-page .store-logo-comparacao img {
-        max-width: 60px;
-        margin-right: 10px;
-    }
+.store-link {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
 }
