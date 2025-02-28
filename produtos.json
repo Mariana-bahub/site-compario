@@ -18,28 +18,3 @@
             "historico": [4700, 4600, 4550]
         }
     ]
-}
-[
-  {
-    "nome": "Samsung Galaxy A14",
-    "descricao": "Celular com 128GB e câmera tripla.",
-    "imagem": "https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/WhatsApp%20Image%202025-02-28%20at%2001.13.30.jpeg",
-    "lojas": [
-      {
-        "nome": "Amazon",
-        "preco": "R$ 1.199,00",
-        "link": "https://www.casasbahia.com.br/smartphone-samsung-galaxy-a05s-prata-128gb-6gb-ram-tela-infinita-de-6-7-processador-octa-core-camera-tripla-traseira-e-selfie-de-13mp/p/55065632?utm_campaign=DescontoEspecial&utm_medium=BuscaOrganica&utm_source=Google"
-      },
-      {
-        "nome": "Mercado Livre",
-        "preco": "R$ 1.179,99",
-        "link": "https://mercadolivre.com/samsung"
-      },
-      {
-        "nome": "Shopee",
-        "preco": "R$ 1.150,00",
-        "link": "https://shopee.com/samsung"
-      }
-    ]
-  }
-]
