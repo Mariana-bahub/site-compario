@@ -140,3 +140,34 @@ const verTodosBtn = document.querySelector('.ver-todos');
 verTodosBtn.addEventListener('click', () => {
   window.location.href = '/todas-ofertas';
 });
+async function carregarVitrine() {
+    const resposta = await fetch('produtos.json');
+    
+    if (!resposta.ok) {
+        console.error("Erro ao carregar o JSON:", resposta.status);
+        return;
+    }
+
+    const produtos = await resposta.json();
+
+    const vitrine = document.getElementById('vitrine');
+
+    produtos.forEach(produto => {
+        vitrine.innerHTML += `
+            <div class="produto-card card p-3">
+                <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
+                <div class="card-body">
+                    <h5 class="card-title">${produto.nome}</h5>
+                    <p class="card-text">R$ ${produto.preco}</p>
+                    <a href="#" class="btn btn-primary" onclick="compararProduto('${produto.nome}')">Comparar</a>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function compararProduto(nomeProduto) {
+    alert('Comparar o produto: ' + nomeProduto);
+}
+
+window.onload = carregarVitrine;
