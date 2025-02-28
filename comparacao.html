@@ -1,122 +1,93 @@
-/* Reset CSS e Estilos Gerais */
-.comparacao-page * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Preços - Produto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <span class="time">2:56 X</span>
+                </div>
+                <div class="col text-end">
+                    <button class="btn btn-outline-secondary btn-sm">Ver Histórico</button>
+                    <button class="btn btn-primary btn-sm">Criar Alerta</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-.comparacao-page {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <main class="container my-4">
+        <section class="product-details">
+            <h1>Comparação de Preços: <span id="product-name">Nome do Produto</span></h1>
+            <img src="imagem-do-produto.jpg" alt="Imagem do Produto" class="product-image">
+            <div class="product-info">
+                <h2>Detalhes do Produto</h2>
+                <p>Descrição detalhada do produto. Aqui você pode incluir informações, especificações e demais detalhes relevantes.</p>
+                <ul class="list-unstyled">
+                    <li>Especificação 1</li>
+                    <li>Especificação 2</li>
+                    <li>Especificação 3</li>
+                </ul>
+            </div>
+        </section>
 
-/* Cabeçalho */
-.comparacao-page .top-header-comparacao {
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        <section class="price-comparison">
+            <h2>Compare os preços:</h2>
+            <div class="price-list">
+                <div class="price-item">
+                    <div class="store-logo">
+                        <img src="logo-loja1.png" alt="Logo Loja 1">
+                    </div>
+                    <div class="price-details">
+                        <p>R$ 100,00 à vista</p>
+                        <p>Em até 12x</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm">Ir à loja</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-.comparacao-page .top-header-comparacao .time-comparacao {
-    font-weight: bold;
-}
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
+            <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
 
-.comparacao-page .top-header-comparacao .actions-comparacao button {
-    margin-left: 10px;
-    padding: 8px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
+            <form action="#" method="POST" class="mb-3">
+                <label for="email" class="form-label">Receba ofertas exclusivas no seu e-mail:</label>
+                <div class="row justify-content-center">
+                    <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                            <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
-/* Conteúdo Principal */
-.comparacao-page .main-content-comparacao {
-    flex: 1;
-    padding: 20px;
-}
+            <div class="mb-3">
+                <a href="#" class="me-3 text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="me-3 text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="me-3 text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
 
-.comparacao-page .product-details-comparacao {
-    background-color: white;
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 20px;
-}
+            <p>
+                <a href="#" class="me-3 text-white">Sobre</a>
+                <a href="#" class="me-3 text-white">Contato</a>
+                <a href="#" class="me-3 text-white">Política de Privacidade</a>
+                <a href="#" class="text-white">Termos de Uso</a>
+            </p>
+        </div>
+    </footer>
 
-.comparacao-page .product-image-comparacao {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.comparacao-page .price-comparison-comparacao {
-    background-color: white;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-.comparacao-page .price-list-comparacao {
-    display: flex;
-    flex-direction: column;
-}
-
-.comparacao-page .price-item-comparacao {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.comparacao-page .store-logo-comparacao img {
-    max-width: 80px;
-    margin-right: 20px;
-}
-
-.comparacao-page .price-details-comparacao {
-    flex: 1;
-}
-
-.comparacao-page .price-item-comparacao button {
-    margin-left: auto;
-}
-
-/* Rodapé */
-.comparacao-page footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .comparacao-page .top-header-comparacao {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .comparacao-page .top-header-comparacao .actions-comparacao {
-        margin-top: 10px;
-    }
-
-    .comparacao-page .product-details-comparacao,
-    .comparacao-page .price-comparison-comparacao {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    .comparacao-page .store-logo-comparacao img {
-        max-width: 60px;
-        margin-right: 10px;
-    }
-}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
