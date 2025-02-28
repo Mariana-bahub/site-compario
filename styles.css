@@ -235,25 +235,3 @@ footer a:hover {
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
 }
-.loja {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: center;
-}
-.loja h3 {
-    margin: 0;
-    color: #333;
-}
-.loja a {
-    text-decoration: none;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 5px 10px;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-.loja a:hover {
-    background-color: #0056b3;
-}
