@@ -1,129 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Preços - Produto</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Comparador de Preços</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center w-100">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
-                </a>
-                <div class="search-bar-container flex-grow-1">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Digite sua busca...">
-                        <button><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorias
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
-                            <li><a class="dropdown-item" href="#">Moda</a></li>
-                            <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="product-info">
+            <h1>Ar-Condicionado Split Hi Wall Gree G-Diamond 18000 BTUs Frio Inverter GWC18ACD-D3DNAIM</h1>
+            <p>Sem avaliações</p>
+            <img src="ar-condicionado.jpg" alt="Ar-Condicionado Gree G-Diamond">
         </div>
-    </nav>
 
-    <header class="top-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-auto">
-                    <span class="time">2:56 X</span>
-                </div>
-                <div class="col text-end">
-                    <button class="btn btn-outline-secondary btn-sm">Ver Histórico</button>
-                    <button class="btn btn-primary btn-sm">Criar Alerta</button>
-                </div>
+        <div class="price-comparison">
+            <div class="highlighted-price">
+                <p class="pechincha">Pechincha</p>
+                <p>Menor preço via Magazine Luiza</p>
+                <p class="price">R$ 2.879,10 <span class="installments">ou 12x de R$ 266,58</span></p>
+                <a href="#" class="compare-button">Comparar em 10 lojas</a>
+                <button class="favorite-button">♡</button>
             </div>
-        </div>
-    </header>
 
-    <main class="container my-4">
-        <section class="product-details">
-            <h1>Comparação de Preços: <span id="product-name">Nome do Produto</span></h1>
-            <img src="imagem-do-produto.jpg" alt="Imagem do Produto" class="product-image">
-            <div class="product-info">
-                <h2>Detalhes do Produto</h2>
-                <p>Descrição detalhada do produto. Aqui você pode incluir informações, especificações e demais detalhes relevantes.</p>
-                <ul class="list-unstyled">
-                    <li>Especificação 1</li>
-                    <li>Especificação 2</li>
-                    <li>Especificação 3</li>
-                </ul>
+            <div class="price-history">
+                <p>Menor preço histórico</p>
+                <p>O produto está no menor preço dos últimos 40 dias</p>
+                <a href="#" class="history-button">Ver Histórico</a>
+                <a href="#" class="alert-button">Criar alerta</a>
             </div>
-        </section>
 
-        <section class="price-comparison">
-            <h2>Compare os preços:</h2>
+            <div class="lower-price-alert">
+                <p>Quer pagar mais barato?</p>
+                <p>Avisamos quando o preço baixar</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
             <div class="price-list">
-                <div class="price-item">
-                    <div class="store-logo">
-                        <img src="logo-loja1.png" alt="Logo Loja 1">
-                    </div>
-                    <div class="price-details">
-                        <p>R$ 100,00 à vista</p>
-                        <p>Em até 12x</p>
-                    </div>
-                    <button class="btn btn-primary btn-sm">Ir à loja</button>
+                <h2>Compare preços em 10 lojas</h2>
+                <div class="store-price">
+                    <p>Menor preço</p>
+                    <p class="price">R$ 2.879,10 à vista <span class="installments">ou 12x de R$ 266,56</span></p>
+                    <p class="cashback">Zoom te devolve R$ 28,79 <span class="cashback-details">1% cashback na loja toda</span></p>
+                    <p class="final-price">Cálculo final R$ 2.850,31 <span class="final-price-details">Após receber dinheiro de volta</span></p>
+                    <a href="#" class="store-link">Magazine Luiza</a>
+                    <a href="#" class="go-to-store">Ir à loja</a>
+                </div>
+                <div class="store-price">
+                    <p class="price">R$ 6.069,80 à vista <span class="installments">ou 6x de R$ 1.011,63 sem juros</span></p>
+                    <a href="#" class="store-link">Adidas</a>
+                    <a href="#" class="buy-button">Comprar</a>
+                </div>
+                <div class="store-price">
+                    <p class="price">R$ 4.559,05 à vista</p>
+                    <p class="cashback">Zoom te devolve R$ 22,80 <span class="cashback-details">0.5% cashback na loja toda</span></p>
+                    <p class="installments">ou 8x de R$ 599,00</p>
+                    <a href="#" class="store-link">Casas Bahia</a>
+                    <a href="#" class="go-to-store">Ir à loja</a>
+                </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
-            <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
-
-            <form action="#" method="POST" class="mb-3">
-                <label for="email" class="form-label">Receba ofertas exclusivas no seu e-mail:</label>
-                <div class="row justify-content-center">
-                    <div class="col-10 col-sm-8 col-md-6 col-lg-4">
-                        <div class="input-group">
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
-                            <button type="submit" class="btn btn-primary">Inscrever-se</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-
-            <div class="mb-3">
-                <a href="#" class="me-3 text-white"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="#" class="me-3 text-white"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="#" class="me-3 text-white"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
-            </div>
-
-            <p>
-                <a href="#" class="me-3 text-white">Sobre</a>
-                <a href="#" class="me-3 text-white">Contato</a>
-                <a href="#" class="me-3 text-white">Política de Privacidade</a>
-                <a href="#" class="text-white">Termos de Uso</a>
-            </p>
         </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    </div>
 </body>
 </html>
