@@ -4,66 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador de Preços</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body class="comparacao-page">
+<header class="navbar">
     <div class="container">
-        <div class="product-info">
-            <h1>Ar-Condicionado Split Hi Wall Gree G-Diamond 18000 BTUs Frio Inverter GWC18ACD-D3DNAIM</h1>
-            <p>Sem avaliações</p>
-            <img src="ar-condicionado.jpg" alt="Ar-Condicionado Gree G-Diamond">
+        <a href="index.html" class="navbar-brand">
+            <img src="logo.png" alt="Logo">
+        </a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="product-info">
+        <h1>Ar-Condicionado Split Hi Wall Gree G-Diamond 18000 BTUs Frio Inverter GWC18ACD-D3DNAIM</h1>
+        <p>Sem avaliações</p>
+        <img src="ar-condicionado.jpg" alt="Ar-Condicionado Gree G-Diamond">
+    </div>
+
+    <div class="price-comparison">
+        <div class="highlighted-price">
+            <p class="pechincha">Pechincha</p>
+            <p>Menor preço via Magazine Luiza</p>
+            <p class="price">R$ 2.879,10 <span class="installments">ou 12x de R$ 266,58</span></p>
+            <a href="#" class="compare-button">Comparar em 10 lojas</a>
+            <button class="favorite-button">♡</button>
         </div>
 
-        <div class="price-comparison">
-            <div class="highlighted-price">
-                <p class="pechincha">Pechincha</p>
-                <p>Menor preço via Magazine Luiza</p>
-                <p class="price">R$ 2.879,10 <span class="installments">ou 12x de R$ 266,58</span></p>
-                <a href="#" class="compare-button">Comparar em 10 lojas</a>
-                <button class="favorite-button">♡</button>
+        <div class="price-history">
+            <p>Menor preço histórico</p>
+            <p>O produto está no menor preço dos últimos 40 dias</p>
+            <a href="#" class="history-button">Ver Histórico</a>
+            <a href="#" class="alert-button">Criar alerta</a>
+        </div>
+
+        <div class="lower-price-alert">
+            <p>Quer pagar mais barato?</p>
+            <p>Avisamos quando o preço baixar</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="price-list">
+            <h2>Compare preços em 10 lojas</h2>
+            <div class="store-price">
+                <p>Menor preço</p>
+                <p class="price">R$ 2.879,10 à vista <span class="installments">ou 12x de R$ 266,56</span></p>
+                <a href="#" class="store-link">Magazine Luiza</a>
+                <a href="#" class="go-to-store">Ir à loja</a>
             </div>
 
-            <div class="price-history">
-                <p>Menor preço histórico</p>
-                <p>O produto está no menor preço dos últimos 40 dias</p>
-                <a href="#" class="history-button">Ver Histórico</a>
-                <a href="#" class="alert-button">Criar alerta</a>
+            <div class="store-price">
+                <p class="price">R$ 6.069,80 à vista <span class="installments">ou 6x de R$ 1.011,63 sem juros</span></p>
+                <a href="#" class="store-link">Adidas</a>
+                <a href="#" class="buy-button">Comprar</a>
             </div>
 
-            <div class="lower-price-alert">
-                <p>Quer pagar mais barato?</p>
-                <p>Avisamos quando o preço baixar</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="price-list">
-                <h2>Compare preços em 10 lojas</h2>
-                <div class="store-price">
-                    <p>Menor preço</p>
-                    <p class="price">R$ 2.879,10 à vista <span class="installments">ou 12x de R$ 266,56</span></p>
-                    <p class="cashback">Zoom te devolve R$ 28,79 <span class="cashback-details">1% cashback na loja toda</span></p>
-                    <p class="final-price">Cálculo final R$ 2.850,31 <span class="final-price-details">Após receber dinheiro de volta</span></p>
-                    <a href="#" class="store-link">Magazine Luiza</a>
-                    <a href="#" class="go-to-store">Ir à loja</a>
-                </div>
-                <div class="store-price">
-                    <p class="price">R$ 6.069,80 à vista <span class="installments">ou 6x de R$ 1.011,63 sem juros</span></p>
-                    <a href="#" class="store-link">Adidas</a>
-                    <a href="#" class="buy-button">Comprar</a>
-                </div>
-                <div class="store-price">
-                    <p class="price">R$ 4.559,05 à vista</p>
-                    <p class="cashback">Zoom te devolve R$ 22,80 <span class="cashback-details">0.5% cashback na loja toda</span></p>
-                    <p class="installments">ou 8x de R$ 599,00</p>
-                    <a href="#" class="store-link">Casas Bahia</a>
-                    <a href="#" class="go-to-store">Ir à loja</a>
-                </div>
-                </div>
+            <div class="store-price">
+                <p class="price">R$ 4.559,05 à vista</p>
+                <a href="#" class="store-link">Casas Bahia</a>
+                <a href="#" class="go-to-store">Ir à loja</a>
             </div>
         </div>
     </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Comparador de Preços - Mariana</p>
+</footer>
 </body>
 </html>
