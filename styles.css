@@ -235,3 +235,98 @@ footer a:hover {
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
 }
+/* Estilo exclusivo para a página de comparação */
+.comparacao-page {
+    background-color: #f5f5f5; /* Fundo cinza claro */
+    padding: 20px;
+}
+
+.comparacao-page .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.comparacao-page .product-info img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.comparacao-page .highlighted-price {
+    padding: 15px;
+    background-color: #e6f7ff; /* Azul clarinho */
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.comparacao-page .highlighted-price .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.comparacao-page .store-price {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comparacao-page .store-price a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.comparacao-page .store-price a:hover {
+    background-color: #0056b3;
+}
+
+.comparacao-page .price-history,
+.comparacao-page .lower-price-alert {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.comparacao-page .alert-button {
+    background: #DD2CFA; /* Roxo igual o rodapé */
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.comparacao-page .alert-button:hover {
+    background: #bb00cc;
+}
+
+@media (max-width: 768px) {
+    .comparacao-page .container {
+        padding: 10px;
+    }
+
+    .comparacao-page .product-info img {
+        max-width: 100%;
+    }
+}
