@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melhores Protetores Solares para o Verão</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <style>
         .container-comparacao {
@@ -41,65 +42,68 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
-                Comparador de Preços
+                <img src="images/logo.png" alt="Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
                 </ul>
+                <div class="search-bar-container">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar...">
+                        <button type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav><div class="container mt-4">
-    <h1>Melhores Protetores Solares para o Verão</h1>
-    
-    <div class="produto">
-        <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
-        <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Melhores Protetores Solares para o Verão</h1>
+
+        <div class="produto">
+            <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
+            <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
+        </div>
+
+        <div class="container-comparacao">
+            <h3>Quais são os melhores protetores solares?</h3>
+            <div class="produto-comparado">
+                <img src="link-imagem-nivea" alt="Nivea Sun FPS 50">
+                <div class="descricao">
+                    <p>Nívea Sun FPS 50 - Hidratação intensa e alta proteção.</p>
+                    <a href="#" class="botao">Comprar</a>
+                </div>
+            </div>
+            <div class="produto-comparado">
+                <img src="link-imagem-la-roche" alt="La Roche-Posay">
+                <div class="descricao">
+                    <p>La Roche-Posay Anthelios - Textura leve e proteção duradoura.</p>
+                    <a href="#" class="botao">Comprar</a>
+                </div>
+            </div>
+            <div class="produto-comparado">
+                <img src="link-imagem-biore" alt="Bioré UV Aqua Rich">
+                <div class="descricao">
+                    <p>Bioré UV Aqua Rich - Fórmula japonesa com acabamento seco.</p>
+                    <a href="#" class="botao">Comprar</a>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="container-comparacao">
-        <h3>Quais são os melhores protetores solares?</h3>
-        <div class="produto-comparado">
-            <img src="link-imagem-nivea" alt="Nivea Sun FPS 50">
-            <div class="descricao">
-                <p>Nívea Sun FPS 50 - Hidratação intensa e alta proteção.</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-        </div>
-        <div class="produto-comparado">
-            <img src="link-imagem-la-roche" alt="La Roche-Posay">
-            <div class="descricao">
-                <p>La Roche-Posay Anthelios - Textura leve e proteção duradoura.</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-        </div>
-        <div class="produto-comparado">
-            <img src="link-imagem-biore" alt="Bioré UV Aqua Rich">
-            <div class="descricao">
-                <p>Bioré UV Aqua Rich - Fórmula japonesa com acabamento seco.</p>
-                <a href="#" class="botao">Comprar</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Rodapé -->
-<footer class="bg-dark text-white text-center p-3 mt-4">
-    &copy; 2025 Comparador de Preços - Todos os direitos reservados
-</footer>
+    <footer>
+        <p>&copy; 2024 Comparador de Preços</p>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
