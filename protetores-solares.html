@@ -3,12 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Preços - Ar-Condicionado Gree G-Diamond</title>
+    <title>Comparação de Ar-Condicionado</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: sans-serif;
+        }
+
+        .comparacao-page {
+            margin-top: 20px;
+        }
+
+        .product-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-item img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .btn-buy {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .view-all {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .view-all button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #007bff; /* Cor de fundo da navbar */
+        }
+
+        .navbar-brand img {
+            width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+        }
+
+        .search-bar-container {
+            flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço disponível */
+            margin: 0 15px; /* Adiciona margem lateral à barra de pesquisa */
+        }
+
+        .search-bar {
+            display: flex;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .search-bar input {
+            border: none;
+            padding: 8px;
+            border-radius: 5px 0 0 5px;
+            flex-grow: 1;
+        }
+
+        .search-bar button {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 8px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .form-label {
+            margin-bottom: 10px;
+        }
+
+        footer .input-group {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -45,80 +173,31 @@
     </nav>
 
     <main class="container mt-4 comparacao-page">
-        <div class="article-content">
-            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-gree.png" alt="Ar-Condicionado Gree G-Diamond">
-            <h1>Qual o melhor ar-condicionado para a sua casa?</h1>
+        <div class="text-center mb-4">
+            <img src="URL_DA_IMAGEM_DO_AR_CONDICIONADO" alt="Ar-Condicionado" style="max-width: 100%; height: auto;">
+            <p>Publicado 27/10/2023 e atualizado 23/01/2025 - 9 min. de leitura</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <h2>Comparação</h2>
             <p>Procurando qual o melhor ar-condicionado para a sua casa? Com o passar dos anos, esse se tornou um item essencial para garantir conforto e bem-estar em qualquer estação.</p>
             <p>Neste guia, te ajudaremos a encontrar o modelo ideal para você, abordando os tipos de ar-condicionado, as tecnologias disponíveis, as funcionalidades que podem oferecer mais conforto e as melhores marcas de ar-condicionado do mercado em 2025.</p>
             <p>Curioso para saber qual o modelo mais famoso do ano passado? Conheça o ar-condicionado mais vendido de 2024!</p>
         </div>
 
-        <ul class="model-list">
-            <li class="model-item">
-                <img src="URL_DA_IMAGEM_DO_MODELO_1" alt="LG Dual Inverter Compact 12.000 BTUs">
-                <div class="model-info">
-                    <h2>#1 LG Dual Inverter Compact 12.000 BTUs</h2>
+        <ul class="product-list">
+            <li class="product-item">
+                <img src="URL_DA_IMAGEM_DO_LG" alt="LG Dual Inverter Compact 12.000 BTUs">
+                <div class="product-details">
+                    <h3 class="product-title">#1 LG Dual Inverter Compact 12.000 BTUs</h3>
                     <p>Melhor ar-condicionado 2024</p>
-                    <p>R$ 2.339,00</p>
-                    <a href="#">Ir à loja</a>
+                    <p class="product-price">R$ 2.339,00</p>
                 </div>
+                <button class="btn-buy">Ir à loja</button>
             </li>
-            <li class="model-item">
-                <img src="URL_DA_IMAGEM_DO_MODELO_2" alt="Ar-condicionado Split Samsung Wind Free Connect 12.000">
-                <div class="model-info">
-                    <h2>#2. Ar-condicionado Split Samsung Wind Free Connect 12.000</h2>
+            <li class="product-item">
+                <img src="URL_DA_IMAGEM_DO_SAMSUNG" alt="Ar-condicionado Split Samsung Wind Free Connect 12.000">
+                <div class="product-details">
+                    <h3 class="product-title">#2. Ar-condicionado Split Samsung Wind Free Connect 12.000</h3>
                     <p>Melhor distribuição do ar</p>
-                    <p>R$ 2.669,00</p>
-                    <a href="#">Ir à loja</a>
-                </div>
-            </li>
-            <li class="model-item">
-                <img src="URL_DA_IMAGEM_DO_MODELO_3" alt="Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs">
-                <div class="model-info">
-                    <h2>#3 Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs</h2>
-                    <p>Garantia de conforto térmico</p>
-                    <p>R$ 1.999,00</p>
-                    <a href="#">Ir à loja</a>
-                </div>
-            </li>
-            <li class="model-item">
-                <img src="URL_DA_IMAGEM_DO_MODELO_4" alt="Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUS">
-                <div class="model-info">
-                    <h2>#4. Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUS</h2>
-                    <p>Com íons que combatem bactérias e fungos</p>
-                    <p>R$ 1.999,00</p>
-                    <a href="#">Ir à loja</a>
-                </div>
-            </li>
-            <li class="model-item">
-                <img src="URL_DA_IMAGEM_DO_MODELO_5" alt="Ar-condicionado Split TCL Elite Series 12.000 BTUS">
-                <div class="model-info">
-                    <h2>#5. Ar-condicionado Split TCL Elite Series 12.000 BTUS</h2>
-                    <p>Modelo Silencioso</p>
-                    <p>R$ 2.427,04</p>
-                    <a href="#">Ir à loja</a>
-                </div>
-            </li>
-        </ul>
-        <div class="see-all">
-            <a href="#">Ver todos</a>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
-        <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
-
-        <form action="#" method="POST" class="mb-3">
-            <label for="email" class="form-label">Receba ofertas exclusivas no seu e-mail:</label>
-            <div class="row justify-content-center">
-                <div class="col-10 col-sm-8 col-md-6 col-lg-4">
-                    <div class="input-group">
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
-                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <div class="mb-3
+                    <p class="product-price">R$
