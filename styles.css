@@ -442,3 +442,41 @@ body {
 }
 
 /* Adicione mais estilos conforme necessário */
+
+/* Novo container adicionado */
+.product-info-secondary {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.product-info-secondary h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.product-info-secondary img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-info-secondary p {
+    margin-bottom: 10px;
+}
+
+.product-info-secondary a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.product-info-secondary a:hover {
+    background-color: #0056b3;
+}
