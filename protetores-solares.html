@@ -1,40 +1,105 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Protetores Solares</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Melhores Protetores Solares para o Verão</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .container-comparacao {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .container-comparacao h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .produto-comparado {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .produto-comparado img {
+            max-width: 80px;
+            height: auto;
+        }
+        .descricao {
+            flex: 1;
+        }
+        .botao {
+            display: inline-block;
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="protetores-page">
-        <div class="product-info">
-            <img src="protetor-solar-exemplo.jpg" alt="Protetor Solar Exemplo">
-            <h2>Protetor Solar Facial FPS 50</h2>
-            <p>Proteção avançada contra raios UVA e UVB, ideal para uso diário.</p>
-            <button class="btn-compare">Comparar Preços</button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+                Comparador de Preços
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="price-comparison">
-            <div class="store-price">
-                <div class="store-logo"><img src="loja1.png" alt="Loja 1"></div>
-                <div class="price">R$ 59,90</div>
-                <div class="pechincha">Pechincha!</div>
-                <a href="#">Ver Oferta</a>
-            </div>
-            <div class="store-price">
-                <div class="store-logo"><img src="loja2.png" alt="Loja 2"></div>
-                <div class="price">R$ 64,50</div>
-                <a href="#">Ver Oferta</a>
-            </div>
-            <div class="store-price">
-                <div class="store-logo"><img src="loja3.png" alt="Loja 3"></div>
-                <div class="price">R$ 55,00</div>
-                <div class="pechincha">Menor preço!</div>
-                <a href="#">Ver Oferta</a>
-            </div>
-            </div>
+    </nav><div class="container mt-4">
+    <h1>Melhores Protetores Solares para o Verão</h1>
+    
+    <div class="produto">
+        <h2>Nívea Sun Protect & Hidrata FPS 50</h2>
+        <p>O protetor solar Nívea oferece alta proteção contra raios UVA e UVB, mantendo a pele hidratada.</p>
     </div>
-    <script src="script.js"></script>
+    
+    <div class="container-comparacao">
+        <h3>Quais são os melhores protetores solares?</h3>
+        <div class="produto-comparado">
+            <img src="link-imagem-nivea" alt="Nivea Sun FPS 50">
+            <div class="descricao">
+                <p>Nívea Sun FPS 50 - Hidratação intensa e alta proteção.</p>
+                <a href="#" class="botao">Comprar</a>
+            </div>
+        </div>
+        <div class="produto-comparado">
+            <img src="link-imagem-la-roche" alt="La Roche-Posay">
+            <div class="descricao">
+                <p>La Roche-Posay Anthelios - Textura leve e proteção duradoura.</p>
+                <a href="#" class="botao">Comprar</a>
+            </div>
+        </div>
+        <div class="produto-comparado">
+            <img src="link-imagem-biore" alt="Bioré UV Aqua Rich">
+            <div class="descricao">
+                <p>Bioré UV Aqua Rich - Fórmula japonesa com acabamento seco.</p>
+                <a href="#" class="botao">Comprar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="bg-dark text-white text-center p-3 mt-4">
+    &copy; 2025 Comparador de Preços - Todos os direitos reservados
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
