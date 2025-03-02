@@ -341,27 +341,27 @@ body {
 
 .article-content {
     background-color: white;
-    padding: 25px; /* Aumentei o padding */
-    border-radius: 12px; /* Aumentei o border-radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajustei a sombra */
-    margin-bottom: 25px; /* Aumentei a margem */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
 }
 
 .article-content img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px; /* Aumentei o border-radius */
-    margin-bottom: 20px; /* Aumentei a margem */
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .article-content h1 {
-    font-size: 2em; /* Aumentei o tamanho da fonte */
-    margin-bottom: 15px; /* Aumentei a margem */
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
 .article-content p {
-    line-height: 1.7; /* Aumentei o line-height */
-    margin-bottom: 15px; /* Aumentei a margem */
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 .model-list {
@@ -372,20 +372,20 @@ body {
 .model-item {
     display: flex;
     background-color: white;
-    margin-bottom: 15px; /* Aumentei a margem */
-    border-radius: 12px; /* Aumentei o border-radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajustei a sombra */
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     align-items: center;
-    padding: 20px; /* Aumentei o padding */
+    padding: 20px;
 }
 
 .model-item img {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    margin-right: 20px; /* Aumentei a margem */
-    border-radius: 8px; /* Adicionei border-radius */
+    margin-right: 20px;
+    border-radius: 8px;
 }
 
 .model-info {
@@ -396,26 +396,26 @@ body {
 }
 
 .model-info h2 {
-    font-size: 1.2em; /* Aumentei o tamanho da fonte */
-    margin-bottom: 8px; /* Aumentei a margem */
+    font-size: 1.2em;
+    margin-bottom: 8px;
 }
 
 .model-info p {
     margin: 0;
-    font-size: 1em; /* Ajustei o tamanho da fonte */
-    line-height: 1.6; /* Ajustei o line-height */
+    font-size: 1em;
+    line-height: 1.6;
 }
 
 .model-info a {
-    background-color: #e9ecef; /* Cor de fundo mais clara */
+    background-color: #e9ecef;
     color: #007bff;
-    padding: 10px 20px; /* Aumentei o padding */
-    border-radius: 8px; /* Aumentei o border-radius */
+    padding: 10px 20px;
+    border-radius: 8px;
     text-decoration: none;
     text-align: center;
     align-self: flex-start;
-    width: 90px; /* Aumentei a largura */
-    font-weight: 500; /* Ajustei o peso da fonte */
+    width: 90px;
+    font-weight: 500;
 }
 
 .model-info a:hover {
@@ -424,24 +424,22 @@ body {
 
 .see-all {
     text-align: center;
-    margin-top: 30px; /* Aumentei a margem */
+    margin-top: 30px;
 }
 
 .see-all a {
     color: #007bff;
     text-decoration: none;
-    font-size: 1.1em; /* Ajustei o tamanho da fonte */
-    font-weight: 500; /* Ajustei o peso da fonte */
-    padding: 10px 20px; /* Aumentei o padding */
-    border-radius: 8px; /* Adicionei border-radius */
-    background-color: #e9ecef; /* Cor de fundo mais clara */
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #e9ecef;
 }
 
 .see-all a:hover {
     text-decoration: underline;
 }
-
-/* Adicione mais estilos conforme necessário */
 
 /* Novo container adicionado */
 .product-info-secondary {
