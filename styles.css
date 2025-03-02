@@ -332,7 +332,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Cor de fundo da página */
+    background-color: #f8f9fa;
 }
 
 .comparacao-page {
@@ -341,27 +341,27 @@ body {
 
 .article-content {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    padding: 25px; /* Aumentei o padding */
+    border-radius: 12px; /* Aumentei o border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajustei a sombra */
+    margin-bottom: 25px; /* Aumentei a margem */
 }
 
 .article-content img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 12px; /* Aumentei o border-radius */
+    margin-bottom: 20px; /* Aumentei a margem */
 }
 
 .article-content h1 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 2em; /* Aumentei o tamanho da fonte */
+    margin-bottom: 15px; /* Aumentei a margem */
 }
 
 .article-content p {
-    line-height: 1.6;
-    margin-bottom: 10px;
+    line-height: 1.7; /* Aumentei o line-height */
+    margin-bottom: 15px; /* Aumentei a margem */
 }
 
 .model-list {
@@ -372,20 +372,23 @@ body {
 .model-item {
     display: flex;
     background-color: white;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Aumentei a margem */
+    border-radius: 12px; /* Aumentei o border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajustei a sombra */
     overflow: hidden;
+    align-items: center;
+    padding: 20px; /* Aumentei o padding */
 }
 
 .model-item img {
     width: 120px;
     height: 120px;
     object-fit: cover;
+    margin-right: 20px; /* Aumentei a margem */
+    border-radius: 8px; /* Adicionei border-radius */
 }
 
 .model-info {
-    padding: 15px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -393,37 +396,45 @@ body {
 }
 
 .model-info h2 {
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    font-size: 1.2em; /* Aumentei o tamanho da fonte */
+    margin-bottom: 8px; /* Aumentei a margem */
 }
 
 .model-info p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1em; /* Ajustei o tamanho da fonte */
+    line-height: 1.6; /* Ajustei o line-height */
 }
 
 .model-info a {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
+    background-color: #e9ecef; /* Cor de fundo mais clara */
+    color: #007bff;
+    padding: 10px 20px; /* Aumentei o padding */
+    border-radius: 8px; /* Aumentei o border-radius */
     text-decoration: none;
     text-align: center;
     align-self: flex-start;
+    width: 90px; /* Aumentei a largura */
+    font-weight: 500; /* Ajustei o peso da fonte */
 }
 
 .model-info a:hover {
-    background-color: #0056b3;
+    background-color: #dee2e6;
 }
 
 .see-all {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Aumentei a margem */
 }
 
 .see-all a {
     color: #007bff;
     text-decoration: none;
+    font-size: 1.1em; /* Ajustei o tamanho da fonte */
+    font-weight: 500; /* Ajustei o peso da fonte */
+    padding: 10px 20px; /* Aumentei o padding */
+    border-radius: 8px; /* Adicionei border-radius */
+    background-color: #e9ecef; /* Cor de fundo mais clara */
 }
 
 .see-all a:hover {
