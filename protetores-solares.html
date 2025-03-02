@@ -42,24 +42,40 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
-                Comparador de Preços
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                </ul>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
+        </a>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Digite sua busca...">
+                <button><i class="bi bi-search"></i></button>
             </div>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
+                        <li><a class="dropdown-item" href="#">Moda</a></li>
+                        <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
     </nav><div class="container mt-4">
     <h1>Melhores Protetores Solares para o Verão</h1>
     
