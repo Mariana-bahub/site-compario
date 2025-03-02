@@ -328,3 +328,14 @@ input[type="search"]::-webkit-search-cancel-button {
     height: auto;
     margin-bottom: 10px;
 }
+#pagina-protetores .navbar {
+    background-color: #ff6600 !important;
+}
+
+#pagina-protetores footer {
+    background-color: #DD2CFA !important;
+    color: white !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+    margin-top: 1.5rem !important;
+}
