@@ -440,8 +440,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .image-container {
     display: flex;
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    align-items: center; /* Centraliza as imagens verticalmente */
+    justify-content: ; /* Centraliza as imagens horizontalmente */
+    align-items: ; /* Centraliza as imagens verticalmente */
     margin-top: 20px; /* Adiciona um espaço acima das imagens */
     margin-bottom: 20px; /* Adiciona um espaço abaixo das imagens */
     flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha em telas menores */
@@ -451,7 +451,7 @@ input[type="search"]::-webkit-search-cancel-button {
     max-width: 200px; /* Define a largura máxima das imagens */
     height: auto; /* Mantém a proporção das imagens */
     margin: 10px; /* Adiciona um espaço entre as imagens */
-    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    border-radius: px; /* Adiciona bordas arredondadas às imagens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave às imagens */
 }
 
