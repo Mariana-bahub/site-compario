@@ -519,8 +519,7 @@ input[type="search"]::-webkit-search-cancel-button {
     .product-item a.btn {
         width: 100%; /* O botão ocupa toda a largura em telas menores */
     }
-}
-
+    
 @media (max-width: 480px) {
     .product-item img {
         width: 100px; /* Imagem menor em telas ainda menores */
