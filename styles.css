@@ -322,12 +322,11 @@ input[type="search"]::-webkit-search-cancel-button {
     .product-info img {
         max-width: 100%;
     }
-}
+    
 .store-logo img {
     max-width: 100px; /* Ajuste conforme necessário */
     height: auto;
     margin-bottom: 10px;
-}
 }
 
 .loja-destaque {
