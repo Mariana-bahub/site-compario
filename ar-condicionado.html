@@ -28,7 +28,6 @@
             width: 50px;
             height: 100%;
             background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 100%);
-            display: block;
             pointer-events: none;
         }
 
@@ -37,25 +36,13 @@
             background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 100%);
         }
 
-        /* Estilo para a vitrine de produtos */
+        /* Vitrine de produtos */
         .vitrine-container {
             overflow-x: auto;
             white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin;
-            scrollbar-color: #888 #f1f1f1;
             padding-bottom: 10px;
         }
-        .vitrine-container::-webkit-scrollbar {
-            height: 6px;
-        }
-        .vitrine-container::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        .vitrine-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+
         .produto-card {
             display: inline-block;
             width: 250px;
@@ -66,69 +53,99 @@
     </style>
 </head>
 <body>
-    <div class="comparacao-page">
-        <section class="comparacao-ar-condicionado mt-5">
-            <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
-            <div class="image-container">
-                <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado 1">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125">
+        </a>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Digite sua busca...">
+                <button><i class="bi bi-search"></i></button>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="introducao">
-                        <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca. Com o passar dos anos, esse se tornou um item essencial para garantir conforto e bem-estar em qualquer estação.</p>
-                        <p>Neste guia, te ajudaremos a encontrar o modelo ideal para você, abordando os tipos de ar-condicionado, as tecnologias disponíveis, as funcionalidades que podem oferecer mais conforto e as melhores marcas de ar-condicionado do mercado em 2025.</p>
-                        <p>Curioso para saber qual o modelo mais famoso do ano passado? Conheça o ar-condicionado mais vendido de 2024!</p>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categorias</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
+                        <li><a class="dropdown-item" href="#">Moda</a></li>
+                        <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="comparacao-page">
+    <section class="comparacao-ar-condicionado mt-5">
+        <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado 1">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="introducao">
+                    <p>Encontre o melhor ar-condicionado para sua casa...</p>
+                    <p>Curioso para saber qual o modelo mais famoso do ano passado?</p>
+                </div>
+
+                <div class="product-list-container">
+                    <div class="product-item">
+                        <span class="product-number">#1</span>
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="LG Dual Inverter">
+                        <span class="product-name">LG Dual Inverter Compact 12.000 BTUs</span>
+                        <span class="product-price">R$ 2.339,00</span>
+                        <a href="#" class="btn btn-primary">Ir à loja</a>
                     </div>
-                    <div class="product-list-container">
-                        <div class="product-item">
-                            <span class="product-number">#1</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="LG Dual Inverter Compact 12.000 BTUs">
-                            <span class="product-name">LG Dual Inverter Compact 12.000 BTUs</span>
-                            <span class="product-feature">Melhor ar-condicionado 2024</span>
-                            <span class="product-price">R$ 2.339,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="product-item">
-                            <span class="product-number">#2</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Ar-condicionado Split Samsung Wind Free Connect 12.000">
-                            <span class="product-name">Ar-condicionado Split Samsung Wind Free Connect 12.000</span>
-                            <span class="product-feature">Melhor distribuição do ar</span>
-                            <span class="product-price">R$ 2.669,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="product-item">
-                            <span class="product-number">#3</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs">
-                            <span class="product-name">Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs</span>
-                            <span class="product-feature">Garantia de conforto térmico</span>
-                            <span class="product-price">R$ 1.999,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="product-item">
-                            <span class="product-number">#4</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs">
-                            <span class="product-name">Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs</span>
-                            <span class="product-feature">Com íons que combatem bactérias e fungos</span>
-                            <span class="product-price">R$ 1.999,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="product-item">
-                            <span class="product-number">#5</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Ar-condicionado Split TCL Elite Series 12.000 BTUs">
-                            <span class="product-name">Ar-condicionado Split TCL Elite Series 12.000 BTUs</span>
-                            <span class="product-feature">Modelo silencioso</span>
-                            <span class="product-price">R$ 2.427,04</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                    </div>
-                    <div class="text-center mt-4">
-                        <a href="#" class="btn btn-primary">Ver todos</a>
-                    </div>
-                    <div class="destaque-produto">
-                        <h3>Melhor ar-condicionado 2025: LG Dual Inverter Compact 12000 BTUs Frio Inverter +AI S3-Q12JAQAL</h3>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="LG Dual Inverter Compact 12000 BTUs Frio Inverter +AI S3-Q12JAQAL" class="img-fluid">
-                            </div>
-                            <div class="col-md-8">
-                                <p>O LG Dual Inverter Compact 12000 BTUs é o melhor
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-primary">Ver todos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Rodapé -->
+<footer class="mt-5">
+    <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
+    <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
+
+    <form action="#" method="POST">
+        <label for="email">Receba ofertas exclusivas no seu e-mail:</label>
+        <div class="input-group">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+            <button type="submit" class="btn btn-primary">Inscrever-se</button>
+        </div>
+    </form>
+
+    <div>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>
+        <a href="#">Sobre</a> |
+        <a href="#">Contato</a> |
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
