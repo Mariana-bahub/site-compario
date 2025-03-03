@@ -436,90 +436,7 @@ input[type="search"]::-webkit-search-cancel-button {
         text-align: left;
         margin-left: 0;
     }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .image-container img {
-        max-width: 150px; /* Reduz a largura máxima das imagens em telas menores */
-    }
-}
-/* Estilo exclusivo para a página de comparação de ar-condicionado */
-
-/* Container principal de cada produto */
-.product-item {
-    display: flex; /* Imagem e descrição ao lado */
-    align-items: center; /* Alinha verticalmente */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 15px; /* Espaço interno */
-    margin-bottom: 20px; /* Espaço entre os produtos */
-    box-sizing: border-box; /* Inclui borda e padding no tamanho total */
-    width: 100%; /* Garante que o produto ocupe toda a largura disponível */
-    position: relative; /* Para a linha horizontal */
-}
-
-/* Linha horizontal */
-.product-item::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px; /* Espessura da linha */
-    background-color: #ccc; /* Cor da linha */
-    position: absolute;
-    top: 0; /* Coloca a linha no topo do container */
-    left: 0;
-}
-
-/* Imagem do produto */
-.product-item img {
-    width: 150px; /* Largura fixa da imagem */
-    height: auto;
-    border: 1px solid #ccc; /* Borda visível */
-    border-radius: 8px; /* Borda arredondada da imagem */
-    object-fit: cover; /* Ajusta a imagem sem distorcer */
-    margin-right: 20px; /* Espaço entre a imagem e a descrição */
-}
-
-/* Descrição do produto */
-.product-info {
-    flex: 1; /* Ocupa o espaço restante */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Espaça o título e o preço */
-}
-
-/* Botão responsivo */
-.product-item a.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Efeito de hover no botão */
-.product-item a.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Responsividade para dispositivos menores */
-@media (max-width: 768px) {
-    .product-item {
-        flex-direction: row; /* Mantém imagem e descrição ao lado */
-        padding: 10px;
-    }
-
-    .product-item img {
-        width: 120px; /* Ajusta o tamanho da imagem para telas menores */
-    }
-
-    .product-item a.btn {
-        width: 100%; /* O botão ocupa toda a largura em telas menores */
-    }
-    .image-container {
+.image-container {
     display: flex;
     justify-content: center; /* Centraliza as imagens horizontalmente */
     align-items: center; /* Centraliza as imagens verticalmente */
@@ -536,8 +453,9 @@ input[type="search"]::-webkit-search-cancel-button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave às imagens */
 }
     
-@media (max-width: 480px) {
-    .product-item img {
-        width: 100px; /* Imagem menor em telas ainda menores */
+/* Responsividade */
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 150px; /* Reduz a largura máxima das imagens em telas menores */
     }
 }
