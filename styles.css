@@ -330,16 +330,75 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* ... (seu CSS existente) ... */
 
-.comparacao-page {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
+.introducao {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.comparacao-ar-condicionado {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
+.product-list {
+    list-style: none;
+    padding: 0;
 }
 
-.comparacao-ar-condicionado .product-info
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.product-number {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.product-name {
+    flex-grow: 1;
+}
+
+.product-feature {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.destaque-produto {
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.avaliacao {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.preco-destaque {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.lojas-destaque {
+    display: flex;
+    justify-content: center;
+}
+
+.loja-destaque {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.loja-destaque:hover {
+    background-color: #0056b3;
+}
