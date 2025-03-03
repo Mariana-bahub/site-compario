@@ -461,30 +461,3 @@ input[type="search"]::-webkit-search-cancel-button {
         max-width: 150px; /* Reduz a largura máxima das imagens em telas menores */
     }
 }
-.product-item {
-    display: flex; /* Deixa imagem e texto lado a lado */
-    align-items: center; /* Alinha no meio verticalmente */
-    padding: 15px;
-    border-bottom: 1px solid #ccc; /* Linha horizontal entre produtos */
-}
-
-.product-item:not(:last-child) {
-    border-right: 2px solid #333; /* Linha vertical mais visível */
-}
-
-.product-item img {
-    max-width: 100px; /* Ajuste conforme o tamanho da imagem */
-    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
-}
-
-.product-name,
-.product-feature,
-.product-price {
-    display: block; /* Quebra as informações em linha separada */
-}
-
-.btn-primary {
-    margin-top: 10px; /* Espaçamento do botão */
-    width: 100%; /* Deixa o botão mais responsivo */
-    text-align: center;
-}
