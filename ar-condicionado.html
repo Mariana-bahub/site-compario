@@ -9,7 +9,39 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        </nav>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
+            </a>
+            <div class="search-bar-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Digite sua busca...">
+                    <button><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
+                            <li><a class="dropdown-item" href="#">Moda</a></li>
+                            <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="comparacao-page">
         <section class="comparacao-ar-condicionado mt-5">
@@ -21,9 +53,10 @@
                         <p>Neste guia, te ajudaremos a encontrar o modelo ideal para você, abordando os tipos de ar-condicionado, as tecnologias disponíveis, as funcionalidades que podem oferecer mais conforto e as melhores marcas de ar-condicionado do mercado em 2025.</p>
                         <p>Curioso para saber qual o modelo mais famoso do ano passado? Conheça o ar-condicionado mais vendido de 2024!</p>
                     </div>
-                    <div class="product-list">
+                    <div class="product-list-container">
                         <div class="product-item">
                             <span class="product-number">#1</span>
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="LG Dual Inverter Compact 12.000 BTUs">
                             <span class="product-name">LG Dual Inverter Compact 12.000 BTUs</span>
                             <span class="product-feature">Melhor ar-condicionado 2024</span>
                             <span class="product-price">R$ 2.339,00</span>
@@ -31,6 +64,7 @@
                         </div>
                         <div class="product-item">
                             <span class="product-number">#2</span>
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Ar-condicionado Split Samsung Wind Free Connect 12.000">
                             <span class="product-name">Ar-condicionado Split Samsung Wind Free Connect 12.000</span>
                             <span class="product-feature">Melhor distribuição do ar</span>
                             <span class="product-price">R$ 2.669,00</span>
@@ -38,6 +72,7 @@
                         </div>
                         <div class="product-item">
                             <span class="product-number">#3</span>
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs">
                             <span class="product-name">Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs</span>
                             <span class="product-feature">Garantia de conforto térmico</span>
                             <span class="product-price">R$ 1.999,00</span>
@@ -45,6 +80,7 @@
                         </div>
                         <div class="product-item">
                             <span class="product-number">#4</span>
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs">
                             <span class="product-name">Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs</span>
                             <span class="product-feature">Com íons que combatem bactérias e fungos</span>
                             <span class="product-price">R$ 1.999,00</span>
@@ -52,6 +88,7 @@
                         </div>
                         <div class="product-item">
                             <span class="product-number">#5</span>
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Ar-condicionado Split TCL Elite Series 12.000 BTUs">
                             <span class="product-name">Ar-condicionado Split TCL Elite Series 12.000 BTUs</span>
                             <span class="product-feature">Modelo silencioso</span>
                             <span class="product-price">R$ 2.427,04</span>
@@ -66,20 +103,4 @@
                         <div class="avaliacao">⭐⭐⭐⭐⭐ (4254)</div>
                         <p>Ar-Condicionado Split Hi Wall LG Dual Inverter Compact 12000 BTUs Frio Inverter +AI S3-Q12JAQAL</p>
                         <p class="preco-destaque">R$ 2.339,00</p>
-                        <div class="lojas-destaque">
-                            <a href="#" class="loja-destaque">Casas Bahia - Ir à loja</a>
-                            <a href="#" class="loja-destaque">Ponto - Ir à loja</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-</body>
-</html>
+                        <div class="
