@@ -446,50 +446,85 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* Estilo exclusivo para página de comparação de ar-condicionado */
 
-/* Linha horizontal visível e contínua */
+/* Container do produto */
 .product-item {
-    border-bottom: 2px solid #ccc; /* Linha visível */
-    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc; /* Linha horizontal visível */
+    padding: 15px 0; /* Espaçamento nas laterais e acima/abaixo */
     margin-bottom: 20px;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center; 
-    gap: 20px; /* Espaço entre imagem e descrição */
-    flex-wrap: nowrap; /* Impede a quebra em telas menores */
+    display: flex; /* Faz a imagem e a descrição ficarem lado a lado */
+    gap: 20px; /* Espaçamento entre imagem e descrição */
+    align-items: center;
+    flex-wrap: nowrap; /* Impede a quebra em telas pequenas */
+    border-radius: 8px; /* Bordas arredondadas no container */
+}
+
+/* Garantindo que a linha horizontal não quebre e ocupe toda a largura */
+.product-item::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc; /* Linha horizontal */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; /* Fica atrás do conteúdo */
 }
 
 /* Imagem do produto */
 .product-item img {
-    width: 150px; /* Tamanho fixo */
+    width: 150px; /* Tamanho fixo para a imagem */
     height: auto;
-    border: 1px solid #ccc; /* Contorno visível */
+    border: 1px solid #ccc; /* Borda visível para a imagem */
     border-radius: 8px; 
-    object-fit: cover; /* Mantém proporção da imagem */
+    object-fit: cover; /* Manter a proporção da imagem */
 }
 
 /* Descrição do produto */
 .product-info {
+    flex: 1; /* Ocupa o restante do espaço disponível */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1; /* Ocupa o restante do espaço */
 }
 
-/* Botão menor e responsivo */
+/* Botão responsivo e menor, abaixo da descrição */
 .product-item a.btn {
-    padding: 8px 16px; 
-    font-size: 0.9rem; 
-    width: fit-content; 
-    text-align: center;
-    background-color: #007bff; /* Cor azul */
-    border: none;
-    border-radius: 5px;
-    color: #fff;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    margin-top: 10px; /* Espaçamento entre texto e botão */
-    display: block;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
 }
 
+/* Efeito hover no botão */
 .product-item a.btn:hover {
-    background-color: #0056b3; /* Efeito hover */
+    background-color: #0056b3;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .product-item {
+        flex-direction: row; /* Imagem e descrição continuam lado a lado */
+        align-items: center;
+    }
+
+    .product-item img {
+        width: 120px; /* Ajuste no tamanho da imagem */
+    }
+
+    .product-item a.btn {
+        width: 100%; /* O botão ocupa toda a largura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item img {
+        width: 100px; /* Ajuste ainda menor para telas pequenas */
+    }
 }
