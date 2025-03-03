@@ -328,53 +328,73 @@ input[type="search"]::-webkit-search-cancel-button {
     height: auto;
     margin-bottom: 10px;
 }
-/* Estilo para página de comparação */
-.container-comparacao {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  flex-wrap: wrap;
+/* Estilos para a página de comparação de protetores solares */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.produto {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  width: 350px;
-  text-align: center;
-  margin-bottom: 20px;
+.comparacao-protetores-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.produto img {
-  width: 200px;
-  border-radius: 10px;
+.comparacao-protetores-lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.sub-container {
-  margin-top: 20px;
+.comparacao-protetores-produto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.comparacao-loja {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e9ecef;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.comparacao-protetores-produto-info h2 {
+    margin-top: 0;
+    font-size: 1.2em;
 }
 
-.botao-comprar {
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
+.comparacao-protetores-preco {
+    font-weight: bold;
+    color: #28a745;
 }
 
-.botao-comprar:hover {
-  background-color: #0056b3;
+.comparacao-protetores-comprar, .comparacao-protetores-ver-todos {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.comparacao-protetores-comprar:hover, .comparacao-protetores-ver-todos:hover {
+    background-color: #0056b3;
+}
+
+.comparacao-protetores-produto-destaque {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.comparacao-protetores-avaliacao {
+    color: #f39c12;
+    margin-bottom: 10px;
 }
