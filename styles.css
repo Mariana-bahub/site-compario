@@ -330,13 +330,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* Estilos para a página de comparação de protetores solares */
 
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
 .comparacao-protetores-container {
     width: 80%;
     max-width: 800px;
@@ -345,6 +338,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif; /* Adicionei a fonte aqui */
 }
 
 .comparacao-protetores-lista-produtos {
