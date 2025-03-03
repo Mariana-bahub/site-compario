@@ -449,16 +449,18 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Container do produto */
 .product-item {
     border-bottom: 2px solid #ccc; /* Linha horizontal visível */
-    padding: 15px 0; /* Espaçamento nas laterais e acima/abaixo */
+    padding: 15px 0; /* Espaçamento acima e abaixo */
     margin-bottom: 20px;
     display: flex; /* Faz a imagem e a descrição ficarem lado a lado */
     gap: 20px; /* Espaçamento entre imagem e descrição */
     align-items: center;
     flex-wrap: nowrap; /* Impede a quebra em telas pequenas */
     border-radius: 8px; /* Bordas arredondadas no container */
+    box-sizing: border-box; /* Garante que padding e border não saiam do container */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
 }
 
-/* Garantindo que a linha horizontal não quebre e ocupe toda a largura */
+/* Garantindo que a linha horizontal ocupe toda a largura do contêiner */
 .product-item::before {
     content: "";
     display: block;
@@ -477,8 +479,9 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 150px; /* Tamanho fixo para a imagem */
     height: auto;
     border: 1px solid #ccc; /* Borda visível para a imagem */
-    border-radius: 8px; 
+    border-radius: 8px;
     object-fit: cover; /* Manter a proporção da imagem */
+    box-sizing: border-box; /* Garante que a imagem fique dentro do container */
 }
 
 /* Descrição do produto */
@@ -512,6 +515,7 @@ input[type="search"]::-webkit-search-cancel-button {
     .product-item {
         flex-direction: row; /* Imagem e descrição continuam lado a lado */
         align-items: center;
+        padding: 10px; /* Ajusta o padding para dispositivos menores */
     }
 
     .product-item img {
