@@ -444,68 +444,63 @@ input[type="search"]::-webkit-search-cancel-button {
         max-width: 150px; /* Reduz a largura máxima das imagens em telas menores */
     }
 }
-/* Estilo exclusivo para página de comparação de ar-condicionado */
+/* Estilo exclusivo para a página de comparação de ar-condicionado */
 
-/* Container do produto */
+/* Container principal de cada produto */
 .product-item {
-    border-bottom: 2px solid #ccc; /* Linha horizontal visível */
-    padding: 15px 0; /* Espaçamento acima e abaixo */
-    margin-bottom: 20px;
-    display: flex; /* Faz a imagem e a descrição ficarem lado a lado */
-    gap: 20px; /* Espaçamento entre imagem e descrição */
-    align-items: center;
-    flex-wrap: nowrap; /* Impede a quebra em telas pequenas */
-    border-radius: 8px; /* Bordas arredondadas no container */
-    box-sizing: border-box; /* Garante que padding e border não saiam do container */
-    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    display: flex; /* Imagem e descrição ao lado */
+    align-items: center; /* Alinha verticalmente */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Espaço interno */
+    margin-bottom: 20px; /* Espaço entre os produtos */
+    box-sizing: border-box; /* Inclui borda e padding no tamanho total */
+    width: 100%; /* Garante que o produto ocupe toda a largura disponível */
+    position: relative; /* Para a linha horizontal */
 }
 
-/* Garantindo que a linha horizontal ocupe toda a largura do contêiner */
+/* Linha horizontal */
 .product-item::before {
     content: "";
     display: block;
     width: 100%;
-    height: 2px;
-    background-color: #ccc; /* Linha horizontal */
+    height: 2px; /* Espessura da linha */
+    background-color: #ccc; /* Cor da linha */
     position: absolute;
-    top: 0;
+    top: 0; /* Coloca a linha no topo do container */
     left: 0;
-    right: 0;
-    z-index: -1; /* Fica atrás do conteúdo */
 }
 
 /* Imagem do produto */
 .product-item img {
-    width: 150px; /* Tamanho fixo para a imagem */
+    width: 150px; /* Largura fixa da imagem */
     height: auto;
-    border: 1px solid #ccc; /* Borda visível para a imagem */
-    border-radius: 8px;
-    object-fit: cover; /* Manter a proporção da imagem */
-    box-sizing: border-box; /* Garante que a imagem fique dentro do container */
+    border: 1px solid #ccc; /* Borda visível */
+    border-radius: 8px; /* Borda arredondada da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    margin-right: 20px; /* Espaço entre a imagem e a descrição */
 }
 
 /* Descrição do produto */
 .product-info {
-    flex: 1; /* Ocupa o restante do espaço disponível */
+    flex: 1; /* Ocupa o espaço restante */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaça o título e o preço */
 }
 
-/* Botão responsivo e menor, abaixo da descrição */
+/* Botão responsivo */
 .product-item a.btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    display: inline-block;
     background-color: #007bff;
     color: white;
+    padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
-    display: inline-block;
     margin-top: 10px;
 }
 
-/* Efeito hover no botão */
+/* Efeito de hover no botão */
 .product-item a.btn:hover {
     background-color: #0056b3;
 }
@@ -513,13 +508,12 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
     .product-item {
-        flex-direction: row; /* Imagem e descrição continuam lado a lado */
-        align-items: center;
-        padding: 10px; /* Ajusta o padding para dispositivos menores */
+        flex-direction: row; /* Mantém imagem e descrição ao lado */
+        padding: 10px;
     }
 
     .product-item img {
-        width: 120px; /* Ajuste no tamanho da imagem */
+        width: 120px; /* Ajusta o tamanho da imagem para telas menores */
     }
 
     .product-item a.btn {
@@ -529,6 +523,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
 @media (max-width: 480px) {
     .product-item img {
-        width: 100px; /* Ajuste ainda menor para telas pequenas */
+        width: 100px; /* Imagem menor em telas ainda menores */
     }
 }
