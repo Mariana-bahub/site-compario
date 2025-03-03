@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.lista-2024 {
+    margin-bottom: 2rem;
+}
+
+.lista-2024 h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.lista-2024 .produto {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.lista-2024 .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.lista-2024 .ver-todos {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.destaque-2025 {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.destaque-2025 h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.destaque-2025 .produto-destaque {
+    text-align: center;
+}
+
+.destaque-2025 .produto-destaque img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .lista-2024 .produto {
+        padding: 0.75rem;
+    }
+}
