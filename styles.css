@@ -461,51 +461,50 @@ input[type="search"]::-webkit-search-cancel-button {
         max-width: 150px; /* Reduz a largura máxima das imagens em telas menores */
     }
 }
-/* Estilo exclusivo para página de ar-condicionado */
+/* Estilo exclusivo para página de comparação de ar-condicionado */
 
-/* Linhas horizontais mais visíveis */
+/* Linha horizontal visível e contínua */
 .product-item {
-    border-bottom: 2px solid #ccc; /* Linha mais visível */
+    border-bottom: 2px solid #ccc; /* Linha visível */
     padding-bottom: 15px;
     margin-bottom: 20px;
-}
-
-/* Layout de imagem ao lado da descrição */
-.product-item {
-    display: flex;
-    align-items: center;
+    display: flex; 
     justify-content: space-between;
-    flex-wrap: wrap; /* Responsivo para telas menores */
-    text-align: left;
+    align-items: center; 
+    gap: 20px; /* Espaço entre imagem e descrição */
+    flex-wrap: nowrap; /* Impede a quebra em telas menores */
 }
 
+/* Imagem do produto */
 .product-item img {
-    width: 150px; /* Tamanho da imagem */
+    width: 150px; /* Tamanho fixo */
     height: auto;
-    margin-right: 15px;
-    border: 1px solid #ccc; /* Contorno para destacar */
-    border-radius: 8px;
+    border: 1px solid #ccc; /* Contorno visível */
+    border-radius: 8px; 
+    object-fit: cover; /* Mantém proporção da imagem */
 }
 
-.product-item .product-name,
-.product-item .product-feature,
-.product-item .product-price {
+/* Descrição do produto */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1; /* Ocupa o restante do espaço */
-    margin-bottom: 10px;
 }
 
 /* Botão menor e responsivo */
 .product-item a.btn {
     padding: 8px 16px; 
     font-size: 0.9rem; 
-    width: auto;
-    display: inline-block;
+    width: fit-content; 
     text-align: center;
     background-color: #007bff; /* Cor azul */
     border: none;
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
+    margin-top: 10px; /* Espaçamento entre texto e botão */
+    display: block;
 }
 
 .product-item a.btn:hover {
