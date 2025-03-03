@@ -335,6 +335,13 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-bottom: 20px;
 }
 
+.product-list-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 .product-list {
     list-style: none;
     padding: 0;
@@ -344,13 +351,20 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.product-item img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 15px;
 }
 
 .product-number {
     font-weight: bold;
     margin-right: 10px;
+    min-width: 30px;
 }
 
 .product-name {
@@ -360,11 +374,14 @@ input[type="search"]::-webkit-search-cancel-button {
 .product-feature {
     font-size: 0.8em;
     color: #888;
+    margin-top: 5px;
 }
 
 .product-price {
     font-weight: bold;
     margin-left: 10px;
+    min-width: 80px;
+    text-align: right;
 }
 
 .destaque-produto {
@@ -372,6 +389,7 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center;
     border: 1px solid #ddd;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .avaliacao {
@@ -401,4 +419,21 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .loja-destaque:hover {
     background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-item img {
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        text-align: left;
+        margin-left: 0;
+    }
 }
