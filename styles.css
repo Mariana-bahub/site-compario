@@ -328,132 +328,56 @@ input[type="search"]::-webkit-search-cancel-button {
     height: auto;
     margin-bottom: 10px;
 }
-/* Estilos exclusivos para a página ar-condicionado.html */
-.ar-condicionado .product-list-container {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    width: 100%;
 }
 
-.ar-condicionado .product-list {
-    list-style: none;
-    padding: 0;
-}
-
-.ar-condicionado .product-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.ar-condicionado .product-item img {
-    max-width: 80px;
-    height: auto;
-    margin-right: 15px;
-}
-
-.ar-condicionado .product-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.ar-condicionado .product-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.ar-condicionado .product-feature {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 5px;
-}
-
-.ar-condicionado .product-price {
-    font-weight: bold;
-    margin-top: 10px;
-    min-width: 80px;
-    text-align: right;
-}
-
-.ar-condicionado .product-item::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #ddd;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.ar-condicionado .product-item a.btn {
-    display: inline-block;
+.loja-destaque {
+    margin: 0 10px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
-    padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
-    text-align: center;
-    margin-top: 15px;
-    width: 100%;
 }
 
-.ar-condicionado .product-item a.btn:hover {
+.loja-destaque:hover {
     background-color: #0056b3;
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
-    .ar-condicionado .product-item {
-        flex-direction: row;
-    }
-    
-    .ar-condicionado .product-item img {
-        max-width: 120px;
-        margin-right: 20px;
-    }
-    
-    .ar-condicionado .product-price {
-        text-align: left;
-    }
-}
-
 @media (max-width: 768px) {
-    .ar-condicionado .product-item {
+    .product-item {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .ar-condicionado .product-item img {
-        max-width: 100px;
-        margin-right: 0;
+    .product-item img {
         margin-bottom: 10px;
     }
 
-    .ar-condicionado .product-price {
+    .product-price {
         text-align: left;
-        margin-top: 10px;
+        margin-left: 0;
     }
-
-    .ar-condicionado .product-item a.btn {
-        width: 100%;
-    }
+.image-container {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center; /* Centraliza as imagens verticalmente */
+    margin-top: 20px; /* Adiciona um espaço acima das imagens */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo das imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha em telas menores */
 }
 
-@media (max-width: 480px) {
-    .ar-condicionado .product-item img {
-        max-width: 80px;
-    }
-
-    .ar-condicionado .product-item a.btn {
-        width: 100%;
+.image-container img {
+    max-width: 200px; /* Define a largura máxima das imagens */
+    height: auto; /* Mantém a proporção das imagens */
+    margin: 10px; /* Adiciona um espaço entre as imagens */
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave às imagens */
+}
+    
+/* Responsividade */
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 150px; /* Reduz a largura máxima das imagens em telas menores */
     }
 }
