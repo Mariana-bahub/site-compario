@@ -6,133 +6,126 @@
     <title>Comparação de Ar-Condicionados</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* ... (outros estilos) ... */
+        /* Container maior para os itens */
+        .produto-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-        /* Estilo para os cartões de produto em formato de lista */
-        .produto-card {
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 15px;
+        /* Lista de produtos */
+        .produto-lista {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Estilo para cada item de produto */
+        .produto-item {
             background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .produto-card img {
-            width: 100%;
-            height: auto;
+            gap: 15px;
+            border: 1px solid #ddd;
             border-radius: 8px;
         }
 
-        .produto-card .product-name {
+        .produto-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .produto-item .product-number {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #2d7c92;
+        }
+
+        .produto-item .product-name {
             font-size: 1.2rem;
             font-weight: bold;
         }
 
-        .produto-card .product-price {
-            font-size: 1.1rem;
+        .produto-item .product-feature {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .produto-item .product-price {
+            font-size: 1.2rem;
             color: #2d7c92;
         }
 
-        .produto-card .product-feature {
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        .produto-card .btn {
-            align-self: center;
+        .produto-item .btn {
+            align-self: flex-start;
             margin-top: 10px;
         }
 
-        /* Ajustes para telas médias */
-        @media (max-width: 992px) and (min-width: 768px) {
-            .produto-card {
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .produto-item {
+                flex-direction: column;
             }
-        }
-
-        /* Ajustes para telas pequenas */
-        @media (max-width: 768px) {
-            .produto-card {
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        /* Ajuste da introdução */
-        .introducao p {
-            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
-    <div class="comparacao-page">
-        <section class="comparacao-ar-condicionado mt-5">
-            <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
-            <div class="image-container">
-                <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado 1" class="img-fluid">
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="introducao">
-                        <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca. Com o passar dos anos, esse se tornou um item essencial para garantir conforto e bem-estar em qualquer estação.</p>
-                        <p>Neste guia, te ajudaremos a encontrar o modelo ideal para você, abordando os tipos de ar-condicionado, as tecnologias disponíveis, as funcionalidades que podem oferecer mais conforto e as melhores marcas de ar-condicionado do mercado em 2025.</p>
-                        <p>Curioso para saber qual o modelo mais famoso do ano passado? Conheça o ar-condicionado mais vendido de 2024!</p>
-                    </div>
-                    <div class="product-list-container">
-                        <div class="produto-card">
-                            <span class="product-number">#1</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" alt="LG Dual Inverter Compact 12.000 BTUs">
-                            <span class="product-name">LG Dual Inverter Compact 12.000 BTUs</span>
-                            <span class="product-feature">Melhor ar-condicionado 2024</span>
-                            <span class="product-price">R$ 2.339,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="produto-card">
-                            <span class="product-number">#2</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Ar-condicionado Split Samsung Wind Free Connect 12.000">
-                            <span class="product-name">Ar-condicionado Split Samsung Wind Free Connect 12.000</span>
-                            <span class="product-feature">Melhor distribuição do ar</span>
-                            <span class="product-price">R$ 2.669,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="produto-card">
-                            <span class="product-number">#3</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs">
-                            <span class="product-name">Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs</span>
-                            <span class="product-feature">Garantia de conforto térmico</span>
-                            <span class="product-price">R$ 1.999,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="produto-card">
-                            <span class="product-number">#4</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs">
-                            <span class="product-name">Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs</span>
-                            <span class="product-feature">Com íons que combatem bactérias e fungos</span>
-                            <span class="product-price">R$ 1.999,00</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                        <div class="produto-card">
-                            <span class="product-number">#5</span>
-                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Ar-condicionado Split TCL Elite Series 12.000 BTUs">
-                            <span class="product-name">Ar-condicionado Split TCL Elite Series 12.000 BTUs</span>
-                            <span class="product-feature">Modelo silencioso</span>
-                            <span class="product-price">R$ 2.427,04</span>
-                            <a href="#" class="btn btn-primary">Ir à loja</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="produto-container">
+        <h2 class="text-center mb-4">Melhores Ar-Condicionados de 2024/2025</h2>
+        <ul class="produto-lista">
+            <!-- Produto 1 -->
+            <li class="produto-item">
+                <span class="product-number">#1</span>
+                <img src="https://via.placeholder.com/600x400" alt="LG Dual Inverter Compact">
+                <span class="product-name">LG Dual Inverter Compact 12.000 BTUs</span>
+                <span class="product-feature">Melhor ar-condicionado 2024</span>
+                <span class="product-price">R$ 2.339,00</span>
+                <a href="#" class="btn btn-primary">Ir à loja</a>
+            </li>
+
+            <!-- Produto 2 -->
+            <li class="produto-item">
+                <span class="product-number">#2</span>
+                <img src="https://via.placeholder.com/600x400" alt="Ar-condicionado Samsung Wind Free">
+                <span class="product-name">Ar-condicionado Split Samsung Wind Free Connect 12.000</span>
+                <span class="product-feature">Melhor distribuição do ar</span>
+                <span class="product-price">R$ 2.669,00</span>
+                <a href="#" class="btn btn-primary">Ir à loja</a>
+            </li>
+
+            <!-- Produto 3 -->
+            <li class="produto-item">
+                <span class="product-number">#3</span>
+                <img src="https://via.placeholder.com/600x400" alt="Springer Midea AirVolution">
+                <span class="product-name">Ar-condicionado Split Springer Midea AirVolution 9.000 BTUs</span>
+                <span class="product-feature">Garantia de conforto térmico</span>
+                <span class="product-price">R$ 1.999,00</span>
+                <a href="#" class="btn btn-primary">Ir à loja</a>
+            </li>
+
+            <!-- Produto 4 -->
+            <li class="produto-item">
+                <span class="product-number">#4</span>
+                <img src="https://via.placeholder.com/600x400" alt="Elgin Eco II">
+                <span class="product-name">Ar-condicionado Split Hi Wall Elgin Eco II 9.000 BTUs</span>
+                <span class="product-feature">Com íons que combatem bactérias e fungos</span>
+                <span class="product-price">R$ 1.999,00</span>
+                <a href="#" class="btn btn-primary">Ir à loja</a>
+            </li>
+
+            <!-- Produto 5 -->
+            <li class="produto-item">
+                <span class="product-number">#5</span>
+                <img src="https://via.placeholder.com/600x400" alt="TCL Elite Series">
+                <span class="product-name">Ar-condicionado Split TCL Elite Series 12.000 BTUs</span>
+                <span class="product-feature">Modelo silencioso</span>
+                <span class="product-price">R$ 2.427,04</span>
+                <a href="#" class="btn btn-primary">Ir à loja</a>
+            </li>
+        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
