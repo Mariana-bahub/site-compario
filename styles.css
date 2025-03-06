@@ -460,3 +460,24 @@ input[type="search"]::-webkit-search-cancel-button {
         padding: 10px; 
     }
     
+/* Certifique-se de que o corpo ocupe 100% da altura */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Contêiner principal que engloba todo o conteúdo, com altura mínima de 100% */
+.comparacao-page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garantir que o rodapé fique no fundo da tela */
+footer {
+    margin-top: auto; /* Empurra o rodapé para o final */
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    width: 100%;
+}
