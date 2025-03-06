@@ -426,4 +426,37 @@ input[type="search"]::-webkit-search-cancel-button {
         flex-direction: column;  
         align-items: flex-start;  
     }  
-  
+@media (max-width: 768px) {
+    .comparacao-container {
+        flex-direction: column; /* Deixa os itens em coluna no celular */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+    }
+
+    .imagem-produto {
+        width: 100%; /* Ocupa toda a largura no celular */
+        max-width: 300px; /* Limite para não esticar demais */
+        margin-bottom: 20px; 
+    }
+
+    .tabela-comparacao {
+        width: 100%; 
+        overflow-x: auto; /* Adiciona rolagem horizontal se precisar */
+    }
+
+    .tabela-comparacao table {
+        width: 100%; /* Tabelas ocupando toda a largura */
+    }
+
+    .tabela-comparacao th,
+    .tabela-comparacao td {
+        padding: 10px; /* Espaçamento maior */
+        font-size: 14px; /* Texto menor para caber na tela */
+    }
+
+    .botao-comprar {
+        width: 100%; /* Botão ocupa toda a largura */
+        font-size: 14px; /* Texto menor */
+        padding: 10px; 
+    }
+  }
