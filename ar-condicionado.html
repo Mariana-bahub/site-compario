@@ -8,33 +8,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Ajustes para responsividade */
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .comparacao-page {
+        /* Garante que o rodapé fique sempre no final */
+        body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        .comparacao-ar-condicionado {
+        .comparacao-page {
             flex: 1;
         }
 
+        /* Ajuste para responsividade */
         .produto {
             display: flex;
             align-items: center;
             padding: 10px;
             border-bottom: 1px solid #eee;
-            flex-wrap: wrap;
         }
 
         .produto img {
             width: 80px;
-            height: auto;
             margin-right: 10px;
         }
 
@@ -51,12 +45,24 @@
             cursor: pointer;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            margin-top: auto;
+        /* Ocultar produtos extras inicialmente */
+        .produto.oculto {
+            display: none;
         }
+
+        /* Ajuste para exibir mais produtos em telas maiores */
+        @media (min-width: 768px) {
+            .produto:nth-child(-n+6) {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .produto:nth-child(-n+3) {
+                display: flex;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -104,10 +110,12 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <p class="text-center">Encontre o melhor ar-condicionado para deixar sua casa sempre fresca.</p>
+                <div class="introducao">
+                    <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca.</p>
+                </div>
 
                 <!-- Lista de Produtos -->
-                <div style="width: 100%;">
+                <div id="lista-produtos">
                     <div class="produto">
                         <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" alt="LG Dual Inverter">
                         <div>
@@ -138,37 +146,39 @@
                         <button>Ir à loja</button>
                     </div>
 
-                    <!-- Novos Produtos -->
-                    <div class="produto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Consul">
+                    <!-- Novos produtos -->
+                    <div class="produto oculto">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Gree Eco">
                         <div>
-                            <strong>#4 Consul Facilite 12.000 BTUs</strong>
-                            <p>Econômico e silencioso</p>
-                            <strong>R$ 2.150,00</strong>
+                            <strong>#4 Gree Eco Garden 9.000 BTUs</strong>
+                            <p>Alta eficiência energética</p>
+                            <strong>R$ 2.199,00</strong>
                         </div>
                         <button>Ir à loja</button>
                     </div>
 
-                    <div class="produto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Gree Eco">
+                    <div class="produto oculto">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Philco Inverter">
                         <div>
-                            <strong>#5 Gree Eco Garden 12.000 BTUs</strong>
-                            <p>Sustentável e eficiente</p>
+                            <strong>#5 Philco Inverter 12.000 BTUs</strong>
+                            <p>Baixo consumo de energia</p>
                             <strong>R$ 2.499,00</strong>
                         </div>
                         <button>Ir à loja</button>
                     </div>
 
-                    <div class="produto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-6.jpg" alt="Electrolux Ultra">
+                    <div class="produto oculto">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-6.jpg" alt="Elgin Eco Power">
                         <div>
-                            <strong>#6 Electrolux Ultra Inverter 18.000 BTUs</strong>
-                            <p>Potência para grandes ambientes</p>
-                            <strong>R$ 3.299,00</strong>
+                            <strong>#6 Elgin Eco Power 18.000 BTUs</strong>
+                            <p>Alta capacidade de refrigeração</p>
+                            <strong>R$ 3.199,00</strong>
                         </div>
                         <button>Ir à loja</button>
                     </div>
                 </div>
+
+                <button id="mostrar-todos" class="btn btn-primary mt-3">Ver todos os produtos</button>
             </div>
         </div>
     </section>
@@ -179,6 +189,11 @@
     <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("mostrar-todos").addEventListener("click", function () {
+        document.querySelectorAll(".produto.oculto").forEach(el => el.style.display = "flex");
+        this.style.display = "none";
+    });
+</script>
 </body>
 </html>
