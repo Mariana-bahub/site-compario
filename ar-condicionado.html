@@ -7,40 +7,89 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fixando o rodapé na parte inferior */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .comparacao-page {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Botão responsivo de 'Ver Todos' / 'Ver Menos' */
+        .ver-todos-btn {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .conteudo-adicional {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .comparacao-ar-condicionado img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Comparador de Preços</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
+        </a>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Digite sua busca...">
+                <button><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Início</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
+                        <li><a class="dropdown-item" href="#">Moda</a></li>
+                        <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#comparacao-ar-condicionado">Ar-Condicionados</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Lojas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <div class="comparacao-page">
-    <section id="comparacao-ar-condicionado" class="comparacao-ar-condicionado mt-5">
+    <section class="comparacao-ar-condicionado mt-5">
         <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
         <div class="image-container text-center">
             <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado">
@@ -49,84 +98,74 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="introducao">
-                    <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca.</p>
+                    <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca. Com o passar dos anos, esse se tornou um item essencial para garantir conforto e bem-estar em qualquer estação.</p>
                 </div>
 
-                <div id="lista-produtos">
-                    <div class="produto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" alt="LG Dual Inverter">
-                        <div>
+                <!-- Lista de Produtos com Novo Layout -->
+                <div style="width: 100%; font-family: sans-serif;">
+                    <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" alt="LG Dual Inverter" style="width: 80px; margin-right: 10px;">
+                        <div style="flex-grow: 1;">
                             <strong>#1 LG Dual Inverter Compact 12.000 BTUs</strong>
                             <p>Melhor ar-condicionado 2024</p>
                             <strong>R$ 2.339,00</strong>
                         </div>
-                        <button>Ir à loja</button>
+                        <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
                     </div>
 
-                    <div class="produto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Samsung Wind Free">
-                        <div>
+                    <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Samsung Wind Free" style="width: 80px; margin-right: 10px;">
+                        <div style="flex-grow: 1;">
                             <strong>#2 Samsung Wind Free Connect 12.000</strong>
                             <p>Melhor distribuição do ar</p>
                             <strong>R$ 2.669,00</strong>
                         </div>
-                        <button>Ir à loja</button>
+                        <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
                     </div>
 
-                    <div class="produto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Midea AirVolution">
-                        <div>
+                    <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Midea AirVolution" style="width: 80px; margin-right: 10px;">
+                        <div style="flex-grow: 1;">
                             <strong>#3 Springer Midea AirVolution 9.000 BTUs</strong>
                             <p>Garantia de conforto térmico</p>
                             <strong>R$ 1.999,00</strong>
                         </div>
-                        <button>Ir à loja</button>
+                        <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
                     </div>
 
-                    <!-- Produtos ocultos inicialmente -->
-                    <div class="produto oculto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Gree Eco">
-                        <div>
-                            <strong>#4 Gree Eco Garden 9.000 BTUs</strong>
-                            <p>Alta eficiência energética</p>
-                            <strong>R$ 2.199,00</strong>
+                    <!-- Conteúdo Adicional Oculto -->
+                    <div class="conteudo-adicional">
+                        <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" alt="Ar-Condicionado 4" style="width: 80px; margin-right: 10px;">
+                            <div style="flex-grow: 1;">
+                                <strong>#4 Daikin Inverter 12.000 BTUs</strong>
+                                <p>Controle inteligente de temperatura</p>
+                                <strong>R$ 2.799,00</strong>
+                            </div>
+                            <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
                         </div>
-                        <button>Ir à loja</button>
-                    </div>
 
-                    <div class="produto oculto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Philco Inverter">
-                        <div>
-                            <strong>#5 Philco Inverter 12.000 BTUs</strong>
-                            <p>Baixo consumo de energia</p>
-                            <strong>R$ 2.499,00</strong>
+                        <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" alt="Ar-Condicionado 5" style="width: 80px; margin-right: 10px;">
+                            <div style="flex-grow: 1;">
+                                <strong>#5 Carrier Inverter 9.000 BTUs</strong>
+                                <p>Economia de energia</p>
+                                <strong>R$ 1.899,00</strong>
+                            </div>
+                            <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
                         </div>
-                        <button>Ir à loja</button>
                     </div>
 
-                    <div class="produto oculto">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-6.jpg" alt="Elgin Eco Power">
-                        <div>
-                            <strong>#6 Elgin Eco Power 18.000 BTUs</strong>
-                            <p>Alta capacidade de refrigeração</p>
-                            <strong>R$ 3.199,00</strong>
-                        </div>
-                        <button>Ir à loja</button>
-                    </div>
-                </div>
-
-                <!-- Botões -->
-                <div class="botoes-container">
-                    <button id="mostrar-todos">Ver Todos</button>
-                    <button id="ver-menos" style="display: none;">Ver Menos</button>
+                    <!-- Botão de 'Ver Todos' / 'Ver Menos' -->
+                    <button class="ver-todos-btn" onclick="toggleConteudo()">Ver Todos</button>
                 </div>
             </div>
         </div>
     </section>
 </div>
 
-<!-- Rodapé ajustado conforme solicitado -->
-<footer class="text-center mt-5">
+<!-- Footer -->
+<footer>
     <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
     <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
 
@@ -152,24 +191,17 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    document.getElementById("mostrar-todos").addEventListener("click", function() {
-        var produtosOcultos = document.querySelectorAll(".produto.oculto");
-        produtosOcultos.forEach(function(produto) {
-            produto.style.display = "block";
-        });
-        document.getElementById("mostrar-todos").style.display = "none";
-        document.getElementById("ver-menos").style.display = "inline-block";
-    });
-
-    document.getElementById("ver-menos").addEventListener("click", function() {
-        var produtosOcultos = document.querySelectorAll(".produto.oculto");
-        produtosOcultos.forEach(function(produto) {
-            produto.style.display = "none";
-        });
-        document.getElementById("mostrar-todos").style.display = "inline-block";
-        document.getElementById("ver-menos").style.display = "none";
-    });
+    function toggleConteudo() {
+        const conteudo = document.querySelector('.conteudo-adicional');
+        const botao = document.querySelector('.ver-todos-btn');
+        if (conteudo.style.display === 'none' || conteudo.style.display === '') {
+            conteudo.style.display = 'block';
+            botao.textContent = 'Ver Menos';
+        } else {
+            conteudo.style.display = 'none';
+            botao.textContent = 'Ver Todos';
+        }
+    }
 </script>
-
 </body>
 </html>
