@@ -460,20 +460,3 @@ input[type="search"]::-webkit-search-cancel-button {
         padding: 10px; 
     }
     
-body {
-    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
-    display: flex;
-    flex-direction: column;
-    margin: 0; /* Remove margens padrão do body */
-}
-
-.comparacao-page {
-    flex-grow: 1; /* Permite que o conteúdo principal cresça para preencher o espaço restante */
-}
-
-footer {
-    /* Seus estilos de rodapé existentes */
-    padding: 20px 0;
-    text-align: center;
-    background-color: #f0f0f0; /* Exemplo de cor de fundo */
-}
