@@ -7,30 +7,113 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustes gerais */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand img {
+            width: 100px;
+            height: auto;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 5px;
+        }
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Imagens responsivas */
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilo da lista de produtos */
+        .produto {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .produto img {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .produto .info {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        .produto button {
+            background-color: purple;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            max-width: 150px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo">
         </a>
-        <div class="search-bar-container">
-            <div class="search-bar">
-                <input type="text" placeholder="Digite sua busca...">
-                <button><i class="bi bi-search"></i></button>
-            </div>
+        <div class="search-bar d-none d-md-flex">
+            <input type="text" placeholder="Digite sua busca...">
+            <button><i class="bi bi-search"></i></button>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown">
                         Categorias
                     </a>
                     <ul class="dropdown-menu">
@@ -45,50 +128,48 @@
     </div>
 </nav>
 
-<div class="comparacao-page">
+<div class="container">
     <section class="comparacao-ar-condicionado mt-5">
         <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
-        <div class="image-container text-center">
+        <div class="text-center image-container">
             <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado">
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-lg-8 col-md-10">
                 <div class="introducao">
                     <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca. Com o passar dos anos, esse se tornou um item essencial para garantir conforto e bem-estar em qualquer estação.</p>
                 </div>
 
-                <!-- Lista de Produtos com Novo Layout -->
-                <div style="width: 100%; font-family: sans-serif;">
-                    <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" alt="LG Dual Inverter" style="width: 80px; margin-right: 10px;">
-                        <div style="flex-grow: 1;">
-                            <strong>#1 LG Dual Inverter Compact 12.000 BTUs</strong>
-                            <p>Melhor ar-condicionado 2024</p>
-                            <strong>R$ 2.339,00</strong>
-                        </div>
-                        <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
+                <!-- Lista de Produtos -->
+                <div class="produto">
+                    <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" alt="LG Dual Inverter">
+                    <div class="info">
+                        <strong>#1 LG Dual Inverter Compact 12.000 BTUs</strong>
+                        <p>Melhor ar-condicionado 2024</p>
+                        <strong>R$ 2.339,00</strong>
                     </div>
+                    <button>Ir à loja</button>
+                </div>
 
-                    <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Samsung Wind Free" style="width: 80px; margin-right: 10px;">
-                        <div style="flex-grow: 1;">
-                            <strong>#2 Samsung Wind Free Connect 12.000</strong>
-                            <p>Melhor distribuição do ar</p>
-                            <strong>R$ 2.669,00</strong>
-                        </div>
-                        <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
+                <div class="produto">
+                    <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" alt="Samsung Wind Free">
+                    <div class="info">
+                        <strong>#2 Samsung Wind Free Connect 12.000</strong>
+                        <p>Melhor distribuição do ar</p>
+                        <strong>R$ 2.669,00</strong>
                     </div>
+                    <button>Ir à loja</button>
+                </div>
 
-                    <div style="display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee;">
-                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Midea AirVolution" style="width: 80px; margin-right: 10px;">
-                        <div style="flex-grow: 1;">
-                            <strong>#3 Springer Midea AirVolution 9.000 BTUs</strong>
-                            <p>Garantia de conforto térmico</p>
-                            <strong>R$ 1.999,00</strong>
-                        </div>
-                        <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Ir à loja</button>
+                <div class="produto">
+                    <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" alt="Midea AirVolution">
+                    <div class="info">
+                        <strong>#3 Springer Midea AirVolution 9.000 BTUs</strong>
+                        <p>Garantia de conforto térmico</p>
+                        <strong>R$ 1.999,00</strong>
                     </div>
+                    <button>Ir à loja</button>
                 </div>
             </div>
         </div>
@@ -99,25 +180,12 @@
 <footer>
     <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
     <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
-
     <form action="#" method="POST" class="mb-3">
-        <label for="email" class="form-label">Receba ofertas exclusivas no seu e-mail:</label>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="input-group">
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
-                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
-                </div>
-            </div>
-        </div>
+        <label for="email">Receba ofertas exclusivas:</label>
+        <input type="email" id="email" class="form-control d-inline-block w-auto" placeholder="Digite seu e-mail">
+        <button type="submit" class="btn btn-primary">Inscrever-se</button>
     </form>
-
-    <p>
-        <a href="#">Sobre</a> | 
-        <a href="#">Contato</a> | 
-        <a href="#">Política de Privacidade</a> | 
-        <a href="#">Termos de Uso</a>
-    </p>
+    <p><a href="#">Sobre</a> | <a href="#">Contato</a> | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
