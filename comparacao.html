@@ -8,29 +8,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* CSS para garantir que o rodapé sempre fique no final */
-        html, body {
-            height: 100%;
+        /* Fundo cinza em toda a página */
+        body {
+            background-color: #CCCCCC;
             margin: 0;
-            display: flex;
-            flex-direction: column;
+            padding: 0;
         }
 
-        main {
-            flex: 1;
-        }
-
-        footer {
-            background-color: #f8f9fa;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
+        /* Garantir que o rodapé fique fixo na parte inferior */
+        .footer {
+            position: fixed;
+            left: 0;
             bottom: 0;
             width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
 
-        footer p, footer a {
-            margin: 0;
+        /* Garantir que o conteúdo acima do rodapé ocupe o restante da tela */
+        .container {
+            padding-bottom: 60px; /* Espaço para o rodapé fixo */
         }
     </style>
 </head>
@@ -114,7 +113,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
         <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
 
