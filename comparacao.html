@@ -1,163 +1,186 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Preços</title>
+    <title>Comparativo de Preços</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            background-color: #f5f5f5;
+            font-family: sans-serif;
+            margin: 0;
             padding: 20px;
+            background-color: #f4f4f4;
         }
 
         .container {
-            max-width: 800px;
-            margin: auto;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .product-card {
-            background: white;
-            padding: 15px;
-            margin-bottom: 15px;
+        .card {
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
         }
 
-        .product-card h3 {
-            color: #333;
-            font-size: 18px;
-            margin-bottom: 5px;
+        .header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
         }
 
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #2d7df4;
+        .best-price {
+            background-color: #e0f2fe;
+            color: #1e40af;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
 
-        .cashback {
-            font-size: 14px;
-            color: #27ae60;
+        .content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
         }
 
-        .final-price {
-            font-size: 16px;
-            font-weight: bold;
-            color: #d35400;
+        .price, .cashback, .shipping, .final-price {
+            grid-column: 1 / -1;
         }
 
         .store {
+            grid-column: 1 / 2;
             display: flex;
             align-items: center;
-            margin-top: 10px;
         }
 
         .store img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            max-width: 50px;
             margin-right: 10px;
         }
 
         .button {
-            display: block;
+            grid-column: 2 / 3;
+            background-color: #4f46e5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
             text-align: center;
-            background-color: #6a0dad;
-            color: white;
-            padding: 8px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            justify-self: end;
         }
 
         .button:hover {
-            background-color: #5c0ca1;
+            background-color: #4338ca;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .store, .button {
+                grid-column: 1 / 2;
+                justify-self: stretch;
+            }
+
+            .store {
+                margin-bottom: 10px;
             }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h2>Comparação de Preços</h2>
-        <div id="product-list"></div>
+        <div class="card">
+            <div class="header">
+                <span class="best-price">Menor preço</span>
+            </div>
+            <div class="content">
+                <div class="price">
+                    <strong>R$ 1.987,30</strong> à vista<br>
+                    ou 10x de R$ 209,19
+                </div>
+                <div class="cashback">
+                    Zoom te devolve R$ 19,87<br>
+                    1% cashback na loja toda
+                </div>
+                <div class="final-price">
+                    Cálculo final R$ 1.967,43<br>
+                    Após receber dinheiro de volta
+                </div>
+                <div class="store">
+                    <img src="magazine-luiza-logo.png" alt="Magazine Luiza">
+                    <span>Magazine Luiza</span>
+                </div>
+                <a href="#" class="button">Ir à loja</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <div class="price">
+                    <strong>R$ 2.082,11</strong> à vista
+                </div>
+                <div class="cashback">
+                    Zoom te devolve R$ 124,93<br>
+                    6% cashback na categoria
+                </div>
+                <div class="final-price">
+                    Cálculo final R$ 1.957,18<br>
+                    Após receber dinheiro de volta
+                </div>
+                <div class="store">
+                    <img src="amazon-logo.png" alt="Amazon">
+                    <span>Amazon</span>
+                </div>
+                <a href="#" class="button">Ir à loja</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <div class="price">
+                    <strong>R$ 2.482,16</strong> à vista<br>
+                    ou 10x de R$ 269,80
+                </div>
+                <div class="cashback">
+                    Zoom te devolve R$ 148,93<br>
+                    6% cashback na loja toda
+                </div>
+                <div class="final-price">
+                    Cálculo final R$ 2.333,23<br>
+                    Após receber dinheiro de volta
+                </div>
+                <div class="store">
+                    <img src="casas-bahia-logo.png" alt="Casas Bahia">
+                    <span>Casas Bahia</span>
+                </div>
+                <a href="#" class="button">Ir à loja</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <div class="price">
+                    <strong>R$ 2.293,30</strong> à vista<br>
+                    ou 6x de R$ 449,67 sem juros
+                </div>
+                <div class="shipping">
+                    Frete estimado R$ 127,80<br>
+                    em até 8 dias úteis
+                </div>
+                <div class="final-price">
+                    Cálculo final R$ 2.421,10
+                </div>
+                <div class="store">
+                    <span>FRIOPEÇAS</span>
+                </div>
+                <a href="#" class="button">Comprar</a>
+            </div>
+        </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const products = [
-                {
-                    store: "Magazine Luiza",
-                    logo: "https://via.placeholder.com/40", // Substituir pelo logo real
-                    price: "R$ 1.987,30",
-                    cashback: "R$ 19,87",
-                    finalPrice: "R$ 1.967,43",
-                    link: "#"
-                },
-                {
-                    store: "Amazon",
-                    logo: "https://via.placeholder.com/40",
-                    price: "R$ 2.082,11",
-                    cashback: "R$ 124,93",
-                    finalPrice: "R$ 1.957,18",
-                    link: "#"
-                },
-                {
-                    store: "Casas Bahia",
-                    logo: "https://via.placeholder.com/40",
-                    price: "R$ 2.482,16",
-                    cashback: "R$ 148,93",
-                    finalPrice: "R$ 2.333,23",
-                    link: "#"
-                },
-                {
-                    store: "FRIOPEÇAS",
-                    logo: "https://via.placeholder.com/40",
-                    price: "R$ 2.293,30",
-                    cashback: "R$ 127,80",
-                    finalPrice: "R$ 2.421,10",
-                    link: "#"
-                }
-            ];
-
-            const productList = document.getElementById("product-list");
-
-            products.forEach(product => {
-                const card = document.createElement("div");
-                card.classList.add("product-card");
-
-                card.innerHTML = `
-                    <h3>${product.store}</h3>
-                    <p class="price">${product.price} à vista</p>
-                    <p class="cashback">Cashback: ${product.cashback}</p>
-                    <p class="final-price">Preço final: ${product.finalPrice}</p>
-                    <div class="store">
-                        <img src="${product.logo}" alt="${product.store}">
-                        <a href="${product.link}" class="button">Ir à loja</a>
-                    </div>
-                `;
-
-                productList.appendChild(card);
-            });
-        });
-    </script>
-
 </body>
 </html>
