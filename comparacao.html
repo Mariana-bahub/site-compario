@@ -29,11 +29,6 @@
       width: 120px;
       height: auto;
     }
-    .search-container {
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-    }
     .search-bar {
       background-color: #fff;
       border-radius: 20px;
@@ -53,6 +48,9 @@
       border: none;
       cursor: pointer;
     }
+    .logo-search {
+      text-align: center;
+    }
     .product-image {
       max-width: 120px;
       height: auto;
@@ -69,17 +67,16 @@
       margin: 0 auto;
     }
 
-    /* Responsividade */
+    /* Layout para telas maiores */
     @media (min-width: 992px) {
-      .navbar .container-fluid {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
       .logo-search {
         display: flex;
         align-items: center;
         gap: 15px;
+        justify-content: flex-start;
+      }
+      .search-container {
+        flex-grow: 1;
       }
     }
   </style>
@@ -94,7 +91,7 @@
           <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png"
                alt="Logo">
         </a>
-        <div class="search-container">
+        <div class="search-container mt-2 mt-lg-0">
           <div class="search-bar">
             <input type="text" placeholder="Digite sua busca..." class="form-control me-2">
             <button><i class="bi bi-search"></i></button>
