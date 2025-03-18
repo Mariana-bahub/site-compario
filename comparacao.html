@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Preços</title>
+    <title>Comparação de Ar-Condicionados</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fixando o rodapé na parte inferior */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .comparacao-page {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #df22f0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +33,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125">
         </a>
         <div class="search-bar-container">
             <div class="search-bar">
@@ -22,8 +41,7 @@
                 <button><i class="bi bi-search"></i></button>
             </div>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,7 +49,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown">
                         Categorias
                     </a>
                     <ul class="dropdown-menu">
@@ -46,59 +64,59 @@
     </div>
 </nav>
 
-<!-- Seção de Comparação -->
-<div class="container mt-5">
-    <h2 class="text-center">Comparação de Preços</h2>
+<!-- Página de Comparação -->
+<div class="comparacao-page">
+    <section class="comparacao-ar-condicionado mt-5">
+        <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
+        <div class="image-container text-center">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado">
+        </div>
 
-    <div class="price-card">
-        <div class="header">Menor preço</div>
-        <div class="content">
-            <h3>R$ 1.987,30 <span>à vista</span></h3>
-            <p>Ou 10x de R$ 209,19</p>
-            <p>Zoom te devolve <span class="cashback">R$ 19,87</span> (1% cashback)</p>
-            <p><strong>Cálculo final:</strong> R$ 1.967,43</p>
-            <div class="store">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Magazine_Luiza_logo.svg" alt="Magazine Luiza">
-                <button class="btn btn-primary">Ir à loja</button>
+        <div class="container mt-4">
+            <div class="row">
+
+                <!-- Produto 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" class="card-img-top" alt="LG Dual Inverter">
+                        <div class="card-body">
+                            <h5 class="card-title">#1 LG Dual Inverter Compact 12.000 BTUs</h5>
+                            <p class="card-text">Melhor ar-condicionado 2024</p>
+                            <p class="fw-bold">R$ 2.339,00</p>
+                            <a href="#" class="btn btn-primary">Ir à loja</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" class="card-img-top" alt="Samsung Wind Free">
+                        <div class="card-body">
+                            <h5 class="card-title">#2 Samsung Wind Free Connect 12.000</h5>
+                            <p class="card-text">Melhor distribuição do ar</p>
+                            <p class="fw-bold">R$ 2.669,00</p>
+                            <a href="#" class="btn btn-primary">Ir à loja</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" class="card-img-top" alt="Midea AirVolution">
+                        <div class="card-body">
+                            <h5 class="card-title">#3 Springer Midea AirVolution 9.000 BTUs</h5>
+                            <p class="card-text">Garantia de conforto térmico</p>
+                            <p class="fw-bold">R$ 1.999,00</p>
+                            <a href="#" class="btn btn-primary">Ir à loja</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-
-    <div class="price-card">
-        <div class="content">
-            <h3>R$ 2.082,11 <span>à vista</span></h3>
-            <p>Zoom te devolve <span class="cashback">R$ 124,93</span> (6% cashback)</p>
-            <p><strong>Cálculo final:</strong> R$ 1.957,18</p>
-            <div class="store">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-                <button class="btn btn-primary">Ir à loja</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="price-card">
-        <div class="content">
-            <h3>R$ 2.482,16 <span>à vista</span></h3>
-            <p>Zoom te devolve <span class="cashback">R$ 148,93</span> (6% cashback)</p>
-            <p><strong>Cálculo final:</strong> R$ 2.333,23</p>
-            <div class="store">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Casas_Bahia_Logo.svg" alt="Casas Bahia">
-                <button class="btn btn-primary">Ir à loja</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="price-card">
-        <div class="content">
-            <h3>R$ 2.293,30 <span>à vista</span></h3>
-            <p>Frete estimado: <span class="frete">R$ 127,80</span></p>
-            <p><strong>Cálculo final:</strong> R$ 2.421,10</p>
-            <div class="store">
-                <img src="https://via.placeholder.com/100x30?text=FRIOPEÇAS" alt="Friopeças">
-                <button class="btn btn-success">Comprar</button>
-            </div>
-        </div>
-    </div>
+    </section>
 </div>
 
 <!-- Footer -->
@@ -127,39 +145,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<style>
-    .price-card {
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 15px;
-        margin: 15px 0;
-        background-color: #f9f9f9;
-    }
-    .header {
-        background: #0dcaf0;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .store {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .store img {
-        height: 30px;
-    }
-    .cashback {
-        color: green;
-        font-weight: bold;
-    }
-    .frete {
-        color: red;
-        font-weight: bold;
-    }
-</style>
 
 </body>
 </html>
