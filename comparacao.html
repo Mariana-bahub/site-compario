@@ -67,6 +67,11 @@
       border: none;
       cursor: pointer;
     }
+    .product-image {
+      max-width: 120px;
+      height: auto;
+      margin-right: 15px;
+    }
   </style>
 </head>
 <body>
@@ -78,8 +83,7 @@
         <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png"
              alt="Logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -130,49 +134,35 @@
 
         <!-- Card 1 -->
         <div class="card mb-3 shadow-sm">
-          <div class="card-body d-flex flex-column flex-md-row justify-content-between">
+          <div class="card-body d-flex">
+            <img src="https://via.placeholder.com/120" alt="Produto 1" class="product-image">
             <div>
               <h5 class="card-title mb-1">R$ 1.987,30 <small class="text-muted">à vista</small></h5>
               <p class="mb-1 text-muted">ou até R$ 2.019,19</p>
               <p class="mb-0"><strong>Zoom te devolve R$ 164,93</strong> <span class="text-success">6% cashback</span></p>
               <small class="text-muted">Cálculo final R$ 1.967,43</small>
             </div>
-            <div class="text-md-end mt-3 mt-md-0">
-              <p class="mb-1 fw-bold">Magazine Luiza</p>
-              <a href="#" class="btn btn-primary">Ir à loja</a>
-            </div>
+          </div>
+          <div class="card-footer text-end">
+            <p class="mb-1 fw-bold">Magazine Luiza</p>
+            <a href="#" class="btn btn-primary">Ir à loja</a>
           </div>
         </div>
 
         <!-- Card 2 -->
         <div class="card mb-3 shadow-sm">
-          <div class="card-body d-flex flex-column flex-md-row justify-content-between">
+          <div class="card-body d-flex">
+            <img src="https://via.placeholder.com/120" alt="Produto 2" class="product-image">
             <div>
               <h5 class="card-title mb-1">R$ 2.082,11 <small class="text-muted">à vista</small></h5>
               <p class="mb-1 text-muted">ou até R$ 2.159,23</p>
               <p class="mb-0"><strong>Zoom te devolve R$ 164,93</strong> <span class="text-success">6% cashback</span></p>
               <small class="text-muted">Cálculo final R$ 1.917,18</small>
             </div>
-            <div class="text-md-end mt-3 mt-md-0">
-              <p class="mb-1 fw-bold">Amazon</p>
-              <a href="#" class="btn btn-primary">Ir à loja</a>
-            </div>
           </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card mb-3 shadow-sm">
-          <div class="card-body d-flex flex-column flex-md-row justify-content-between">
-            <div>
-              <h5 class="card-title mb-1">R$ 2.482,16 <small class="text-muted">à vista</small></h5>
-              <p class="mb-1 text-muted">ou até R$ 2.600,00</p>
-              <p class="mb-0"><strong>Zoom te devolve R$ 164,93</strong></p>
-              <small class="text-muted">Cálculo final R$ 2.317,23</small>
-            </div>
-            <div class="text-md-end mt-3 mt-md-0">
-              <p class="mb-1 fw-bold">Casas Bahia</p>
-              <a href="#" class="btn btn-primary">Ir à loja</a>
-            </div>
+          <div class="card-footer text-end">
+            <p class="mb-1 fw-bold">Amazon</p>
+            <a href="#" class="btn btn-primary">Ir à loja</a>
           </div>
         </div>
       </section>
@@ -182,6 +172,22 @@
   <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados.</p>
+    <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
+
+    <form action="#" method="POST">
+      <label for="email" class="form-label">Receba ofertas exclusivas:</label>
+      <div class="input-group">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+      </div>
+    </form>
+
+    <p>
+      <a href="#">Sobre</a> | 
+      <a href="#">Contato</a> | 
+      <a href="#">Política de Privacidade</a> | 
+      <a href="#">Termos de Uso</a>
+    </p>
   </footer>
 
   <!-- Bootstrap JS -->
