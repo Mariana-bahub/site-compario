@@ -46,16 +46,29 @@
       text-decoration: underline;
     }
 
-    /* Exemplo para espaçamento extra na seção, se quiser */
-    .comparacao-ar-condicionado {
-      margin-bottom: 20px; 
+    /* Navbar customizada */
+    .navbar-custom {
+      background-color: #e100ff; /* Fundo roxo */
     }
 
-    /* Ajuste extra para a barra de busca (pílula) */
+    /* Ajuste para exibir a logo à direita e o botão de menu à esquerda */
+    .navbar-toggler {
+      border: none; /* remove a borda do botão */
+    }
+
+    /* Barra de pesquisa separada abaixo da Navbar, com fundo roxo */
+    .search-container {
+      background-color: #e100ff;
+      padding: 15px;
+    }
+
+    /* Estilo "pílula" para a barra de pesquisa */
     .search-bar {
       background-color: #fff;
       border-radius: 20px;
       padding: 5px 10px;
+      display: flex;
+      align-items: center;
     }
     .search-bar input {
       border: none;
@@ -71,25 +84,36 @@
 </head>
 <body>
 
-  <!-- Navbar (ajustada para ficar como na imagem) -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e100ff;">
+  <!-- Navbar (botão menu à esquerda, logo à direita) -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
     <div class="container d-flex justify-content-between align-items-center">
-      <!-- Botão (menu) à esquerda -->
-      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <!-- Botão (hamburger) no canto esquerdo -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Barra de pesquisa central -->
-      <div class="flex-grow-1 mx-2">
-        <div class="search-bar d-flex align-items-center">
-          <input type="text" placeholder="Digite sua busca..." class="form-control me-2">
-          <button><i class="bi bi-search"></i></button>
-        </div>
+      <!-- Área de links que aparece no toggle -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+              <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
+              <li><a class="dropdown-item" href="#">Moda</a></li>
+              <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        </ul>
       </div>
 
-      <!-- Logo à direita -->
-      <a class="navbar-brand ms-auto" href="#">
+      <!-- Logo no canto direito -->
+      <a class="navbar-brand" href="#">
         <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png"
              alt="Logo"
              width="125"
@@ -97,26 +121,17 @@
              class="d-inline-block align-top">
       </a>
     </div>
-
-    <!-- Nav items (collapse) -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-            <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
-            <li><a class="dropdown-item" href="#">Moda</a></li>
-            <li><a class="dropdown-item" href="#">Casa e Jardim</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-      </ul>
-    </div>
   </nav>
+
+  <!-- Barra de pesquisa (abaixo da navbar) -->
+  <div class="search-container">
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" placeholder="Digite sua busca..." class="form-control me-2">
+        <button><i class="bi bi-search"></i></button>
+      </div>
+    </div>
+  </div>
 
   <!-- Conteúdo principal -->
   <main>
