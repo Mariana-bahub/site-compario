@@ -3,62 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparação de Preços</title>
+    <title>Comparação de Ar-Condicionados</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Fixando o rodapé na parte inferior */
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-        .container {
+
+        .comparacao-page {
             flex: 1;
         }
+
         footer {
             background-color: #df22f0;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 20px;
+            position: relative;
         }
-        .card {
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            transition: 0.3s;
-        }
-        .card:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .btn-purple {
+
+        /* Botão responsivo de 'Ver Todos' / 'Ver Menos' */
+        .ver-todos-btn {
             background-color: purple;
             color: white;
+            padding: 10px 20px;
             border: none;
-            padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            display: block;
+            margin: 20px auto;
         }
-        .btn-purple:hover {
-            background-color: #7a0b7a;
+
+        .conteudo-adicional {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .comparacao-ar-condicionado img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/project_20250226_0201059-01.png" alt="Logo" width="125" height="125" class="d-inline-block align-top">
         </a>
-        <div class="search-bar-container d-flex">
-            <input type="text" class="form-control me-2" placeholder="Digite sua busca...">
-            <button class="btn btn-light"><i class="bi bi-search"></i></button>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Digite sua busca...">
+                <button><i class="bi bi-search"></i></button>
+            </div>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,7 +73,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Promoções</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorias
                     </a>
                     <ul class="dropdown-menu">
@@ -81,55 +88,209 @@
     </div>
 </nav>
 
-<!-- Conteúdo -->
-<div class="container mt-4">
-    <h2 class="text-center">Comparação de Ar-Condicionados</h2>
-
-    <div class="row">
-        <!-- Produto 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <h5>Magazine Luiza</h5>
-                <p><strong>Preço:</strong> R$ 1.987,30 à vista</p>
-                <p><strong>Cashback:</strong> R$ 19,87</p>
-                <p><strong>Valor final:</strong> R$ 1.967,43</p>
-                <button class="btn-purple">Ir à loja</button>
-            </div>
+<div class="comparacao-page">
+    <section class="comparacao-ar-condicionado mt-5">
+        <h2 class="text-center">Melhores Ar-Condicionados de 2024/2025</h2>
+        <div class="image-container text-center">
+            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/arcondicionado.jpg" alt="Ar-Condicionado">
         </div>
 
-        <!-- Produto 2 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <h5>Amazon</h5>
-                <p><strong>Preço:</strong> R$ 2.082,11 à vista</p>
-                <p><strong>Cashback:</strong> R$ 124,93</p>
-                <p><strong>Valor final:</strong> R$ 1.957,18</p>
-                <button class="btn-purple">Ir à loja</button>
-            </div>
-        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="introducao">
+                    <p>Encontre o melhor ar-condicionado para deixar sua casa sempre fresca. Com o passar dos anos, esse se tornou um item essencial para garantir conforto e bem-estar em qualquer estação.</p>
+                </div>
 
-        <!-- Produto 3 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <h5>Casas Bahia</h5>
-                <p><strong>Preço:</strong> R$ 2.482,16 à vista</p>
-                <p><strong>Cashback:</strong> R$ 148,93</p>
-                <p><strong>Valor final:</strong> R$ 2.333,23</p>
-                <button class="btn-purple">Ir à loja</button>
-            </div>
-        </div>
+                <!-- Lista de Produtos com Novo Layout (ATUALIZADO) -->
+                <div style="width: 100%; font-family: sans-serif;">
 
-        <!-- Produto 4 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <h5>FRIOPEÇAS</h5>
-                <p><strong>Preço:</strong> R$ 2.293,30 à vista</p>
-                <p><strong>Frete:</strong> R$ 127,80</p>
-                <p><strong>Valor final:</strong> R$ 2.421,10</p>
-                <button class="btn-purple">Comprar</button>
+                    <!-- CARD #1 -->
+                    <div style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; padding: 15px;">
+                        <!-- Título do produto e imagem -->
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/Banner%20para%20site%20promo%C3%A7%C3%A3o%20elegante%20azul%20e%20vermelho.png" 
+                                 alt="LG Dual Inverter" 
+                                 style="width: 80px; margin-right: 10px; border-radius: 5px;">
+                            <div>
+                                <strong style="font-size: 1.1rem;">#1 LG Dual Inverter Compact 12.000 BTUs</strong>
+                                <p style="margin: 0; color: #555;">Melhor ar-condicionado 2024</p>
+                            </div>
+                        </div>
+                        <!-- Lista de lojas / ofertas -->
+                        <div style="border-top: 1px solid #eee; padding-top: 10px;">
+                            <!-- Oferta 1 -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                <div>
+                                    <strong style="font-size: 1rem;">R$ 1.987,30 à vista</strong><br>
+                                    <small style="color: #777;">ou 10x de R$ 209,19</small><br>
+                                    <span style="color: green; font-size: 0.9rem;">Zoom te devolve R$ 149,83 (6% cashback)</span><br>
+                                    <small style="color: #555;">Cálculo final: R$ 1.697,43</small>
+                                </div>
+                                <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                    Ir à loja
+                                </button>
+                            </div>
+                            <!-- Oferta 2 -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                <div>
+                                    <strong style="font-size: 1rem;">R$ 2.082,11 à vista</strong><br>
+                                    <small style="color: #777;">ou 10x de R$ 220,00</small><br>
+                                    <span style="color: green; font-size: 0.9rem;">Zoom te devolve R$ 164,93 (8% cashback)</span><br>
+                                    <small style="color: #555;">Cálculo final: R$ 1.917,18</small>
+                                </div>
+                                <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                    Ir à loja
+                                </button>
+                            </div>
+                            <!-- Oferta 3 -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                <div>
+                                    <strong style="font-size: 1rem;">R$ 2.293,30 à vista</strong><br>
+                                    <small style="color: #777;">ou 12x de R$ 191,10</small><br>
+                                    <span style="color: #f00; font-size: 0.9rem;">Frete estimado R$ 127,00</span><br>
+                                    <small style="color: #555;">Cálculo final: R$ 2.420,30</small>
+                                </div>
+                                <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                    Ir à loja
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD #2 -->
+                    <div style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; padding: 15px;">
+                        <!-- Título do produto e imagem -->
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-2.jpg" 
+                                 alt="Samsung Wind Free" 
+                                 style="width: 80px; margin-right: 10px; border-radius: 5px;">
+                            <div>
+                                <strong style="font-size: 1.1rem;">#2 Samsung Wind Free Connect 12.000</strong>
+                                <p style="margin: 0; color: #555;">Melhor distribuição do ar</p>
+                            </div>
+                        </div>
+                        <!-- Lista de lojas / ofertas -->
+                        <div style="border-top: 1px solid #eee; padding-top: 10px;">
+                            <!-- Oferta 1 -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                <div>
+                                    <strong style="font-size: 1rem;">R$ 2.669,00 à vista</strong><br>
+                                    <small style="color: #777;">ou 10x de R$ 266,90</small><br>
+                                    <span style="color: green; font-size: 0.9rem;">Zoom te devolve R$ 160,14 (6% cashback)</span><br>
+                                    <small style="color: #555;">Cálculo final: R$ 2.508,86</small>
+                                </div>
+                                <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                    Ir à loja
+                                </button>
+                            </div>
+                            <!-- Oferta 2 -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                <div>
+                                    <strong style="font-size: 1rem;">R$ 2.799,00 à vista</strong><br>
+                                    <small style="color: #777;">ou 12x de R$ 233,25</small><br>
+                                    <span style="color: green; font-size: 0.9rem;">Frete grátis</span><br>
+                                    <small style="color: #555;">Cálculo final: R$ 2.799,00</small>
+                                </div>
+                                <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                    Ir à loja
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD #3 -->
+                    <div style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; padding: 15px;">
+                        <!-- Título do produto e imagem -->
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-3.jpg" 
+                                 alt="Midea AirVolution" 
+                                 style="width: 80px; margin-right: 10px; border-radius: 5px;">
+                            <div>
+                                <strong style="font-size: 1.1rem;">#3 Springer Midea AirVolution 9.000 BTUs</strong>
+                                <p style="margin: 0; color: #555;">Garantia de conforto térmico</p>
+                            </div>
+                        </div>
+                        <!-- Lista de lojas / ofertas -->
+                        <div style="border-top: 1px solid #eee; padding-top: 10px;">
+                            <!-- Oferta 1 -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                <div>
+                                    <strong style="font-size: 1rem;">R$ 1.999,00 à vista</strong><br>
+                                    <small style="color: #777;">ou 10x de R$ 199,90</small><br>
+                                    <span style="color: green; font-size: 0.9rem;">Zoom te devolve R$ 100,00 (5% cashback)</span><br>
+                                    <small style="color: #555;">Cálculo final: R$ 1.899,00</small>
+                                </div>
+                                <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                    Ir à loja
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conteúdo Adicional Oculto (Exibido ao clicar em "Ver Todos") -->
+                    <div class="conteudo-adicional" style="display: none;">
+                        <!-- CARD #4 -->
+                        <div style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; padding: 15px;">
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-4.jpg" 
+                                     alt="Daikin Inverter" 
+                                     style="width: 80px; margin-right: 10px; border-radius: 5px;">
+                                <div>
+                                    <strong style="font-size: 1.1rem;">#4 Daikin Inverter 12.000 BTUs</strong>
+                                    <p style="margin: 0; color: #555;">Controle inteligente de temperatura</p>
+                                </div>
+                            </div>
+                            <div style="border-top: 1px solid #eee; padding-top: 10px;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                    <div>
+                                        <strong style="font-size: 1rem;">R$ 2.799,00 à vista</strong><br>
+                                        <small style="color: #777;">ou 10x de R$ 279,90</small><br>
+                                        <span style="color: green; font-size: 0.9rem;">Frete grátis</span><br>
+                                        <small style="color: #555;">Cálculo final: R$ 2.799,00</small>
+                                    </div>
+                                    <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                        Ir à loja
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD #5 -->
+                        <div style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px; padding: 15px;">
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <img src="https://raw.githubusercontent.com/Mariana-bahub/site-compario/main/imagens/ar-condicionado-5.jpg" 
+                                     alt="Carrier Inverter" 
+                                     style="width: 80px; margin-right: 10px; border-radius: 5px;">
+                                <div>
+                                    <strong style="font-size: 1.1rem;">#5 Carrier Inverter 9.000 BTUs</strong>
+                                    <p style="margin: 0; color: #555;">Economia de energia</p>
+                                </div>
+                            </div>
+                            <div style="border-top: 1px solid #eee; padding-top: 10px;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                                    <div>
+                                        <strong style="font-size: 1rem;">R$ 1.899,00 à vista</strong><br>
+                                        <small style="color: #777;">ou 10x de R$ 189,90</small><br>
+                                        <span style="color: green; font-size: 0.9rem;">Zoom te devolve R$ 95,00 (5% cashback)</span><br>
+                                        <small style="color: #555;">Cálculo final: R$ 1.804,00</small>
+                                    </div>
+                                    <button style="background-color: #6c00ad; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">
+                                        Ir à loja
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão de 'Ver Todos' / 'Ver Menos' -->
+                    <button class="ver-todos-btn" onclick="toggleConteudo()">
+                        Ver Todos
+                    </button>
+                </div>
+                <!-- FIM Lista de Produtos com Novo Layout -->
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 <!-- Footer -->
@@ -158,6 +319,18 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    function toggleConteudo() {
+        const conteudo = document.querySelector('.conteudo-adicional');
+        const botao = document.querySelector('.ver-todos-btn');
+        if (conteudo.style.display === 'none' || conteudo.style.display === '') {
+            conteudo.style.display = 'block';
+            botao.textContent = 'Ver Menos';
+        } else {
+            conteudo.style.display = 'none';
+            botao.textContent = 'Ver Todos';
+        }
+    }
+</script>
 </body>
 </html>
