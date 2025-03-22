@@ -6,6 +6,7 @@
     <title>Comparação de Preços</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,9 +17,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        .comparacao-page {
-            flex: 1;
-        }
+
         .container {
             max-width: 600px;
             margin: auto;
@@ -83,21 +82,9 @@
             padding: 20px;
             position: relative;
         }
-        .ver-todos-btn {
-            background-color: purple;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            margin: 20px auto;
-        }
     </style>
 </head>
 <body>
-
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -133,83 +120,57 @@
     </div>
 </nav>
 
-<!-- Conteúdo principal -->
-<div class="comparacao-page">
-    <div class="container">
-        <div class="menor-preco">Menor preço</div>
+<div class="container">
+    <div class="menor-preco">Menor preço</div>
 
-        <div class="card">
-            <div class="preco">R$ 1.987,30 à vista</div>
-            <div class="cashback">Zoom te devolve <strong>R$ 19,87</strong> (1% cashback)</div>
-            <div class="calculo-final">Cálculo final: <strong>R$ 1.967,43</strong></div>
-            <div class="loja">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Magazine_Luiza_logo.png" alt="Magazine Luiza">
-                <span>Magazine Luiza</span>
-            </div>
-            <a href="#" class="botao-comprar">Ir à loja</a>
+    <div class="card">
+        <div class="preco">R$ 1.987,30 à vista</div>
+        <div class="cashback">Zoom te devolve <strong>R$ 19,87</strong> (1% cashback)</div>
+        <div class="calculo-final">Cálculo final: <strong>R$ 1.967,43</strong></div>
+        <div class="loja">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Magazine_Luiza_logo.png" alt="Magazine Luiza">
+            <span>Magazine Luiza</span>
         </div>
+        <a href="#" class="botao-comprar">Ir à loja</a>
+    </div>
 
-        <div class="card">
-            <div class="preco">R$ 2.082,11 à vista</div>
-            <div class="cashback">Zoom te devolve <strong>R$ 124,93</strong> (6% cashback)</div>
-            <div class="calculo-final">Cálculo final: <strong>R$ 1.957,18</strong></div>
-            <div class="loja">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-                <span>Amazon</span>
-            </div>
-            <a href="#" class="botao-comprar">Ir à loja</a>
+    <div class="card">
+        <div class="preco">R$ 2.082,11 à vista</div>
+        <div class="cashback">Zoom te devolve <strong>R$ 124,93</strong> (6% cashback)</div>
+        <div class="calculo-final">Cálculo final: <strong>R$ 1.957,18</strong></div>
+        <div class="loja">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <span>Amazon</span>
         </div>
+        <a href="#" class="botao-comprar">Ir à loja</a>
+    </div>
 
-        <div class="card">
-            <div class="preco">R$ 2.482,16 à vista</div>
-            <div class="cashback">Zoom te devolve <strong>R$ 148,93</strong> (6% cashback)</div>
-            <div class="calculo-final">Cálculo final: <strong>R$ 2.333,23</strong></div>
-            <div class="loja">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Casas_Bahia_logo.svg" alt="Casas Bahia">
-                <span>Casas Bahia</span>
-            </div>
-            <a href="#" class="botao-comprar">Ir à loja</a>
+    <div class="card">
+        <div class="preco">R$ 2.482,16 à vista</div>
+        <div class="cashback">Zoom te devolve <strong>R$ 148,93</strong> (6% cashback)</div>
+        <div class="calculo-final">Cálculo final: <strong>R$ 2.333,23</strong></div>
+        <div class="loja">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Casas_Bahia_logo.svg" alt="Casas Bahia">
+            <span>Casas Bahia</span>
         </div>
+        <a href="#" class="botao-comprar">Ir à loja</a>
+    </div>
 
-        <div class="card">
-            <div class="preco">R$ 2.293,30 à vista</div>
-            <div class="cashback">Frete estimado: <strong>R$ 127,80</strong></div>
-            <div class="calculo-final">Cálculo final: <strong>R$ 2.421,10</strong></div>
-            <div class="loja">
-                <img src="https://via.placeholder.com/30" alt="Friopeças">
-                <span>FRIOPEÇAS</span>
-            </div>
-            <a href="#" class="botao-comprar">Comprar</a>
+    <div class="card">
+        <div class="preco">R$ 2.293,30 à vista</div>
+        <div class="cashback">Frete estimado: <strong>R$ 127,80</strong></div>
+        <div class="calculo-final">Cálculo final: <strong>R$ 2.421,10</strong></div>
+        <div class="loja">
+            <img src="https://via.placeholder.com/30" alt="Friopeças">
+            <span>FRIOPEÇAS</span>
         </div>
+        <a href="#" class="botao-comprar">Comprar</a>
     </div>
 </div>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2025 Comparador de Preços - Todos os direitos reservados</p>
     <p><small>Os preços podem variar. Sempre verifique no site do vendedor.</small></p>
 
     <form action="#" method="POST" class="mb-3">
-        <label for="email" class="form-label">Receba ofertas exclusivas no seu e-mail:</label>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="input-group">
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
-                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
-                </div>
-            </div>
-        </div>
-    </form>
-
-    <p>
-        <a href="#">Sobre</a> | 
-        <a href="#">Contato</a> | 
-        <a href="#">Política de Privacidade</a> | 
-        <a href="#">Termos de Uso</a>
-    </p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+        <label for="email" class="form-label">Rece
