@@ -459,10 +459,38 @@ input[type="search"]::-webkit-search-cancel-button {
         font-size: 14px; /* Texto menor */
         padding: 10px; 
     }
+    
     .alert-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
     position: absolute;
-    top: 100%; /* Faz com que apareça logo abaixo da barra de pesquisa */
+    top: 100%; /* Fica logo abaixo da barra de pesquisa */
     left: 0;
-    margin-top: 4px; /* Pequeno espaço entre a barra de pesquisa e o alerta */
-    z-index: 10; /* Mantém abaixo da logo se necessário */
-    }
+    width: 100%;
+    margin-top: 5px;
+}
+
+.alert-icon {
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.alert-message {
+    flex: 1;
+}
